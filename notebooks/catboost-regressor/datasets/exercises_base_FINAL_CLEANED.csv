@@ -1,0 +1,1688 @@
+﻿Exercise_Name,Base_Lift,exercise_id
+(BACK) Barbell Deadlift,Best3DeadliftKg,3
+(BACK) Barbell Pendlay Row,Best3DeadliftKg,4
+(BACK) Barbell Row,Best3DeadliftKg,5
+(BACK) Close Grip Cable Row,Best3DeadliftKg,7
+(BACK) Landmine T Bar Row,Best3DeadliftKg,10
+(BACK) Rope Cable Pullover,Best3DeadliftKg,11
+(BACK) Single Arm Supported Dumbbell Row,Best3DeadliftKg,12
+(BACK) Supinated Barbell Bent Over Row,Best3DeadliftKg,13
+(BICEPS) Single Arm Hammer Preacher Curl,Best3DeadliftKg,15
+(CALVES) Seated Calf Machine,Best3SquatKg,16
+(CARDIO) Bike ERG,Cardio_Core,17
+(CARDIO) Row ERG,Cardio_Core,18
+(CARDIO) SKI ERG,Cardio_Core,19
+(CHEST) Decline Barbell Bench Press,Best3BenchKg,20
+(CHEST) Flat Dumbbell Bench Press,Best3DeadliftKg,21
+(CHEST) Incline Cable Fly,Best3BenchKg,22
+(CHEST) Iso Incline Chest Press,Best3BenchKg,23
+(Dumbbell) Calf Raise (Single Leg),Best3SquatKg,24
+(GLUTES) Barbell Hip Thrust,Best3SquatKg,25
+(HAMSTRINGS) Barbell RDL,Best3DeadliftKg,26
+(LEGS) Heel Elevated Barbell Front Squat,Best3SquatKg,31
+(LEGS) Heel Elevated Goblet Squat,Best3SquatKg,32
+(LEGS) Leg Seated Leg Extension,Best3SquatKg,33
+(LEGS) Pendulum Squat,Best3SquatKg,34
+(LEGS) Sled Push,Best3BenchKg,35
+(POSTERIOR CHAIN) Barbell Deadlift,Best3DeadliftKg,36
+(SHOULDERS) Low Cable Crossover,Best3BenchKg,37
+(SHOULDERS) Seated Iso Shoulder Press,Best3BenchKg,40
+(SHOULDERS) Seated Smith Machine Shoulder Press,Best3DeadliftKg,41
+(SHOULDERS) Standing Landmine Shoulder Press,Best3BenchKg,42
+(TRICEPS) Close Grip Barbell Bench Press,Best3BenchKg,44
+(TRICEPS) Seated EZ Bar Overhead Tricep Extension,Best3BenchKg,45
+(TRICEPS) Weighted Bench Dip,Best3BenchKg,46
+1 Arm Lat Pullin,Best3DeadliftKg,47
+1-1/4 Squat,Best3SquatKg,50
+1-Arm 45 Degrees Cable Rear Delt Flye,Best3BenchKg,51
+10km Row,Best3DeadliftKg,55
+1km Run,Cardio_Core,58
+1km Run (4/3),Cardio_Core,59
+"2"" ACB Bench Press",Best3BenchKg,62
+200m Sprint,Cardio_Core,64
+21 Curl (Barbell),Best3DeadliftKg,65
+2km Row,Best3DeadliftKg,69
+3 Count Pause Bench,Best3BenchKg,70
+30m Sprint,Cardio_Core,73
+3in Board Press,Best3BenchKg,74
+400m Row,Best3DeadliftKg,76
+400m Sprint,Cardio_Core,77
+45 Degree Extension,Best3DeadliftKg,80
+45 Degree Incline DB Press,Best3BenchKg,81
+45-degree Side Bend,Cardio_Core,84
+45° Incline Barbell Press,Best3BenchKg,85
+"6.	Abs (Standing Band Crunches, Sit-Ups, Etc.)",Cardio_Core,90
+60m Sprint,Cardio_Core,91
+90° Hammer Curl,Best3DeadliftKg,102
+AB Rollout,Cardio_Core,104
+ACB Close Grip Bench,Best3BenchKg,106
+ACB Reverse Close Grip Bench,Best3BenchKg,107
+AD Press,Best3BenchKg,109
+AD Press (Smith Machine),Best3DeadliftKg,111
+ATG Lunge,Best3SquatKg,112
+ATG Split Squat,Best3SquatKg,114
+Ab Coaster,Cardio_Core,115
+Ab Machine,Best3DeadliftKg,116
+Ab Roll,Cardio_Core,117
+Ab Roller,Cardio_Core,118
+Ab Rollout,Cardio_Core,119
+Ab Wheel,Cardio_Core,122
+Ab Wheel [Weighted],Cardio_Core,124
+Abs Crunch (Bodyweight),Cardio_Core,130
+Abs Crunch (Machine),Cardio_Core,132
+Abs Crunch In High Cable,Cardio_Core,134
+Abs Machine,Cardio_Core,135
+Active Pigeon Stretch (Lift Offs),Cardio_Core,136
+Active Plank,Cardio_Core,137
+Adduction,Best3SquatKg,138
+Agachamento Hack Sentado,Best3SquatKg,140
+Air Bike,Cardio_Core,142
+Alternate Leg Raises,Best3BenchKg,145
+Alternating Bounds,Cardio_Core,146
+Alternating Cable Crossover (High To Low),Best3BenchKg,147
+Alternating Cable Curls,Best3DeadliftKg,148
+Alternating Dumbbell Curl,Best3DeadliftKg,149
+Alternating Good Morning,Best3DeadliftKg,150
+Alternating Lunge Jumps,Cardio_Core,154
+Alternating Lunge with Rotation,Best3SquatKg,155
+Alternating Reach Forearm Plank,Cardio_Core,156
+Anderson Squat,Best3SquatKg,158
+Anterior Tibialis Raise,Best3BenchKg,159
+Anterior Tibialis Raises,Best3BenchKg,160
+Archer Push Up,Best3BenchKg,166
+Arm-Out SingleArm DB Row,Best3DeadliftKg,170
+Armpulldown,Best3DeadliftKg,171
+Arms-Extended 45° Hyperextension,Best3DeadliftKg,173
+Ascending Skater Jumps 10 Yards,Cardio_Core,177
+Assault Bike,Cardio_Core,178
+Assisted Squats,Best3SquatKg,180
+Australian Pull Up,Best3DeadliftKg,183
+B-Skips,Cardio_Core,185
+B-Stance Romanian Deadlift (Dumbbell),Best3DeadliftKg,186
+BFR Bicep Curl,Best3DeadliftKg,187
+Back Extension,Best3DeadliftKg,188
+Back Extension Crunches,Cardio_Core,190
+Back Squat,Best3SquatKg,191
+Backsquat,Best3SquatKg,192
+Backward Sled,Best3DeadliftKg,194
+Backwards Sled Drag,Best3DeadliftKg,195
+Backwards Sled Pull,Best3DeadliftKg,196
+Bajan Curl,Best3DeadliftKg,200
+Band Assisted Lunge Jumps,Cardio_Core,205
+Band Assisted Pogo Jumps,Cardio_Core,206
+Band Assisted Squat Jumps,Cardio_Core,207
+Band Curls,Cardio_Core,209
+Band Lateral Raise,Cardio_Core,214
+Band Lateral Walk,Cardio_Core,215
+Band Pull Apart,Cardio_Core,217
+Band Pull Aparts Routine,Cardio_Core,218
+Band Resisted Sprints 20 Yards,Cardio_Core,220
+Band Resisted Steal Starts,Cardio_Core,221
+Band Scarecrows,Cardio_Core,223
+Band Tricep Pushdown,Cardio_Core,227
+Banded Ankle Mobilizations,Cardio_Core,230
+Banded Back Squat,Cardio_Core,231
+Banded Back Squat [X|5|X],Cardio_Core,232
+Banded Backwards Kicks,Cardio_Core,233
+Banded Chest Dumbbell Fly,Cardio_Core,236
+Banded Chest Fly,Cardio_Core,237
+Banded Clam Shells,Cardio_Core,238
+Banded Cuban Rotations,Cardio_Core,239
+Banded Deadbug,Cardio_Core,240
+Banded Dips,Cardio_Core,241
+Banded External Rotations,Cardio_Core,243
+Banded Hip Abduction,Cardio_Core,247
+Banded Hip Distraction,Cardio_Core,248
+Banded Hip Flexor Marches,Cardio_Core,249
+Banded Kettle Bell Swings,Cardio_Core,250
+Banded Knee Extensions,Cardio_Core,251
+Banded Overhead Squat,Cardio_Core,252
+Banded Pull Apart,Cardio_Core,253
+Banded Shoulder Dislocates,Cardio_Core,255
+Bar Assisted Pogo Hops,Cardio_Core,263
+Barbell American Deadlift,Best3DeadliftKg,265
+Barbell Curls,Best3DeadliftKg,266
+Barbell Glute Bridge,Best3SquatKg,269
+Barbell Hack Squat,Best3SquatKg,270
+Barbell Hang Clean To Overhead Press,Best3DeadliftKg,271
+Barbell Hold,Best3DeadliftKg,273
+Barbell Hyperextension,Best3DeadliftKg,274
+Barbell Rollout,Cardio_Core,276
+Barbell Row,Best3DeadliftKg,277
+Barbell Row (smith Machine),Best3DeadliftKg,278
+Barbell Shoulder Press,Best3BenchKg,279
+Barbell Squat,Best3SquatKg,280
+Barbell Squat (With Bands),Cardio_Core,281
+Barbell Strict Curl,Best3DeadliftKg,283
+Barbell Wrist Flexion & Extension,Best3DeadliftKg,287
+Barbell Yates Row (Rest Pause Last Set),Best3DeadliftKg,288
+Basyian Curl,Best3DeadliftKg,290
+Battle Ropes,Cardio_Core,291
+Batwing Row,Best3DeadliftKg,293
+Bear Craw Isometric Hold,Cardio_Core,297
+Bear Crawl,Cardio_Core,298
+Bear Position Pull Through,Best3DeadliftKg,300
+Behind The Back Holds,Best3DeadliftKg,304
+Behind The Back Lateral Raise (Cable),Best3DeadliftKg,305
+Behind The Back Shrug,Best3DeadliftKg,306
+Behind The Back Shrugs,Best3DeadliftKg,307
+Behind The Neck Press,Best3BenchKg,308
+Behind The Neck Press (Seated),Best3BenchKg,309
+Behind-The-Back Cable Lateral Raise,Best3DeadliftKg,311
+Behind-The-Back Dumbbell Wrist Curl,Best3DeadliftKg,312
+Behind-The-Back Lateral Raise,Best3DeadliftKg,313
+Behind-The-Neck Press (Smith Machine),Best3DeadliftKg,315
+Behind-the-Neck Lat Pulldown,Best3DeadliftKg,317
+Behind-the-Neck Overhead Press,Best3BenchKg,318
+Behind-the-Neck Push Press,Best3BenchKg,319
+Belt Squat,Best3SquatKg,320
+Belt Squat Stiff Leg Deadlifts,Best3SquatKg,321
+Bench Dips,Best3BenchKg,322
+Bench Press,Best3BenchKg,324
+Bench Press (AM),Best3BenchKg,325
+Bench Press (Barbell),Best3BenchKg,327
+Bench Press (Board),Best3BenchKg,328
+Bench Press (Close Grip),Best3BenchKg,329
+Bench Press (Duffalo Bar),Best3BenchKg,330
+Bench Press (Paused),Best3BenchKg,333
+Bench Press (Smith Machine),Best3DeadliftKg,334
+Bench Press (Wide Grip),Best3BenchKg,337
+Bench Press Incline (Close Grip),Best3BenchKg,339
+Bench Press Pause (Dumbbell),Best3BenchKg,340
+Bench(BB),Best3BenchKg,343
+Bent Knee Standing Calf Raise,Best3SquatKg,344
+Bent Leg Raise,Best3BenchKg,345
+Bent Over Lateral Raise (Dumbbell),Best3DeadliftKg,348
+Bent Over Row,Best3DeadliftKg,351
+"Bent Over Row (Barbell, Paused)",Best3DeadliftKg,353
+Bent Over Row (Dumbbell),Best3DeadliftKg,354
+Bent-Over Row (Smith Machine),Best3DeadliftKg,358
+Bicep Curl (12-15),Best3DeadliftKg,360
+Bicep Curl (Barbell),Best3DeadliftKg,361
+Bicep Curl (Machine),Best3DeadliftKg,365
+Bicep Curl Incline (Dumbell),Best3DeadliftKg,368
+Bicep Curl Of Choice (Swap This Out For A Listed Exercise),Best3DeadliftKg,369
+Bicep Curl To Overhead Press,Best3DeadliftKg,370
+Bicep Curls (Cable),Best3DeadliftKg,372
+Bicep Down Machine,Best3DeadliftKg,373
+Bicep Pull Up,Best3DeadliftKg,374
+Biceps Pull-Down,Best3DeadliftKg,376
+Bicycle,Cardio_Core,377
+Bicycle Crunch,Cardio_Core,378
+Bicycle Crunche,Cardio_Core,379
+Bicycle crunch,Cardio_Core,381
+Bike,Cardio_Core,382
+Bird Dog,Cardio_Core,388
+Bird Dog Isometric Hold,Cardio_Core,390
+Bird Dogs,Cardio_Core,391
+Block Press,Best3BenchKg,394
+Block Pull (Barbell),Best3DeadliftKg,395
+Boarded Bench Press,Best3BenchKg,397
+Body Weight Row On Barbell,Best3DeadliftKg,398
+Bodyweight Feet Elevated Pike Push-up,Best3BenchKg,399
+Bodyweight Hip Thrust,Best3SquatKg,400
+Bodyweight Row,Best3DeadliftKg,402
+Bodyweight Side Lying Clamshell,Cardio_Core,403
+Bodyweight Single Leg Deadlifts W/ Reach,Best3DeadliftKg,404
+Bodyweight Triceps Extension,Best3BenchKg,407
+Bosu Ball Crunch,Cardio_Core,409
+Bosu Ball Push Ups,Best3BenchKg,410
+Bosu Squat,Best3SquatKg,414
+Bottom Half Standing Calf Raise,Best3SquatKg,416
+Bottom-2/3 Constant Tension Preacher Curl,Best3DeadliftKg,417
+Bottom-ROM Paused Squats (Smith),Best3SquatKg,420
+Box Jump,Cardio_Core,424
+Box Squat (Barbell),Best3SquatKg,426
+Bradford Press,Best3BenchKg,428
+Bulgarian Dip,Best3BenchKg,433
+Bulgarian Smith Squat,Best3SquatKg,434
+"Bulgarian Split Squat (12,10,8,6,4/Per Leg)",Best3SquatKg,435
+Bulgarian Split Squat (Barbell),Best3SquatKg,436
+Bulgarian Split Squat (Bodyweight),Best3SquatKg,437
+Bulgarian Split Squat (Dumbbell),Best3SquatKg,438
+Bulgarian split squat,Best3SquatKg,441
+Bulgarien Split Sqauts,Best3SquatKg,442
+Bulgarien Split Squats,Best3SquatKg,443
+Burpee,Cardio_Core,445
+Burpee Broad Jumps,Cardio_Core,447
+Burpee-Pullups,Best3DeadliftKg,448
+Bus Driver,Cardio_Core,449
+Butterfly DB,Best3BenchKg,453
+Butterfly Reverse,Best3BenchKg,455
+Cable Abductor (Outside) Riase (Cable),Best3DeadliftKg,459
+Cable Adductor (Inside) Raise (Cable),Best3BenchKg,460
+Cable Axe Chop,Best3DeadliftKg,462
+Cable Cross Tricep Pushdown,Best3BenchKg,465
+Cable Cross-Body Lat Pull-Arounds,Best3DeadliftKg,466
+Cable Crossed Tricep Extension,Best3BenchKg,467
+Cable Crunch,Cardio_Core,469
+Cable Hip Abduction,Best3SquatKg,473
+Cable Incline Fly,Best3BenchKg,475
+Cable Incline Wrist Curls,Best3DeadliftKg,476
+Cable Lateral Raise (Lengthened-Mid Position),Best3DeadliftKg,478
+Cable Low Row,Best3DeadliftKg,479
+Cable Overhead Curl,Best3DeadliftKg,481
+Cable Overhead Extension,Best3BenchKg,482
+Cable Preacher Curls,Best3DeadliftKg,484
+Cable Pronations,Best3DeadliftKg,485
+Cable Pushdown,Best3BenchKg,487
+Cable Rear Delt Fly,Best3BenchKg,488
+Cable Rear Delt Flys (POSTERIOR DELT; Mid/Lengthened Position),Best3BenchKg,489
+Cable Reverse Curl,Best3DeadliftKg,490
+Cable Reverse Flye,Best3BenchKg,491
+Cable Romanian Deadlift,Best3DeadliftKg,492
+Cable Rope Seated Crunches,Cardio_Core,493
+Cable Rotational Twists,Best3DeadliftKg,495
+Cable Shrugs,Best3DeadliftKg,496
+Cable Standing Pullover,Best3DeadliftKg,497
+Cable Step Up,Best3SquatKg,498
+Cable Stretch Drag Curls,Cardio_Core,499
+Cable Tib Raises,Best3BenchKg,500
+Cable Tricep Kickback,Best3BenchKg,501
+Cable Tricep Push Away,Best3BenchKg,502
+Cable Tricep Pushdown (12-15),Best3BenchKg,503
+Cable Triceps Kickback,Best3BenchKg,504
+Cable Twists,Best3DeadliftKg,505
+Cable Unilateral Tricep Pushdowns,Best3DeadliftKg,506
+Cable Woodchoppers,Best3DeadliftKg,510
+Cable Wrist Curls (12-15),Best3DeadliftKg,512
+Cable Wrist Pushdown,Best3BenchKg,513
+Cable Y Raise,Best3BenchKg,514
+Cable Y Raise (Rehab),Best3BenchKg,515
+Cable abduction,Best3DeadliftKg,516
+Cable twists,Best3DeadliftKg,518
+Cable/Machine Fly (12-15),Best3DeadliftKg,519
+Calf Press (Leg Press Machine),Best3SquatKg,523
+Calf Press On Hack Squat,Best3SquatKg,524
+Calf Raise,Best3SquatKg,525
+Calf Raise (Leg Press),Best3SquatKg,528
+Calf Raise (Smith Machine),Best3SquatKg,530
+Calf Raise - Leg Press Machine,Best3SquatKg,531
+Calf Raise Machine,Best3SquatKg,532
+Calf Raise Smith Machine,Best3SquatKg,533
+Calf Raise Sumo,Best3SquatKg,534
+Cambered Bar Barbell Bench press,Best3BenchKg,535
+Cambered Bar Squat,Best3SquatKg,538
+Cannonball Crunch,Cardio_Core,539
+Cardio,Cardio_Core,541
+Cardio (LISS),Cardio_Core,542
+Chest Dips,Best3BenchKg,555
+Chest Fly (Dumbbell),Best3BenchKg,558
+Chest Fly (Machine),Best3DeadliftKg,559
+Chest Fly press (DB),Best3BenchKg,561
+Chest Press,Best3BenchKg,562
+Chest Press (Convergent),Cardio_Core,563
+Chest Press (Resistance Band),Cardio_Core,566
+Chest Press (dumbbell),Best3BenchKg,568
+Chest Pull Over,Best3DeadliftKg,571
+Chest Supported Barbell Lat Row,Best3DeadliftKg,572
+Chest Supported Cable Row,Best3DeadliftKg,574
+Chest Supported Curl,Best3DeadliftKg,575
+Chest Supported Dumbbell Lateral Raises,Best3DeadliftKg,578
+Chest Supported Dumbells Lateral Raise,Best3DeadliftKg,579
+Chest Supported Incline Shrug,Best3DeadliftKg,580
+Chest Supported Low Row,Best3DeadliftKg,582
+Chest Supported Machine Row Stack Loaded,Best3DeadliftKg,583
+Chest Supported Rear Delt Fly (Dumbbell),Best3BenchKg,584
+Chest Supported Rear Fly,Best3BenchKg,585
+Chest Supported Reverse Fly (Dumbbell),Best3BenchKg,586
+Chest Supported Row,Best3DeadliftKg,587
+Chest Supported Row (12-15),Best3DeadliftKg,589
+Chest Supported Row (Machine),Best3DeadliftKg,592
+Chest Supported Row (Swiss Bar),Best3DeadliftKg,594
+Chest Supported Row (T-Bar),Best3DeadliftKg,595
+Chest Supported Row Of Choice,Best3DeadliftKg,596
+Chest Supported T Bar Row,Best3DeadliftKg,597
+Chest Supported T Bar Row Pronated,Best3DeadliftKg,598
+Chest Supported T-Bar Row,Best3DeadliftKg,599
+Chest To Bar Pull-ups,Best3DeadliftKg,600
+Chest-Supported Row (Machine),Best3DeadliftKg,601
+Chin-Up (Assisted),Best3DeadliftKg,606
+Chin-Up (Weighted),Best3DeadliftKg,608
+Chinese Lateral Elevations,Best3DeadliftKg,609
+Clamshells (Band),Cardio_Core,612
+Clamshells With Band,Cardio_Core,613
+Clean (Barbell),Best3DeadliftKg,617
+Clean And Jerk Complex,Best3DeadliftKg,618
+Clean Deadlift,Best3DeadliftKg,619
+Clean Pull,Best3DeadliftKg,620
+Clean and Press,Best3DeadliftKg,622
+Close Chest Dumbbell Press,Best3BenchKg,623
+"Close Grip Bench Press (12,10,8,6,4)",Best3BenchKg,625
+Close Grip Bench Press (Smith Machine),Best3DeadliftKg,626
+Close Grip Chest Press,Best3BenchKg,628
+Close Grip Chest Press (TRX),Best3BenchKg,629
+Close Grip Dips,Best3BenchKg,630
+Close Grip Elevated Pushups,Best3BenchKg,631
+Close Grip Incline Bench,Best3BenchKg,632
+Close Grip Incline Bench Press (Smith Machine),Best3DeadliftKg,633
+Close Grip Larsen Press,Best3BenchKg,634
+Close Grip Palm Out Bicep Pull Down,Best3DeadliftKg,635
+Close Grip Underhand Lat Pulldown,Best3DeadliftKg,638
+Close Grip Underhand Lat Pulldown (chin Pulldown),Best3DeadliftKg,639
+Close-Grip Push-Ups,Best3BenchKg,642
+Cobra Pushups,Best3BenchKg,643
+Coffin Press Dumbbell,Best3BenchKg,645
+Competition Squat,Best3SquatKg,647
+Compression Leg Raise,Best3BenchKg,648
+Concentrated Tricep Cable Overhead,Best3BenchKg,649
+Concentration Cable Curl,Best3DeadliftKg,650
+Converging Machine Press (Anterior Delt),Cardio_Core,653
+Copenhagen Plank,Cardio_Core,654
+Copenhagen Plank Dips,Cardio_Core,655
+Cossack Squats,Best3SquatKg,661
+Cossack Squats (Weighted),Best3SquatKg,662
+Couch Touches,Cardio_Core,665
+Crab Walk,Cardio_Core,666
+Cross Body Hammer Curl,Best3DeadliftKg,667
+Cross Body Lat Pulldown (Single Arm),Best3DeadliftKg,669
+Cross Body SA Pulldown,Best3DeadliftKg,671
+Cross Body Tricep Extension,Best3BenchKg,673
+Cross Body Y-Raise,Best3BenchKg,674
+Crossbody Tricep Extension,Best3BenchKg,677
+Crossed Overhead Triceps Extension (Cable),Best3BenchKg,678
+Crunch Machine,Cardio_Core,682
+Crunch Machine Weighted,Cardio_Core,683
+Crunches,Cardio_Core,684
+Cuff Lateral Raise (Cable),Best3DeadliftKg,688
+Cuffed Behind-The-Back Lateral Raise,Best3DeadliftKg,689
+Curl-Up,Best3DeadliftKg,692
+Curtesy Step Up,Best3SquatKg,693
+Curtsy Lunge,Best3SquatKg,695
+Curtsy Lunge (Dumbbell),Best3SquatKg,696
+"Custom Circuit - (Lat Raise, Bicep Curl, Upright Row, Calf Raise, Tricep Extension, Hammer Curls) 12 Reps Each Then Break)",Best3DeadliftKg,698
+Cycling,Cardio_Core,700
+DB Hip Hugger,Best3SquatKg,705
+DB Lateral Raise,Best3DeadliftKg,706
+DB Wrist Extensions,Best3DeadliftKg,708
+Dead Hang For Time,Best3DeadliftKg,714
+Deadlift,Best3DeadliftKg,717
+Deadlift (Banded),Cardio_Core,718
+Deadlift (Barbell / KG),Best3DeadliftKg,719
+Deadlift (Block),Best3DeadliftKg,721
+Deadlift (Deficit),Best3DeadliftKg,722
+Deadlift (Harambe System/Barbell),Best3DeadliftKg,724
+Deadlift (Paused),Best3DeadliftKg,725
+Deadlift (To Knees),Best3DeadliftKg,727
+Deadlift Hold 150kgs,Best3DeadliftKg,730
+Decline Bench Press (Dumbbell),Best3BenchKg,733
+Decline Bench Press (Smith Machine),Best3DeadliftKg,734
+Decline Cable Fly,Best3BenchKg,735
+Decline Chest Press,Best3BenchKg,737
+Decline Crunch,Cardio_Core,739
+Decline Deficit Pike Push-Ups,Best3BenchKg,741
+Decline Dumbell Scullcrusher,Best3BenchKg,742
+Decline Flye - Dumbbell,Best3BenchKg,743
+Decline Hammer Strength,Best3BenchKg,744
+Decline Hammer Strength Press,Best3BenchKg,745
+Decline Ring push Up,Best3BenchKg,749
+Decline Sit Up (Weighted),Cardio_Core,751
+Decline Skull Crushers,Best3BenchKg,752
+Decline Skullcrusher,Best3BenchKg,753
+Decline overhead Cable Fly (lower),Best3BenchKg,754
+Deep Goblet Squat Holds w/ Pulse,Best3SquatKg,755
+Deep Split Jerk Hold,Best3SquatKg,756
+Deep Split Squats (Weighted),Best3SquatKg,757
+Deep Squat Hold,Best3SquatKg,758
+Deficit Deadlift (Barbell),Best3DeadliftKg,761
+Deficit Exploding Pushup,Best3BenchKg,762
+Deficit Goblet Squats,Best3SquatKg,763
+Deficit Handstand Push Up,Best3BenchKg,764
+Deficit Pendlay Row,Best3DeadliftKg,765
+Deficit Push Up,Best3BenchKg,766
+Deficit Reverse Lunge,Best3SquatKg,768
+Deficit Ring Push Up,Best3BenchKg,769
+Deficit Romanian Deadlift (Barbell),Best3DeadliftKg,771
+Deficit Row,Best3DeadliftKg,772
+Depth Jump,Cardio_Core,774
+Diagonal Supinated Lat Pulldown,Best3DeadliftKg,775
+Diamond Push Ups,Best3BenchKg,776
+Diamond Pushups,Best3BenchKg,778
+Dive-Bomber Push Ups,Best3BenchKg,786
+Donkey Kick (Dumbbell),Cardio_Core,789
+Donkey Machine Calf Raise,Best3SquatKg,792
+Dorsiflexion With Band,Cardio_Core,794
+Double Kettlebell Press,Best3BenchKg,795
+Double Leg Multi-Directional Pogo,Cardio_Core,796
+Double Quadruped Transverse Hip Abduction,Best3SquatKg,797
+Drag Curl,Best3DeadliftKg,801
+Drag Curls,Best3DeadliftKg,802
+Dragon Fly,Best3BenchKg,804
+Driving Pin Squat,Best3SquatKg,805
+Dual Cable Lat Pull Down,Best3DeadliftKg,806
+Dual Handle Elbows Out Row,Best3DeadliftKg,808
+Dual Rope Extension,Best3DeadliftKg,810
+Dumbbell Alternating Bench Press,Best3BenchKg,812
+Dumbbell Bench Pullover,Best3DeadliftKg,813
+Dumbbell Bench-Braced Wrist Curl,Best3DeadliftKg,814
+Dumbbell Calf Jumps,Cardio_Core,816
+Dumbbell Chest Press/Floor Press,Best3BenchKg,817
+Dumbbell Crush Press,Best3BenchKg,818
+Dumbbell Gorilla Row,Best3DeadliftKg,820
+Dumbbell Hyperextension,Best3DeadliftKg,825
+Dumbbell Incline Bench Row,Best3DeadliftKg,826
+Dumbbell Press Or Weighted Pushups (Swap This Out For Either),Best3BenchKg,828
+Dumbbell RDL,Best3DeadliftKg,830
+Dumbbell Renegade Row,Best3DeadliftKg,831
+Dumbbell Scull Crusher,Best3BenchKg,833
+Dumbbell Shoulder Press,Best3BenchKg,834
+Dumbbell Squat And Press,Best3SquatKg,837
+Dumbbell Step Up,Best3SquatKg,838
+Dumbbell Supinated Curl,Best3DeadliftKg,839
+Dumbbell Swing,Best3DeadliftKg,840
+Dumbbell Swings,Best3DeadliftKg,841
+Dumbbell Tripod Row,Best3DeadliftKg,844
+Dumbbell Underhand Chest Fly,Best3BenchKg,845
+Dumbbell Upper Back Row,Best3DeadliftKg,846
+Dumbbell Walking Lunges,Cardio_Core,847
+Dumbbell seated Row,Best3DeadliftKg,848
+Dumbell Incline Shrugs,Best3DeadliftKg,849
+Dumbell NEWS Leg Extension,Best3SquatKg,851
+Dumbell Skullcrusher,Best3BenchKg,854
+Dumbell Wide curl,Best3DeadliftKg,857
+Dynamic Side Plank,Cardio_Core,864
+Développer Horizontale,Best3BenchKg,868
+EZ Bar Skull Crusher,Best3BenchKg,869
+EZ Bar Skullcrushers,Best3BenchKg,870
+Eccentric Calf Raises,Best3SquatKg,873
+Elevated Heel Squat Holds,Best3SquatKg,884
+Elevated Push Ups,Best3BenchKg,887
+Elevated Squats,Best3SquatKg,889
+Elevated skier Squat,Best3SquatKg,891
+Elliptical Machine,Best3DeadliftKg,893
+Erg Row,Cardio_Core,894
+Etupunnerrus,Best3BenchKg,895
+Eugene Forearm Extensions (Cable),Best3DeadliftKg,897
+Explosive Bench Press,Best3BenchKg,899
+External Rotations,Best3DeadliftKg,902
+External Rotations (Cable),Best3DeadliftKg,903
+Ez Bar Cable Curl,Best3DeadliftKg,904
+Ez-Bar Skull Crusher,Best3BenchKg,907
+FFE Contralateral DB Reverse Lunge,Best3SquatKg,908
+Face Pull,Best3DeadliftKg,911
+Face Pull (Paused),Best3DeadliftKg,913
+Face Pull (Rotator Cuff),Best3DeadliftKg,914
+Farmer's Walk (Weighted),Cardio_Core,917
+Fat Grip Reverse Curls(Ez Bar),Best3DeadliftKg,921
+Fear Press,Best3BenchKg,922
+Feet Up Bench,Best3BenchKg,923
+Feet Up Bench Press,Best3BenchKg,924
+Flat Bench Curls,Best3DeadliftKg,931
+Flat Chest Db Press,Best3DeadliftKg,932
+Flat Chest Press,Best3DeadliftKg,933
+Flat Dumbbell Press,Best3DeadliftKg,935
+"Flat Dumbbell Press (12,10,8,6,4)",Best3DeadliftKg,936
+Flexion Row,Best3DeadliftKg,946
+Floating Deadlift,Best3DeadliftKg,948
+Floor Chest Fly (Dumbbell),Best3BenchKg,949
+Floor Press (Dumbbell),Best3BenchKg,952
+Flutter Kicks,Cardio_Core,955
+Fly Press (Dumbbell),Best3BenchKg,959
+Foot To Bar,Cardio_Core,961
+Forearm Curl Straight Bar,Best3DeadliftKg,964
+Forearm Finger Curl Pronated (Optional),Best3DeadliftKg,966
+Forearm Finger Curl Supinated (Optional),Best3DeadliftKg,967
+Forearms Curls,Best3DeadliftKg,974
+Forward Jump,Cardio_Core,975
+Forward Sled,Best3DeadliftKg,976
+Frame Carry,Best3DeadliftKg,977
+Frame Hold,Cardio_Core,978
+Free Motion Pec Fly,Best3BenchKg,979
+French Press,Best3BenchKg,981
+French Press (Barbell),Best3BenchKg,982
+Frog Pumps,Cardio_Core,984
+Frog Squat (Dumbbell),Best3SquatKg,985
+Front Carry Lunge For Time,Best3SquatKg,989
+Front Foot Elevated Lunge,Best3SquatKg,990
+Front Foot Elevated Split Squat,Best3SquatKg,992
+Front Foot Elevated Split Squat SSB,Best3SquatKg,993
+Front Lever,Best3DeadliftKg,994
+Front Lever Hold,Best3DeadliftKg,996
+Front Pin Squat,Best3SquatKg,998
+Front PullDwon,Best3DeadliftKg,999
+Front Raise,Best3BenchKg,1000
+Front Raise (Arm Behind You),Best3BenchKg,1001
+Front Raise (Cable),Best3BenchKg,1002
+Front Raise (Palms Up),Best3BenchKg,1003
+Front Squat (Barbell),Best3SquatKg,1005
+Front Squat (Dumbbell),Best3SquatKg,1007
+Front Squat (Paused),Best3SquatKg,1008
+Front Squat W/ Elevated Heels,Best3SquatKg,1010
+GH Situp,Cardio_Core,1017
+GHD Sit Up (Weighted),Cardio_Core,1018
+GHR’s,Best3DeadliftKg,1019
+Garhammer Raise,Best3BenchKg,1020
+Garhammer Raises,Best3BenchKg,1021
+Ghd Sit Up,Cardio_Core,1022
+Ghr Sit Up,Cardio_Core,1023
+Glute Bridge (Band),Cardio_Core,1024
+Glute Bridge (Bodyweight),Best3SquatKg,1026
+Glute Bridge (Dumbbell),Best3SquatKg,1027
+Glute Bridge (Machine),Best3SquatKg,1028
+Glute Bridge Hold,Best3SquatKg,1030
+Glute Bridge Smith,Best3SquatKg,1031
+Glute Bridges,Best3SquatKg,1032
+Glute Bridges With Resistance Band,Cardio_Core,1033
+Glute Bulgarian Split Squat (Dumbbell),Best3SquatKg,1034
+Glute Drive (Machine),Best3SquatKg,1035
+Glute Drive/Hip Thrust Machine,Best3SquatKg,1036
+Glute Ham Raise Sit Ups,Cardio_Core,1037
+Glute Kickback,Best3BenchKg,1039
+Glute-Biased Leg Press,Best3SquatKg,1042
+Goblet Lunge Squat Lunge Combo,Best3SquatKg,1047
+Goblet March,Best3SquatKg,1048
+Goblet Rebound Lateral Lunge,Best3SquatKg,1050
+Goblet Squat Jump,Cardio_Core,1052
+Good Morning,Best3DeadliftKg,1054
+Good Morning (Bodyweight),Best3DeadliftKg,1055
+Good Morning (Hack Machine),Best3SquatKg,1056
+Good morning (Smith),Best3DeadliftKg,1058
+Ground Starts 10 Yards,Cardio_Core,1061
+Guillotine Bench Press,Best3BenchKg,1062
+Guillotine Press,Best3BenchKg,1063
+Hack Deadlift,Best3SquatKg,1066
+Hack Squat,Best3SquatKg,1067
+Hack Squat (Machine),Best3SquatKg,1069
+Hack Squat Calf Raise,Best3SquatKg,1071
+Hack Squat Inverted,Best3SquatKg,1072
+Half Kneeling Arnold Press (Dumbbell),Best3BenchKg,1073
+Half Kneeling Landmine Press,Best3BenchKg,1075
+Half Kneeling Single Leg Box Jump,Cardio_Core,1077
+Hammer Bar Curl,Best3DeadliftKg,1081
+Hammer Curl,Best3DeadliftKg,1082
+Hammer Curl (Cable),Best3DeadliftKg,1083
+Hammer Curl (Dumbbell),Best3DeadliftKg,1084
+Hammer Curl Dumbbell,Best3DeadliftKg,1086
+Hammer Curls - Cable And Rope,Best3DeadliftKg,1088
+Hammer Preacher,Best3DeadliftKg,1090
+Hammer Preacher Curl,Best3DeadliftKg,1091
+Hammer Preacher Curl (Dumbell),Best3DeadliftKg,1093
+Hammer Single Arm Preacher Bench,Best3BenchKg,1094
+Hammer Squat Lunge Machine (RDL),Best3SquatKg,1096
+Hammer Strength Iso-Lateral Low Row,Best3DeadliftKg,1099
+Hammer Strength Preacher Curl,Best3DeadliftKg,1100
+Hamstring Curl (TRX),Best3DeadliftKg,1102
+Hands on Hips Countermovement Jump,Cardio_Core,1112
+Handstand,Cardio_Core,1113
+Handstand Hold,Cardio_Core,1114
+Handstand Progression,Cardio_Core,1115
+Handstand Pushups,Best3BenchKg,1116
+Hang Snatch,Best3DeadliftKg,1119
+Hanging Knee Raise,Best3BenchKg,1120
+Hanging Knee Raises,Best3BenchKg,1121
+Hanging Leg Raise,Best3BenchKg,1123
+Hanging Leg Raise (Weighted),Best3BenchKg,1124
+Hanging Oblique Knee Raise,Best3BenchKg,1125
+Hanging Toes To Bar,Cardio_Core,1127
+Hatfield Squat,Best3SquatKg,1129
+Heavy Barbell Holds,Best3DeadliftKg,1132
+Heavy Lateral Raise,Best3DeadliftKg,1134
+Heel Elevated Leg Press,Best3SquatKg,1137
+Heel Elevated Squat,Best3SquatKg,1138
+Heel Elevated Squat (Barbell),Best3SquatKg,1139
+Heel Taps,Cardio_Core,1142
+Heel Walks 20 Yards,Cardio_Core,1143
+Heels Elevated Bulgarian Split Squat (Barbell),Best3SquatKg,1145
+Heels Elevated Squat,Best3SquatKg,1146
+Helms Row,Best3DeadliftKg,1147
+Hex Press,Best3BenchKg,1149
+High Bar Squat (Barbell),Best3SquatKg,1150
+High Bar Squat (Smith Machine),Best3SquatKg,1152
+High Cable Fly,Best3BenchKg,1153
+High Cable Lateral Raise,Best3DeadliftKg,1154
+High Feet Leg Press,Best3SquatKg,1156
+High Incline Chest/Shoulder Press,Best3BenchKg,1157
+High Incline DB Press,Best3BenchKg,1159
+High Incline Dumbbell Press,Best3BenchKg,1160
+High Incline Press,Best3BenchKg,1161
+High Knee Butt Kick Run 15 Yards,Cardio_Core,1163
+High Pull,Best3DeadliftKg,1166
+High Row,Best3DeadliftKg,1168
+High Shoulder Rotation (Dumbbell),Best3BenchKg,1169
+High Step Up,Best3SquatKg,1170
+High To Low Cable Fly,Best3BenchKg,1171
+High To Low Cable Flyes,Best3BenchKg,1172
+High-Low Cable Press,Best3BenchKg,1174
+High-To-Low Neutral-Grip Lat Row,Best3DeadliftKg,1175
+High-to-low Cable Chest Flies,Best3BenchKg,1176
+Hill Sprint / Stairs Sprint,Cardio_Core,1178
+Hip Abduction,Best3SquatKg,1179
+Hip Adduction,Best3SquatKg,1182
+Hip Adductor (Machine),Best3SquatKg,1183
+Hip Adductor Dropset,Best3SquatKg,1184
+Hip Extension Quad,Best3SquatKg,1193
+Hip Flexor Bounce,Best3SquatKg,1195
+Hip Flexor Raise,Best3SquatKg,1197
+Hip Mobilization,Best3SquatKg,1200
+Hip Raise,Best3SquatKg,1201
+Hip Thrust,Best3SquatKg,1202
+Hip Thrust (Band),Cardio_Core,1204
+Hip Thrust (Bodyweight),Best3SquatKg,1206
+Hip Thrust (Dumbbell),Best3SquatKg,1207
+Hip Thrust (Machine),Best3SquatKg,1208
+Hip Thrust (Smith Machine),Best3SquatKg,1209
+Hip Thrust (machine),Best3SquatKg,1210
+Hip Thrust Machine,Best3SquatKg,1212
+Hollow Body Pullups,Best3DeadliftKg,1215
+Hollow Hold,Cardio_Core,1216
+Hollow Rock,Cardio_Core,1217
+Horizontal Elbow-braced Cable Triceps Extension,Best3BenchKg,1219
+Hyperextension,Best3DeadliftKg,1220
+Hyperextension (Glute Focus),Best3SquatKg,1221
+Hyperextension (Weighted),Best3DeadliftKg,1222
+Inch Worm + Push Up,Best3BenchKg,1228
+Inchworm,Cardio_Core,1229
+Incline Bench Lateral Raise,Best3DeadliftKg,1233
+Incline Bench Preacher Curl,Best3DeadliftKg,1235
+Incline Bench Press (Barbell),Best3BenchKg,1236
+Incline Bench Press (Dumbbell) (Paused),Best3BenchKg,1239
+Incline Bench Press - Hammer Strength,Best3BenchKg,1242
+Incline Bicep Curl,Best3DeadliftKg,1246
+Incline Cable Chest Press,Best3BenchKg,1249
+Incline Cable Curl,Best3DeadliftKg,1250
+Incline Cable Flys,Best3BenchKg,1252
+Incline Chest Fly,Best3BenchKg,1254
+Incline Chest Fly Machine,Best3DeadliftKg,1256
+Incline Chest Press (Machine),Best3DeadliftKg,1257
+Incline Chest Press (Smith),Best3BenchKg,1258
+Incline Curl,Best3DeadliftKg,1261
+Incline Curl (Dumbbell),Best3DeadliftKg,1263
+Incline DB Curl 45 Degrees,Best3DeadliftKg,1264
+Incline Dumbbel Curl (Low Bench),Best3DeadliftKg,1266
+Incline Dumbbell Curl (12-15),Best3DeadliftKg,1267
+Incline Dumbbell Curls,Best3DeadliftKg,1269
+Incline Dumbbell Front Raise,Best3BenchKg,1270
+"Incline Dumbbell Press (12,10,8,6,4)",Best3BenchKg,1271
+Incline Dumbbell Row,Best3DeadliftKg,1272
+Incline Dumbell Bench Press,Best3BenchKg,1273
+Incline Dumbell Press,Best3BenchKg,1274
+Incline Fly (Cable),Best3BenchKg,1276
+Incline Fly Press (Dumbbell),Best3BenchKg,1277
+Incline Hammer Curl (Dumbbell),Best3DeadliftKg,1280
+Incline Hammer Curls,Best3DeadliftKg,1281
+Incline Hybrid DB Fly,Best3BenchKg,1283
+Incline Lat Raise,Best3DeadliftKg,1284
+Incline Neutral Press DB,Best3BenchKg,1286
+Incline Pullover (Dumbbell),Best3DeadliftKg,1287
+Incline Pushdown (Cable),Best3BenchKg,1288
+Incline Rear Delt Flye,Best3BenchKg,1290
+Incline Rear Delt Raises,Best3BenchKg,1291
+Incline Rear Delt Raises W External Rotation,Best3BenchKg,1292
+Incline Rear Shrug,Best3DeadliftKg,1293
+Incline Row DB,Best3DeadliftKg,1295
+Incline Treadmill,Cardio_Core,1296
+Incline Tricep Extention (Cable),Best3BenchKg,1299
+Incline Y Lateral Raise,Best3DeadliftKg,1302
+Incline dumbell row,Best3DeadliftKg,1304
+Inverted Row,Best3DeadliftKg,1311
+Iso Hold Band Curl,Cardio_Core,1315
+Iso Low Row,Best3DeadliftKg,1316
+Iso-lateral Low Row,Best3DeadliftKg,1318
+JM Press (Smith Machine),Best3DeadliftKg,1324
+Jacknifes,Cardio_Core,1326
+Janicki Fly,Best3BenchKg,1330
+Jefferson Curl,Best3DeadliftKg,1331
+Jefferson Deadlift,Best3DeadliftKg,1332
+Jesus Curl,Best3DeadliftKg,1334
+Jog,Cardio_Core,1335
+Jump Squat (Barbell),Cardio_Core,1338
+Jump Switch Lunge,Cardio_Core,1339
+Jumping Jack,Cardio_Core,1341
+Jumping Lunge,Cardio_Core,1342
+KAS Glute Bridge Hold,Best3SquatKg,1344
+Kas Glute Bridge,Best3SquatKg,1348
+Keenan Pullover Sagital,Best3DeadliftKg,1351
+Kelso Shrug,Best3DeadliftKg,1352
+Kelso Shrug/Incline Row,Best3DeadliftKg,1354
+Kettlebell Bicep Curl,Best3DeadliftKg,1357
+Kettlebell Clean & Press,Best3DeadliftKg,1360
+Kettlebell Front Squat,Best3SquatKg,1363
+Kettlebell Gorilla Row,Best3DeadliftKg,1364
+Kettlebell Power Row,Best3DeadliftKg,1366
+Kettlebell Press,Best3BenchKg,1367
+Kettlebell Squat L/R,Best3SquatKg,1368
+Kettlebell Toe Raise,Best3BenchKg,1372
+Kettlebell Towel Curl,Best3DeadliftKg,1373
+Kettlebell Windmill,Best3BenchKg,1375
+Klokov Press,Best3BenchKg,1377
+Knee Raise (Captain's Chair),Best3BenchKg,1381
+Knee Raise (Weighted),Best3BenchKg,1382
+Knee Raise Crunch Torso Down,Cardio_Core,1383
+Knee To Feet Jumps,Cardio_Core,1384
+Knee-to-wall ankle rocks,Best3SquatKg,1386
+Kneeling Landmine Pushes,Best3BenchKg,1388
+Kneeling Lat Pulldown,Best3DeadliftKg,1389
+Kneeling Leg Curl,Best3DeadliftKg,1390
+Kneeling Overhead Press,Best3BenchKg,1398
+Kneeling Windmill Press,Best3BenchKg,1400
+L-Sit Pull Up,Best3DeadliftKg,1406
+L-sit Pull Ups,Best3DeadliftKg,1407
+Ladder Drills,Cardio_Core,1408
+Landmine Clean And Press,Best3DeadliftKg,1409
+Landmine Oblique Twist,Cardio_Core,1411
+Landmine Push Press,Best3BenchKg,1413
+Landmine Squat (Heel Elevated),Best3SquatKg,1415
+Landmine Twist,Cardio_Core,1417
+Larsen Press (Barbell),Best3BenchKg,1418
+Lat Biased Row,Best3DeadliftKg,1419
+Lat Machine,Best3DeadliftKg,1420
+Lat Prayer,Best3DeadliftKg,1422
+Lat Press Down,Best3DeadliftKg,1424
+Lat Pullaround,Best3DeadliftKg,1426
+Lat Pulldown,Best3DeadliftKg,1428
+Lat Pulldown (2-Grip),Best3DeadliftKg,1429
+Lat Pulldown (Band),Cardio_Core,1430
+Lat Pulldown (Close Grip),Best3DeadliftKg,1431
+Lat Pulldown (Med - Neutral Grip),Best3DeadliftKg,1434
+Lat Pulldown (Neutral Grip),Best3DeadliftKg,1435
+Lat Pulldown (behind neck),Best3DeadliftKg,1437
+Lat Pulldown Machine,Best3DeadliftKg,1438
+Lat Pullover,Best3DeadliftKg,1440
+Lat Pullover Cable,Best3DeadliftKg,1441
+Lat Pullover Machine,Best3DeadliftKg,1442
+Lateral Alternating Bounds,Best3DeadliftKg,1445
+Lateral Banded Walk,Cardio_Core,1447
+Lateral Bear Crawl,Best3DeadliftKg,1448
+Lateral Jump,Cardio_Core,1452
+Lateral Leg Raises,Best3DeadliftKg,1454
+Lateral Line Hops,Best3DeadliftKg,1456
+Lateral Lunge (Weighted),Best3SquatKg,1458
+Lateral Power Shuffles 10 Yards,Best3DeadliftKg,1463
+"Lateral Pullover, Rope",Best3DeadliftKg,1466
+Lateral Raise (12-15),Best3DeadliftKg,1467
+Lateral Raise (Band),Cardio_Core,1468
+Lateral Raise (Machine),Best3DeadliftKg,1471
+Lateral Raise (Seated),Best3DeadliftKg,1472
+Lateral Raise Eccentrics,Best3DeadliftKg,1473
+Lateral Raise Machine Standing,Best3DeadliftKg,1474
+Lateral Raise Seated,Best3DeadliftKg,1476
+Lateral Short Shuffle,Best3DeadliftKg,1477
+Lateral Shuffle,Best3DeadliftKg,1478
+Lateral Shuffles 10 Yards,Best3DeadliftKg,1482
+Lateral Squat - Low Alternating (reps per leg),Best3SquatKg,1483
+Lateral band walk,Cardio_Core,1485
+Lateral walks  (banded),Cardio_Core,1486
+Lean In Lateral Raise (Dumbbell),Best3DeadliftKg,1487
+Lean-Back Lat Pulldown,Best3DeadliftKg,1488
+Lean-Back Seated Hip Abduction (Machine),Best3DeadliftKg,1489
+Leaning In Lateral Raise,Best3DeadliftKg,1490
+Leaning Overhead Extension,Best3BenchKg,1491
+Leg Circles,Cardio_Core,1492
+Leg Curl Machine (Not Lying),Best3DeadliftKg,1495
+Leg Extension (Cable),Best3SquatKg,1499
+Leg Extension (Dumbbell),Best3SquatKg,1500
+Leg Extension (Single Leg),Best3SquatKg,1502
+Leg Extension Single Leg,Best3SquatKg,1503
+Leg Extension with Band,Cardio_Core,1504
+Leg Pres (Low Pad),Best3SquatKg,1506
+Leg Press (45 Degrees),Best3SquatKg,1508
+Leg Press Calf,Best3SquatKg,1509
+Leg Raise,Best3BenchKg,1512
+Leg Raise (Captain's Chair),Best3BenchKg,1513
+Leg Raise Floor,Best3BenchKg,1515
+"Legg Press (12,10,8,6,4)",Best3BenchKg,1517
+Library Deadlift,Best3DeadliftKg,1519
+Light Cardio,Cardio_Core,1521
+Light Hammer,Best3DeadliftKg,1522
+Light Jog,Cardio_Core,1523
+Light cardio (Treadmill Or Rowing machine),Cardio_Core,1527
+Line Hops,Cardio_Core,1528
+Linear Pogo Jumps 10 Yards,Cardio_Core,1530
+Log Press,Best3BenchKg,1534
+Long Lever Ball Crunch,Cardio_Core,1535
+Long Pause Bench Press,Best3BenchKg,1536
+Long Rope Tricep Extension,Best3BenchKg,1537
+Long rope incline pushdown,Best3BenchKg,1539
+Loop band row,Cardio_Core,1543
+Low Cable Crossover,Best3BenchKg,1545
+Low Cable Fly,Best3BenchKg,1546
+Low Incline Flye (Dumbbell),Best3BenchKg,1549
+Low Incline Press (Dumbbell),Best3BenchKg,1550
+Low Row - Plate Loaded (Arsenal),Best3DeadliftKg,1552
+Low-Intensity Cardio,Cardio_Core,1555
+Low-To-High Cable Fly,Best3BenchKg,1556
+Low-to-High Cable Fly,Best3BenchKg,1557
+Lower Ab Leg Raises,Best3BenchKg,1558
+Lower Abs With Propel Machine,Cardio_Core,1559
+Lower Body Twist,Cardio_Core,1562
+Lu Lateral Raise,Best3DeadliftKg,1563
+Lu Lateral Raises,Best3DeadliftKg,1564
+Lu raises,Best3BenchKg,1567
+Lunge (Barbell),Best3SquatKg,1569
+Lunge (Bodyweight),Best3SquatKg,1570
+Lunge (Dumbbell),Best3SquatKg,1571
+Lunge (Kettlebell),Best3SquatKg,1572
+Lunge With Twist,Best3SquatKg,1574
+Lying Behind The Back Neck Plate Elevation,Best3DeadliftKg,1576
+Lying Bicep Curl,Best3DeadliftKg,1577
+Lying Cable Curl,Best3DeadliftKg,1578
+Lying Cable Tricep Extension,Best3BenchKg,1580
+Lying Chest Press,Best3BenchKg,1582
+Lying Crucifix Lateral Raise,Best3DeadliftKg,1583
+Lying DB Bicep Curl,Best3DeadliftKg,1584
+Lying Hamstring Curl,Best3DeadliftKg,1586
+Lying Leg Raise,Best3BenchKg,1592
+Lying Overhead Tricep Extension (barbell),Best3BenchKg,1593
+Lying Reverse Fly,Best3BenchKg,1597
+Lying Sit Up,Cardio_Core,1599
+Lying Tricep Extension (Barbell),Best3BenchKg,1602
+Lying Tricep Extension (Dumbbell),Best3BenchKg,1603
+Lying Triceps Extension (EZ Bar),Best3BenchKg,1604
+MMS Barbell Complex,Best3DeadliftKg,1609
+MTS Front Pulldown,Best3DeadliftKg,1610
+MTS Low Row Machine,Best3DeadliftKg,1611
+MTS Row,Best3DeadliftKg,1612
+Machine Bench,Best3DeadliftKg,1617
+Machine Bench Press,Best3DeadliftKg,1618
+Machine Calf Raise,Best3SquatKg,1619
+Machine Chest Press (Flat),Best3DeadliftKg,1620
+Machine Chest Press (Incline),Best3DeadliftKg,1621
+Machine Chest Press (Neutral Grip),Best3DeadliftKg,1622
+Machine Crunch,Cardio_Core,1623
+Machine Flat Press,Best3DeadliftKg,1624
+Machine Hip Thrust,Best3SquatKg,1625
+Machine Lat Pulldown,Best3DeadliftKg,1626
+Machine Low Row,Best3DeadliftKg,1629
+Machine Press,Best3DeadliftKg,1631
+Machine Pull Down,Best3DeadliftKg,1632
+Machine Pull-down,Best3DeadliftKg,1633
+Machine Wide Rows,Best3DeadliftKg,1634
+Mag Grip Lat Pulldown,Best3DeadliftKg,1635
+Marching Glute Bridge,Best3SquatKg,1639
+Meadows Curl,Best3DeadliftKg,1646
+Meadows Row,Best3DeadliftKg,1647
+Med Ball Backward Toss,Best3DeadliftKg,1648
+Med Ball Crunch,Cardio_Core,1651
+Medicine Ball Close Grip Push Up,Best3BenchKg,1660
+Medicine Ball Floor Throw And Hip Toss,Best3SquatKg,1661
+Medicine Ball Russian Twist,Cardio_Core,1665
+Mercy 30 Curls,Best3DeadliftKg,1670
+Middle Back Rows,Best3DeadliftKg,1672
+Military Press (Barbell),Best3BenchKg,1675
+Mini Band - Walking,Cardio_Core,1677
+Monster Walks (hip Circle),Cardio_Core,1683
+Mountain Climber,Cardio_Core,1684
+Multi Direction Plank Series,Cardio_Core,1686
+Muscle Up,Best3DeadliftKg,1687
+Narrow Neutral Pulldown,Best3DeadliftKg,1690
+Nautilus Inspriation Row (Wide-Grip),Best3DeadliftKg,1692
+Nautilus Single Arm Curl,Best3DeadliftKg,1693
+Neck Press/Guillotine Press,Best3BenchKg,1703
+Negative Chin Ups,Best3DeadliftKg,1708
+Negative Pull Up,Best3DeadliftKg,1709
+Neutral Geip Seated Cable Row,Best3DeadliftKg,1710
+Neutral Grip Pull Ups (as Many Sets As Needed),Best3DeadliftKg,1714
+Neutral Grip Seated Cable Row,Best3DeadliftKg,1716
+Neutral-Grip Pulldowns,Best3DeadliftKg,1717
+Nordic Curls (Freak Athlete),Best3DeadliftKg,1719
+OHP Pin Press,Best3BenchKg,1720
+Oblique 90 Degree Crunch,Cardio_Core,1721
+Oblique Crunch,Cardio_Core,1723
+Oblique Deadlift,Best3DeadliftKg,1724
+Oblique Heel Touch,Cardio_Core,1725
+Oblique QL Side Raise,Best3BenchKg,1726
+Oblique Roman Chair With Weight,Best3DeadliftKg,1727
+Oblique Sidecrunch,Cardio_Core,1728
+Oblique Twists,Cardio_Core,1729
+Omni Press,Best3BenchKg,1733
+One Arm Bent Over Row,Best3DeadliftKg,1738
+One Arm Cable Curl,Best3DeadliftKg,1739
+One Arm Lateral Raise (Dumbbell),Best3DeadliftKg,1742
+One Arm Overhead Carry with March,Best3BenchKg,1743
+One Arm Overhead Press (Dumbbell),Best3BenchKg,1745
+One Arm Press,Best3BenchKg,1746
+One Arm Pulldown,Best3DeadliftKg,1747
+One Arm Reverse Fly,Best3BenchKg,1748
+One Arm Reverse Pec Deck,Best3BenchKg,1749
+One Arm Row (Dumbell),Best3DeadliftKg,1751
+One Leg Calf Raises,Best3SquatKg,1754
+One Legged Bounds,Cardio_Core,1757
+Opposite Grip Pullups (Chins If Your Primary Is Pullups And Vice Versa),Best3DeadliftKg,1759
+Overcoming ISO Close Grip Bench,Best3BenchKg,1761
+Overcoming ISO Split Squats,Best3SquatKg,1762
+Overhead Cable Bicep Curl,Best3DeadliftKg,1763
+Overhead Cable Rope Extention,Best3BenchKg,1764
+Overhead Chest Press,Best3BenchKg,1766
+Overhead Dumbbell Carries,Best3BenchKg,1767
+Overhead Extension (EZ Bar),Best3BenchKg,1769
+Overhead Extension - Partial,Best3BenchKg,1770
+Overhead Lu Raise,Best3BenchKg,1771
+Overhead March,Best3BenchKg,1772
+Overhead Pin Press,Best3BenchKg,1774
+Overhead Press,Best3BenchKg,1776
+Overhead Press (Barbell),Best3BenchKg,1778
+Overhead Press (Dumbbell),Best3BenchKg,1779
+Overhead Press (Machine),Best3DeadliftKg,1780
+Overhead Press (Smith Machine),Best3DeadliftKg,1782
+Overhead Press (barbell - Paused),Best3BenchKg,1783
+Overhead Rope Extension,Best3BenchKg,1784
+Overhead Tricep Extension (Cable),Best3BenchKg,1791
+Overhead Tricep Extension (Dumbbell),Best3BenchKg,1792
+Pallof Hold,Cardio_Core,1798
+Pallof Press Holds,Best3BenchKg,1800
+Pallof Press Walkouts,Cardio_Core,1801
+Palms Facing Up - D Handle Tricep Pushdown,Best3BenchKg,1802
+Parallel Pull Up W Knee Tuck,Best3DeadliftKg,1803
+Partial Chin-Up,Best3DeadliftKg,1805
+Partial Deadlift (Smith Machine),Best3DeadliftKg,1806
+Partial Incline Press (Dumbbell),Best3BenchKg,1807
+Partial Lateral Raise,Best3DeadliftKg,1808
+Pause Press(Bench),Best3BenchKg,1813
+Pause Squat,Best3SquatKg,1814
+Paused Barbell RDL,Best3DeadliftKg,1815
+Paused Front Squats,Best3SquatKg,1818
+Paused Incline Press,Best3BenchKg,1819
+Paused Platz Squat (Barbell),Best3SquatKg,1820
+Paused Push Up,Best3BenchKg,1821
+Pec Fly (Dumbbell),Best3BenchKg,1823
+Pelican Curl,Best3DeadliftKg,1826
+Pendlay Row,Best3DeadliftKg,1828
+Peterson Step Ups,Best3SquatKg,1831
+Peterson Step-Ups (Weighted),Best3SquatKg,1833
+Pike Handstand Hold,Cardio_Core,1836
+Pike Pushup (Feet Elevated),Best3BenchKg,1839
+Pillar Bridge w/ Arm Lift,Cardio_Core,1841
+Pillar Bridge w/ Arm Reach,Cardio_Core,1842
+Pin Press Squat,Best3SquatKg,1844
+Pin Squat (Barbell),Best3SquatKg,1846
+Pin Squats,Best3SquatKg,1847
+Pinwheel Curl (Dumbbell),Best3DeadliftKg,1849
+Pistol Squat (Assisted),Best3SquatKg,1852
+Pistol Squat To Box,Best3SquatKg,1853
+Planche Progression,Best3BenchKg,1855
+Planche Progression Hold,Best3BenchKg,1856
+Plank,Cardio_Core,1858
+Plank (Weighted),Cardio_Core,1860
+Plank Hip Dip,Cardio_Core,1861
+Plank Pull Through,Cardio_Core,1863
+Plank Rows,Cardio_Core,1864
+Plank To Push Up,Cardio_Core,1865
+Plank Walkout,Cardio_Core,1867
+Plank With Dumbbell Row,Cardio_Core,1868
+Plank With Dumbell Drag,Cardio_Core,1869
+Plank With Feet On Bench,Cardio_Core,1870
+Plank With Leg Lift,Cardio_Core,1871
+Plank With Resistance Band Rows,Cardio_Core,1873
+Plank on Swissball,Cardio_Core,1874
+Plank with Shoulder Taps,Cardio_Core,1876
+Plate Pinch,Best3DeadliftKg,1881
+Plate Raise,Best3DeadliftKg,1882
+Platz Squat,Best3SquatKg,1887
+Plyometric Jumps,Cardio_Core,1891
+Plyometric Push Ups,Best3BenchKg,1892
+Plyometric Push-Up,Best3BenchKg,1893
+Pogo Jump,Cardio_Core,1895
+Poliquin lateral raise,Best3DeadliftKg,1897
+"Posterior Chain (Band Good Mornings, Bodyweight Hyperextensions, Etc.)",Cardio_Core,1898
+Powell Raise,Best3BenchKg,1900
+Power Clean,Best3DeadliftKg,1903
+Power Shrug,Best3DeadliftKg,1905
+Power Skips Distance 20 Yrds,Cardio_Core,1907
+Power Snatch,Best3DeadliftKg,1909
+Prayer Bench Press,Best3BenchKg,1910
+Preacher Curl,Best3DeadliftKg,1912
+Preacher Curl  (Plate Loaded),Best3DeadliftKg,1913
+Preacher Curl (Barbell),Best3DeadliftKg,1914
+Preacher Curl (Cable),Best3DeadliftKg,1915
+Preacher Curl (Dumbbell),Best3DeadliftKg,1916
+Preacher Curl (EZ Bar),Best3DeadliftKg,1917
+Preacher Curl (Machine),Best3DeadliftKg,1918
+Preacher Curl (Plate Loaded),Best3DeadliftKg,1919
+Preacher Curl - Hammer Strength,Best3DeadliftKg,1921
+Preacher Curl Machine,Best3DeadliftKg,1922
+Preacher Curl(Machine),Best3DeadliftKg,1923
+Preacher Curls (Machine),Best3DeadliftKg,1924
+Preacher Hammer Curl,Best3DeadliftKg,1926
+Preacher Machine,Best3DeadliftKg,1927
+Press/Push/Jerk Complex,Best3BenchKg,1932
+Prime Leg Extension,Best3SquatKg,1933
+Prisoner Swiss Ball Crunch,Cardio_Core,1934
+Pronated Finger Curls,Best3DeadliftKg,1936
+Pronation Curl,Best3DeadliftKg,1938
+Pronation Curls,Best3DeadliftKg,1939
+Prone Y Raise,Best3BenchKg,1942
+Pull Apart (Cable),Best3DeadliftKg,1946
+Pull Through (Cable),Best3DeadliftKg,1949
+Pull Ups Max,Best3DeadliftKg,1950
+Pull-Up (Assisted),Best3DeadliftKg,1952
+Pull-Up (Bodyweight),Best3DeadliftKg,1954
+"Pull-Up (Neutral Grip, Weighted)",Best3DeadliftKg,1956
+Pull-Up Negatives,Best3DeadliftKg,1958
+Pulldown (Vbar),Best3DeadliftKg,1960
+Pullover,Best3DeadliftKg,1962
+Pullover (Dumbbell),Best3DeadliftKg,1963
+Pullover Barbell,Best3DeadliftKg,1966
+Push Jerk,Best3BenchKg,1970
+Push Press (Dumbbell),Best3BenchKg,1972
+Push Up,Best3BenchKg,1973
+Push Up (Incline),Best3BenchKg,1975
+Push Up (Weighted),Best3BenchKg,1977
+Push Up Pyramid,Best3BenchKg,1978
+Push-Up Variations (Incline Or Weighted),Best3BenchKg,1980
+Pushup,Best3BenchKg,1982
+Quad extensions,Best3SquatKg,1984
+Quarter Squat Jumps Rythmic,Cardio_Core,1990
+R.B Ab Twist,Cardio_Core,1991
+RDL (Smith Machine),Best3DeadliftKg,1992
+RDL / Same Movement,Best3DeadliftKg,1993
+REVERSE GRIP DUMBBELL BENCHPRESS,Best3BenchKg,1995
+RP Barbell Wrist Curls,Best3DeadliftKg,1996
+RP Flat Hammer Chest Press,Best3DeadliftKg,1998
+RP HS Underhand Pulldowns,Best3DeadliftKg,1999
+RP Hammer Curls,Best3DeadliftKg,2000
+RP Hammer Strength Lateral Raise - Single Arm,Best3DeadliftKg,2001
+RP Hammer Strength Shoulder Press - Plate Loaded,Best3DeadliftKg,2002
+RP Incline Hammer Strength Press,Best3BenchKg,2003
+RP Lying Leg Curl (Prime),Best3DeadliftKg,2005
+RP Machine Dips,Best3DeadliftKg,2007
+RP Overhead Triceps Extension,Best3BenchKg,2010
+RP Ricky Pulldown,Best3DeadliftKg,2011
+RP SportsArt Triceps Extension,Best3BenchKg,2014
+Rack Deadlifts,Best3DeadliftKg,2017
+Rear Delt 45 Degrees Cable Flye,Best3BenchKg,2021
+Rear Delt Cable,Best3BenchKg,2022
+Rear Delt Cable Fly,Best3BenchKg,2023
+Rear Delt Fly (Cable),Best3BenchKg,2026
+Rear Delt Fly (Dumbbell),Best3BenchKg,2027
+Rear Delt Fly (Machine),Best3DeadliftKg,2028
+Rear Delt Fly Of Choice,Best3BenchKg,2030
+Rear Delt Fly Unilateral,Best3DeadliftKg,2031
+Rear Delt Skier,Best3BenchKg,2034
+Rebound Box Jumps,Cardio_Core,2038
+Reserve Fly,Best3BenchKg,2040
+Resistance Band Push-Ups,Cardio_Core,2043
+Resisted Alternating Knee To Chest,Best3BenchKg,2045
+Rest Pause - Lateral Raise (Placeholder),Best3DeadliftKg,2054
+Retro Walking Treadmill,Cardio_Core,2060
+Reverse Abs Crunch (Bodyweight),Cardio_Core,2061
+Reverse Bicep Curl (Barbell),Best3DeadliftKg,2063
+Reverse Bicep Curl (Cable),Best3DeadliftKg,2064
+Reverse Bicep Curl (EZ Bar),Best3DeadliftKg,2066
+Reverse Bicep Curl (cable)!,Best3DeadliftKg,2067
+Reverse Cable Curl,Best3DeadliftKg,2068
+Reverse Cable Fly,Best3BenchKg,2069
+Reverse Cambered Bar Bench Press,Best3BenchKg,2070
+Reverse Curl Cable,Best3DeadliftKg,2073
+Reverse Curls,Best3DeadliftKg,2074
+Reverse Dumbbell Fly,Best3BenchKg,2075
+Reverse Dumbell Fly,Best3BenchKg,2076
+Reverse Fly,Best3BenchKg,2077
+Reverse Fly (Machine),Best3DeadliftKg,2079
+Reverse Flye (Cable),Best3BenchKg,2080
+Reverse Forearm Curl,Best3DeadliftKg,2081
+Reverse Forearm Curls,Best3DeadliftKg,2082
+Reverse Grip Bench,Best3BenchKg,2083
+Reverse Grip Bench Press,Best3BenchKg,2084
+Reverse Grip Cable Tricep Extension,Best3BenchKg,2086
+Reverse Grip Cable Triceps Extension,Best3BenchKg,2087
+Reverse Grip Curl (Cable),Best3DeadliftKg,2088
+Reverse Grip Decline Pushup,Best3BenchKg,2089
+Reverse Grip Push Down,Best3BenchKg,2094
+Reverse Grip Pushdown,Best3BenchKg,2095
+Reverse Grip Rotational Floor/Bench Press (Dumbbell),Best3BenchKg,2096
+Reverse Grip Tricep Extension,Best3BenchKg,2097
+Reverse Hack Squat,Best3SquatKg,2099
+Reverse Hack Squats,Best3SquatKg,2100
+Reverse Hamstring Curls,Best3DeadliftKg,2101
+Reverse Hyperextension,Best3DeadliftKg,2102
+Reverse Leg Extension,Best3SquatKg,2103
+Reverse Lunge (Barbell),Best3SquatKg,2104
+Reverse Lunge (Bodyweight),Best3SquatKg,2105
+Reverse Lunge (Dumbbell),Best3SquatKg,2106
+Reverse Lunge To Overhead Press,Best3SquatKg,2107
+Reverse Lunge-Foot Evelated,Best3SquatKg,2108
+Reverse Lunges,Best3SquatKg,2109
+Reverse Nordic Curl,Best3DeadliftKg,2111
+Reverse Pec Dec,Best3BenchKg,2112
+Reverse Pec Deck,Best3BenchKg,2113
+Reverse Pecdec Fly,Best3BenchKg,2114
+Reverse Plank,Cardio_Core,2115
+Reverse Row,Best3DeadliftKg,2117
+Reverse Sled Drag,Best3SquatKg,2118
+Reverse Sled Pull,Best3DeadliftKg,2119
+Reverse Wrist Curl,Best3DeadliftKg,2121
+Reverse Wrist Curl (Barbell),Best3DeadliftKg,2122
+Reverse Wrist Curl (Cable),Best3DeadliftKg,2123
+Reverse Wrist Curls,Best3DeadliftKg,2125
+Reverse-Grip Dumbbell Press,Best3BenchKg,2126
+Reverse-Grip Pulldowns,Best3DeadliftKg,2127
+Rhino Row - Single Arm,Best3DeadliftKg,2128
+Rhomboid Pulldown,Best3DeadliftKg,2129
+Ring Ab Rollout,Cardio_Core,2130
+Ring Archer Pull Ups,Best3DeadliftKg,2131
+Ring Curl,Best3DeadliftKg,2132
+Ring Dip (Weighted),Best3BenchKg,2134
+Ring Face Pull,Best3DeadliftKg,2135
+Ring Inverted Row,Best3DeadliftKg,2138
+Ring Knee Tucks,Best3DeadliftKg,2139
+Ring Lat Pull,Best3DeadliftKg,2140
+Ring Pull Ups,Best3DeadliftKg,2143
+Ring Push Up,Best3BenchKg,2146
+Ring Rack Chins,Best3DeadliftKg,2149
+Ring Rear Delt Flies,Best3BenchKg,2150
+Ring Row,Best3DeadliftKg,2151
+Ring Row (Weighted),Best3DeadliftKg,2152
+Ring Sissy Squat,Best3SquatKg,2153
+Ring Tricep Extensions,Best3BenchKg,2154
+Roll Up,Cardio_Core,2159
+Rolling Plank,Cardio_Core,2160
+Rolling Tricep Extension (Dumbbell),Best3BenchKg,2161
+Rollouts,Cardio_Core,2162
+Roman Chair Leg Raise,Best3BenchKg,2163
+Romanian Chair Leg Raise,Best3BenchKg,2165
+Romanian Deadlift,Best3DeadliftKg,2166
+"Romanian Deadlift (12,10,8,6,4)",Best3DeadliftKg,2167
+Romanian Deadlift (B Stance),Best3DeadliftKg,2168
+Romanian Deadlift (Barbell),Best3DeadliftKg,2169
+Romanian Deadlift (Bottom Pause),Best3DeadliftKg,2170
+Romanian Deadlift (Smith Machine),Best3DeadliftKg,2173
+Romanian Deadlifts,Best3DeadliftKg,2175
+Romanian Zercher Deadlift,Best3DeadliftKg,2176
+Rope Crunches,Cardio_Core,2178
+Rope Curl,Best3DeadliftKg,2179
+Rope Face Pulls,Best3DeadliftKg,2180
+Rope Hammer Curl,Best3DeadliftKg,2181
+Rope/ Towel Ups,Best3DeadliftKg,2183
+Rotary Torso,Cardio_Core,2184
+Rotating Bicep Curl,Best3DeadliftKg,2185
+Rotating Plank,Cardio_Core,2186
+Rotational Landmine Push Press,Best3BenchKg,2187
+Rotator Cuff,Best3BenchKg,2188
+Rotator Cuff Pull Overs,Best3DeadliftKg,2191
+Row,Best3DeadliftKg,2193
+Row Between Chairs,Best3DeadliftKg,2195
+Run,Cardio_Core,2200
+Running In Place,Cardio_Core,2201
+Running In Place Toe Tap Air Touch,Cardio_Core,2202
+Russian Twist,Cardio_Core,2203
+Russian Twist (Dumbbell),Cardio_Core,2204
+SL Leg Extensions,Best3SquatKg,2205
+SSB Squat,Best3SquatKg,2208
+SSB Walk For Time,Cardio_Core,2209
+Safety Bar Hatfield Squat,Best3SquatKg,2210
+Sandbag Box Squat,Best3SquatKg,2218
+Sandbag Clean,Best3DeadliftKg,2220
+Sandbag Squat,Best3SquatKg,2232
+Scap Pull Down,Best3DeadliftKg,2238
+Scapular Pull-Up,Best3DeadliftKg,2239
+Scapular Push Up,Best3BenchKg,2241
+Scarecrows,Best3DeadliftKg,2243
+SchräGbankdrüCken,Best3BenchKg,2244
+Scissor Jumps,Cardio_Core,2245
+Scissor Kick,Cardio_Core,2246
+Scissors For Abs,Cardio_Core,2247
+Scott Curl,Best3DeadliftKg,2248
+Seal Row,Best3DeadliftKg,2249
+Seated Abductor Machine (15-20),Best3DeadliftKg,2250
+Seated Alternating Lateral,Best3DeadliftKg,2251
+Seated Altrnating Dumbell Curl,Best3DeadliftKg,2252
+Seated Anterior Delt Press (AD),Best3BenchKg,2253
+Seated Barbell Shoulder Press,Best3BenchKg,2254
+Seated Bicep Curl,Best3DeadliftKg,2255
+Seated Biceps Curl,Best3DeadliftKg,2256
+Seated Box Jumps,Cardio_Core,2258
+Seated Cable Overhead Bicep Curl,Best3DeadliftKg,2260
+Seated Cable Row,Best3DeadliftKg,2261
+Seated Cable Row (One Arm),Best3DeadliftKg,2262
+Seated Calf Raise,Best3SquatKg,2263
+Seated Calf Raise (Machine),Best3SquatKg,2264
+Seated DB Good Morning,Best3DeadliftKg,2265
+Seated DB Shoulder Press,Best3BenchKg,2266
+Seated Deadlift,Best3DeadliftKg,2268
+Seated Dip (Machine),Best3DeadliftKg,2269
+Seated Dumbbel Shrugs,Best3DeadliftKg,2270
+Seated Dumbbell Curl,Best3DeadliftKg,2272
+Seated Dumbbell Hammer Curls,Best3DeadliftKg,2273
+Seated Dumbbell Lateral Raise,Best3DeadliftKg,2274
+Seated Face Pull,Best3DeadliftKg,2276
+Seated Flexion Row,Best3DeadliftKg,2277
+Seated French Press (Dumbbell),Best3BenchKg,2280
+Seated Front Raise,Best3BenchKg,2282
+Seated Good Morning,Best3DeadliftKg,2283
+Seated Hamstring Curl,Best3DeadliftKg,2286
+Seated Hamstring Curl (Machine),Best3DeadliftKg,2287
+Seated High Cable Row (Upper Back & Traps),Best3DeadliftKg,2288
+Seated Incline Hammer Curl,Best3DeadliftKg,2289
+Seated Lateral Raise,Best3DeadliftKg,2291
+Seated Leg Curl (Cable),Best3DeadliftKg,2294
+Seated Leg Extension (Machine),Best3SquatKg,2297
+Seated Leg curl,Best3DeadliftKg,2298
+Seated Military Press (Barbell),Best3BenchKg,2299
+Seated Military Press (Smith Machine),Best3DeadliftKg,2300
+Seated Military Press (smith Machine),Best3DeadliftKg,2301
+Seated Or Lying Hamstring Curl (Swap This Out For Either),Best3DeadliftKg,2302
+Seated Overhead Extension (EZ Bar),Best3BenchKg,2303
+Seated Overhead Pin Press (Barbell),Best3BenchKg,2304
+Seated Overhead Press (Barbell),Best3BenchKg,2305
+Seated Overhead Press (No Back Support),Best3BenchKg,2307
+Seated Overhead Press (Smith Machine),Best3DeadliftKg,2308
+Seated Pin Press (Barbell),Best3BenchKg,2309
+Seated Rhino Row,Best3DeadliftKg,2310
+Seated Row (BB),Best3DeadliftKg,2311
+Seated Row (Cable),Best3DeadliftKg,2312
+Seated Shoulder Press,Best3BenchKg,2314
+"Seated Shoulder Press (12,10,8,6,4)",Best3BenchKg,2315
+Seated Shoulder Press (Behind Neck),Best3BenchKg,2316
+Seated Shoulder Press (Dumbbell),Best3BenchKg,2317
+Seated Side Lateral Raise,Best3DeadliftKg,2318
+Seated Tricep Press (Dumbbell),Best3BenchKg,2323
+Seated alternating Dumbell Bicep Curl,Best3DeadliftKg,2330
+Seated low pulley wrist curl,Best3DeadliftKg,2331
+Shadow Boxing,Cardio_Core,2339
+Shoulder Banded Rotations,Cardio_Core,2345
+Shoulder Complex (Dumbbell),Best3BenchKg,2346
+Shoulder Dislocations W/ Band,Cardio_Core,2347
+Shoulder Halo,Best3BenchKg,2348
+Shoulder Press,Best3BenchKg,2349
+Shoulder Press (Machine),Best3DeadliftKg,2350
+Shoulder Press (Seated),Best3BenchKg,2352
+Shoulder Press (Smith Machine),Best3DeadliftKg,2353
+Shoulder Press Smith Machine,Best3DeadliftKg,2354
+Shoulder Press Smith machine,Best3DeadliftKg,2355
+Shoulder YTWL,Best3BenchKg,2357
+Shrug (Barbell),Best3DeadliftKg,2360
+Shrug (Dumbbell),Best3DeadliftKg,2362
+Shrug (Smith Machine),Best3DeadliftKg,2364
+Shrug Smith,Best3DeadliftKg,2366
+Shrug Smith Behind The Back,Best3DeadliftKg,2367
+Shrugs (Trap Bar),Best3DeadliftKg,2369
+Shuttle Run,Cardio_Core,2370
+Side Crunch,Cardio_Core,2373
+Side Extension,Best3DeadliftKg,2375
+Side Knees To Elbows,Cardio_Core,2376
+Side Lunge,Best3SquatKg,2378
+Side Lying Clam (Plate),Best3DeadliftKg,2379
+Side Plank,Cardio_Core,2383
+Side Plank Hip Drops,Cardio_Core,2384
+Side Plank With Reach Under,Cardio_Core,2386
+Side Plank With Rotation,Cardio_Core,2387
+Side Planks With Band Resistance,Cardio_Core,2388
+Side-Lying Clamshells,Cardio_Core,2389
+Side-Lying Hip Abduction,Best3SquatKg,2390
+Side-Lying Hip Raise,Best3SquatKg,2391
+Single Arm Arnold Press,Best3BenchKg,2392
+Single Arm Bench Press,Best3BenchKg,2393
+Single Arm Bench Press (Dumbell/Kettlebell),Best3BenchKg,2394
+Single Arm Bicep Curl,Best3DeadliftKg,2395
+Single Arm Chest Press (Machine),Best3DeadliftKg,2398
+Single Arm Dumbbell Press,Best3BenchKg,2400
+Single Arm Farmer Carry,Best3DeadliftKg,2401
+Single Arm High Row (Cable),Best3DeadliftKg,2403
+Single Arm High Row (Machine),Best3DeadliftKg,2404
+Single Arm Incline Press,Best3BenchKg,2405
+Single Arm Iso Row,Best3DeadliftKg,2406
+Single Arm KB Snatch,Best3DeadliftKg,2407
+Single Arm Kettlebell Swing,Best3DeadliftKg,2408
+Single Arm Landmine Row,Best3DeadliftKg,2410
+Single Arm Lateral Cable Shoulder Raise,Best3DeadliftKg,2412
+Single Arm Overhead Exte,Best3BenchKg,2414
+Single Arm Pec Deck,Best3BenchKg,2417
+Single Arm Preacher Curl,Best3DeadliftKg,2418
+Single Arm Preacher Curl (Dumbbell),Best3DeadliftKg,2419
+Single Arm Preacher Curls,Best3DeadliftKg,2420
+Single Arm Pull Down,Best3DeadliftKg,2422
+Single Arm Pushdown,Best3BenchKg,2424
+Single Arm Pushdown (Cable),Best3BenchKg,2425
+Single Arm Rear Delt Fly (Cable),Best3BenchKg,2428
+Single Arm Rear Delt Fly (Dumbbell),Best3BenchKg,2429
+Single Arm Row (Cable),Best3DeadliftKg,2431
+Single Arm Shoulder Press,Best3BenchKg,2433
+Single Arm Snatch,Best3DeadliftKg,2434
+Single Arm Tricep Press down,Best3BenchKg,2436
+Single Cable Front Raise,Best3BenchKg,2437
+Single Cable Lateral Shoulder Push/Raise (Lift Via Elbow),Best3DeadliftKg,2438
+Single Leg Barbell RDL,Best3DeadliftKg,2441
+Single Leg Box Jump (land 2),Cardio_Core,2443
+Single Leg Bridge,Best3SquatKg,2444
+Single Leg Broad To 90,Cardio_Core,2446
+Single Leg Calf Raise (Weighted),Best3SquatKg,2450
+Single Leg Calf Raise Machine,Best3SquatKg,2451
+Single Leg Deadlift,Best3DeadliftKg,2453
+Single Leg Deadlift (Dumbbell),Best3DeadliftKg,2454
+Single Leg Double Broad Jump,Cardio_Core,2455
+Single Leg Hamstring Curl,Best3DeadliftKg,2459
+Single Leg Hip Thrust,Best3SquatKg,2460
+Single Leg Hip Thrust (Smith Machine),Best3SquatKg,2461
+Single Leg Hurdle Jump,Cardio_Core,2462
+Single Leg Kettlebell Raise,Best3BenchKg,2464
+Single Leg Lateral Broad Jump Ea Leg,Cardio_Core,2465
+Single Leg Lateral Line Hops,Best3DeadliftKg,2466
+Single Leg Leg Extension,Best3SquatKg,2467
+Single Leg RDL,Best3DeadliftKg,2473
+Single Leg Romanian Deadlift,Best3DeadliftKg,2475
+Single Leg Seated Calf Raise,Best3SquatKg,2477
+Single Leg Seated Calf Raise (Machine),Best3SquatKg,2478
+Single Leg Seated Hamstring Curl,Best3DeadliftKg,2479
+Single Leg Smith Romanian Deadlift,Best3DeadliftKg,2480
+Single Leg Squat (On Plates),Best3SquatKg,2481
+Single Leg Squat With Bench,Best3SquatKg,2482
+Single Leg Stair Jumps,Cardio_Core,2483
+Single Single Double Incline Dumbbell Chest Press,Best3BenchKg,2488
+Single dumbbell overhead press,Best3BenchKg,2491
+Single-Leg Squats,Best3SquatKg,2496
+Single-arm Sideways Sit Reverse Pec-Dec,Best3BenchKg,2500
+Single-arm Triceps Kickback (Cable),Best3BenchKg,2501
+Sissy Squat,Best3SquatKg,2502
+Sissy Squat (Weighted),Best3SquatKg,2503
+Sissy Squat Weighted,Best3SquatKg,2504
+Sissy Squats (Full ROM),Best3SquatKg,2505
+Sissy Squats (Partial ROM),Best3SquatKg,2506
+Sit Up,Cardio_Core,2507
+Sit Ups (Weighted),Cardio_Core,2508
+Sitting Good Morning,Best3DeadliftKg,2510
+Six Ways,Cardio_Core,2512
+Skater Jumps,Cardio_Core,2514
+SkiErg,Cardio_Core,2515
+Skiers (Dumbbell),Best3DeadliftKg,2518
+Skull Crusher,Best3BenchKg,2520
+Skull Crusher (Barbell),Best3BenchKg,2521
+Skull Crusher (Bodyweight),Best3BenchKg,2522
+Skull Crusher (EZ Bar),Best3BenchKg,2524
+Skull Crusher (EZ bar),Best3BenchKg,2525
+Skull Crusher (Smith),Best3BenchKg,2528
+Skull Crusher(Ez Bar)(Bar To Chin),Best3DeadliftKg,2529
+Skullcrusher (EZ Bar),Best3BenchKg,2531
+Slant Board Situp,Best3DeadliftKg,2533
+Sled,Best3SquatKg,2535
+Sled Drive,Best3SquatKg,2538
+Sled Press Calf Raises,Best3SquatKg,2539
+Sled Pull,Best3DeadliftKg,2540
+Sled Pull/Push,Best3DeadliftKg,2541
+Sled Push,Best3BenchKg,2542
+Sled Push And Pull,Best3DeadliftKg,2543
+Sled Push/Pull,Best3DeadliftKg,2545
+Sled Row,Best3DeadliftKg,2546
+Sled Trekken Naar Achter Explosief,Best3SquatKg,2547
+Sled Walks,Cardio_Core,2548
+Sledgehammer,Cardio_Core,2549
+Slight Incline Bench (Dumbbell),Best3BenchKg,2551
+Slow Negative Cossack Squats,Best3SquatKg,2554
+Smith Good Morning,Best3DeadliftKg,2555
+Smith Hack Squat,Best3SquatKg,2556
+Smith Machine Anterior Delt Press,Best3DeadliftKg,2557
+"Smith Machine Assisted SLDL (12,10,8,6,4)",Best3DeadliftKg,2558
+Smith Machine Calf,Best3SquatKg,2559
+Smith Machine Calf Raise,Best3SquatKg,2560
+Smith Machine Hack Squat,Best3SquatKg,2561
+Smith Machine Overhead Press,Best3DeadliftKg,2562
+Smith Machine Reverse Lunge,Best3SquatKg,2563
+Smith Machine Row,Best3DeadliftKg,2565
+Smith Machine Shoulder Press,Best3DeadliftKg,2566
+Smith Machine Shrugs,Best3DeadliftKg,2567
+Smith Machine Upright Rows,Best3DeadliftKg,2569
+Smith Unilateral Incline,Best3DeadliftKg,2573
+Snatch (Barbell),Best3DeadliftKg,2576
+Snatch (Dumbbell),Best3DeadliftKg,2577
+Snatch (Kettlebell),Best3DeadliftKg,2578
+Snatch Complex,Best3DeadliftKg,2579
+Snatch Deadlift,Best3DeadliftKg,2580
+Snatch Grip Romanian Deadlift,Best3DeadliftKg,2582
+Snatch Grip Shrugs,Best3DeadliftKg,2583
+Snatch Pull,Best3DeadliftKg,2585
+Snatch-Grip Behind-Neck Press in Deep Squat,Best3SquatKg,2586
+Sots Press,Best3BenchKg,2587
+Speed Bench,Cardio_Core,2589
+Speed Bench Press,Cardio_Core,2590
+Speed Deadlift,Cardio_Core,2591
+Speed Deadlifts,Cardio_Core,2592
+Speed Squat,Cardio_Core,2594
+Spider Curl,Best3DeadliftKg,2595
+Spider Front Raises,Best3BenchKg,2597
+Split Squat (Barbell),Best3SquatKg,2602
+Split Squat (Smith Machine),Best3SquatKg,2605
+Split Squat Front Foot Elevated (Smith Machine),Best3SquatKg,2606
+Split stance KB Windmill,Best3SquatKg,2608
+Squat (Barbell),Best3SquatKg,2612
+Squat (Dumbbell),Best3SquatKg,2614
+Squat Heel Elavates,Best3SquatKg,2618
+Squat Pin Presses,Best3SquatKg,2619
+Squat Press,Best3SquatKg,2620
+Squat To Overhead Press,Best3SquatKg,2623
+Squats (Pin),Best3SquatKg,2627
+Stability Ball Crunch,Cardio_Core,2628
+Staggered Trap Bar,Best3DeadliftKg,2630
+Stair Stepper,Best3SquatKg,2633
+Stairmaster,Cardio_Core,2634
+Stairs,Cardio_Core,2635
+Standing Behind Neck Shoulder Press (Barbell),Best3BenchKg,2637
+Standing Cable Abductors,Best3SquatKg,2638
+Standing Cable Hip Abduction,Best3SquatKg,2639
+Standing Cable Row,Best3DeadliftKg,2640
+Standing Calf Raise (Machine),Best3SquatKg,2642
+Standing Close Cable Press,Best3BenchKg,2643
+Standing Cross Body Cable Lateral Raise,Best3DeadliftKg,2644
+Standing Dumbbell Wrist Extensions,Best3DeadliftKg,2645
+Standing Ez-Bar Curl,Best3DeadliftKg,2646
+Standing Hip Flexor March,Best3SquatKg,2647
+Standing Knee Drive,Best3SquatKg,2648
+Standing Leg Curl,Best3DeadliftKg,2649
+Standing Leg Raise with Band,Cardio_Core,2650
+Standing Low Cable Chest Press,Best3BenchKg,2651
+Standing Overhead Extension,Best3BenchKg,2654
+"Standing Overhead Press (Smith Machine, Push Press)",Best3DeadliftKg,2655
+Standing Reverse Fly,Best3BenchKg,2658
+Standing Shoulder Press,Best3BenchKg,2660
+Standing Shoulder Press (Dumbbell),Best3BenchKg,2661
+Standing Side Crunch,Cardio_Core,2662
+Standing Side-Leg Raises (Band),Cardio_Core,2663
+Standng Calf Raise (Machine),Best3SquatKg,2667
+Static Curl,Best3DeadliftKg,2668
+Steady-State Cardio,Cardio_Core,2673
+Steal Starts 10 Yards,Cardio_Core,2674
+Step downs,Best3SquatKg,2675
+Stiff Leg Deadlift Or Romanian Deadlift (Swap This Out For Either),Best3DeadliftKg,2682
+Stiff Leg Deficit Deadlift,Best3DeadliftKg,2683
+Stiff Leg Zercher Deadlift,Best3DeadliftKg,2684
+Straigh bar - Cable pull down,Best3DeadliftKg,2687
+Straight Arm Cable Pulldown,Best3DeadliftKg,2688
+Straight Arm Chest Raise,Best3BenchKg,2689
+Straight Arm Lat Pull Down (12-15),Best3DeadliftKg,2690
+Straight Arm Pull Down,Best3DeadliftKg,2691
+Straight Arm Pull Downs,Best3DeadliftKg,2692
+Straight Arm Pulldown,Best3DeadliftKg,2693
+Straight Arm Push down,Best3BenchKg,2694
+Straight Back Kickbacks,Best3BenchKg,2696
+Straight Bar Cable Extensions,Best3DeadliftKg,2697
+Straight Bar Lat Extension,Best3DeadliftKg,2698
+Straight Bar Wrist Curl,Best3DeadliftKg,2699
+Straight Leg Bounds 20 Yards,Cardio_Core,2700
+Straight Leg Calf Raise,Best3SquatKg,2701
+Straight Leg Calf Raise 2,Best3SquatKg,2702
+Straight Leg Deadlift,Best3DeadliftKg,2703
+Straight Leg Shuffle 20 Yrds,Cardio_Core,2704
+Straight-Arm Pushdown,Best3BenchKg,2707
+Straight-Bar Overhead Triceps Extension (Cable),Best3BenchKg,2708
+Strict Curl,Best3DeadliftKg,2716
+Suitcase Deadlift,Best3DeadliftKg,2720
+Sumo Box Squat,Best3SquatKg,2721
+Sumo Deadlift (Barbell),Best3DeadliftKg,2722
+Sumo Deadlift (Box),Best3DeadliftKg,2723
+Sumo Deadlift (Dumbbell),Best3DeadliftKg,2724
+Sumo Deadlift (Paused),Best3DeadliftKg,2725
+Sumo SLDL,Best3DeadliftKg,2727
+Sumo Squat,Best3SquatKg,2728
+Sumo Squat Belt Squat,Best3SquatKg,2729
+Sumo Stiff Leg Deadlift,Best3DeadliftKg,2730
+Super ROM Lateral Dumbbell Raise,Best3DeadliftKg,2731
+Super ROM Overhead Cable Row,Best3DeadliftKg,2733
+Super-Wide Weighted Pull-Ups,Best3DeadliftKg,2734
+SuperWideGrip Pull-Ups (Weighted),Best3DeadliftKg,2735
+Superman,Cardio_Core,2736
+Superman Alternating Sides,Cardio_Core,2737
+Superman Quad,Cardio_Core,2739
+Supinated Chest Supported Row (Machine),Best3DeadliftKg,2740
+Supinated Grip Chin-ups,Best3DeadliftKg,2741
+Supine Scorpions,Cardio_Core,2742
+Swan Dive,Cardio_Core,2743
+Swiss Ball Leg Curl,Best3DeadliftKg,2745
+T Bar Rows,Best3DeadliftKg,2747
+T-Bar Row (Chest Supported),Best3DeadliftKg,2750
+TNF Row (upper Back),Best3DeadliftKg,2752
+TRX Facepull,Best3DeadliftKg,2756
+TRX High Row,Best3DeadliftKg,2758
+TRX Row,Best3DeadliftKg,2759
+TRX T,Best3DeadliftKg,2762
+Tate Press,Best3BenchKg,2763
+Tempo Bench Press,Best3BenchKg,2765
+Tempo Deadlift,Best3DeadliftKg,2767
+Tempo Overhead Press,Best3BenchKg,2769
+Tempo Overheadpress,Best3BenchKg,2770
+Tempo Press,Best3BenchKg,2771
+Tempo Squat (Barbell),Best3SquatKg,2774
+Terminal Knee Extensions (TKEs) w/ band,Cardio_Core,2777
+Thruster (Barbell),Best3SquatKg,2781
+Tib Raises,Best3BenchKg,2784
+Tibia Raise,Best3BenchKg,2785
+Tibialis Curl,Best3DeadliftKg,2788
+Tibialis Raises,Best3BenchKg,2790
+Toe Press,Best3BenchKg,2794
+Toe Press Leg Press,Best3SquatKg,2795
+Top To Bottom Cable Flyes,Best3BenchKg,2799
+Towel Forearm Hold (Optional),Best3DeadliftKg,2801
+Trap Bar Deadlift,Best3DeadliftKg,2804
+Trap Bar Deadlift (Paused),Best3DeadliftKg,2805
+Trap Bar Farmers Walk,Cardio_Core,2806
+Trap Bar Jump,Cardio_Core,2807
+Trap Bar Jumps,Cardio_Core,2808
+Trap Bar Power Shrug,Best3DeadliftKg,2809
+Trap Bar RDL,Best3DeadliftKg,2810
+Trap Bar Shrug,Best3DeadliftKg,2811
+Treadmill,Cardio_Core,2813
+Tricep Dips,Best3BenchKg,2818
+Tricep Extension (Banded),Cardio_Core,2820
+Tricep Extension (Barbell),Best3BenchKg,2821
+Tricep Extension (Cable),Best3BenchKg,2822
+Tricep Extension (Dumbbell),Best3BenchKg,2823
+Tricep Extension (Resistance Band),Cardio_Core,2825
+Tricep Extension Pulldowns Band,Cardio_Core,2826
+Tricep Kick Back,Best3BenchKg,2827
+Tricep Kickback,Best3BenchKg,2828
+Tricep Kickback (Cable),Best3BenchKg,2829
+Tricep Kickbacks,Best3BenchKg,2830
+Tricep Overhead Extension (Dumbbell),Best3BenchKg,2831
+Tricep Pressdown,Best3BenchKg,2832
+Tricep Push Up,Best3BenchKg,2835
+Tricep Pushdown,Best3BenchKg,2836
+Tricep Pushdown (Straight Bar),Best3BenchKg,2838
+Tricep Tate Press,Best3BenchKg,2841
+Tricep-Pressdown,Best3BenchKg,2842
+Triceps Extension (Straight Bar),Best3BenchKg,2844
+Triceps Rope Above Head,Best3BenchKg,2848
+Triceps press,Best3BenchKg,2849
+Triple Broad Jump,Cardio_Core,2850
+Tube Walk,Cardio_Core,2851
+Turkish Get Up,Best3DeadliftKg,2852
+Turkish Get-Ups,Best3DeadliftKg,2853
+"Twisted ""T"" Planks",Cardio_Core,2855
+Twisting Bench Crunches,Cardio_Core,2856
+Twists,Cardio_Core,2857
+Type Writer Pull Up,Best3DeadliftKg,2859
+Underhand Fly (Cable),Best3BenchKg,2860
+Underhand Lat Pulldown,Best3DeadliftKg,2861
+Underhand Pull-down biceps,Best3DeadliftKg,2862
+Underhand Row,Best3DeadliftKg,2863
+Underhand Rows (Machine),Best3DeadliftKg,2864
+Unilateral Cable Rear Delt Fly,Best3DeadliftKg,2867
+Unilateral Hip Adductor,Best3SquatKg,2868
+Unilateral Lat Focused Row,Best3DeadliftKg,2869
+Unilateral Low Cable Fly,Best3DeadliftKg,2871
+Unilateral Preacher Curl,Best3DeadliftKg,2872
+Unilateral Preacher Curl (Dumbbell) Hammer,Best3DeadliftKg,2873
+Unilateral Preacher Curl (Dumbbell) Normal,Best3DeadliftKg,2874
+Unilateral Preacher Curl Machine,Best3DeadliftKg,2875
+Unilateral Smith Machine (close Grip),Best3DeadliftKg,2876
+Unilateral Tricep Cable Pushdown(Rope),Best3DeadliftKg,2877
+Unilaterel Leg Extension,Best3SquatKg,2878
+Up Down Plank,Cardio_Core,2879
+Upper Back Row,Best3DeadliftKg,2882
+Upper Back Rows,Best3DeadliftKg,2883
+Upright Row (Cable),Best3DeadliftKg,2889
+Upright Row (Dumbbell),Best3DeadliftKg,2890
+V Bar Over Head Extension,Best3DeadliftKg,2891
+V-Bar Lat Pulldown,Best3DeadliftKg,2892
+V-Bar Lat Pulldowns,Best3DeadliftKg,2893
+V-Bar Pulldown,Best3DeadliftKg,2894
+V-Grip Barbell Row,Best3DeadliftKg,2895
+V-Handle Tricep Pushdown (Cable),Best3BenchKg,2896
+V-Stance Leg Press,Best3SquatKg,2897
+V-Up,Cardio_Core,2898
+V-squat,Best3SquatKg,2899
+Vatsat,Cardio_Core,2901
+Vertical Crunch,Cardio_Core,2902
+Vertical Jump,Cardio_Core,2903
+Vertical traction,Best3DeadliftKg,2904
+Viking Press,Best3BenchKg,2905
+Waiter Curl,Best3DeadliftKg,2907
+Walk,Cardio_Core,2908
+Walking Lunge (Barbell),Cardio_Core,2911
+Walking Lunge (Weighted),Cardio_Core,2913
+Walking Lunges,Cardio_Core,2914
+Walking Lunges w/ Pulse,Cardio_Core,2916
+Wall Assisted Handstand Pushup,Best3BenchKg,2920
+Wall Press Dead Bug,Best3BenchKg,2921
+Wall Push Up,Best3BenchKg,2922
+Wall Sit,Cardio_Core,2923
+Wall Sit Hold,Best3SquatKg,2924
+Wall Tib Raise,Best3BenchKg,2925
+Way Bent Over Row,Best3DeadliftKg,2932
+Weighted Alternating Lunge Jump,Cardio_Core,2935
+Weighted Ankle Stretch (Goblet Hold),Cardio_Core,2936
+Weighted Deficit Push-up,Best3BenchKg,2939
+Weighted Hanging Leg Raises,Best3BenchKg,2943
+Weighted Hanging Oblique Knee Raise,Best3BenchKg,2944
+Weighted Knee Raises,Best3BenchKg,2945
+Weighted Pause Pull Ups,Best3DeadliftKg,2948
+Weighted Sit Up,Cardio_Core,2953
+Weighted Sit Ups,Cardio_Core,2954
+Weighted Wall Sits,Best3SquatKg,2956
+Wide Grip Assisted Pull Up,Best3DeadliftKg,2960
+Wide Grip Cable Curls,Best3DeadliftKg,2961
+Wide Grip Chest Press,Best3BenchKg,2963
+Wide Grip Incline Benchpress,Best3BenchKg,2965
+Wide Grip Lat Pulldown,Best3DeadliftKg,2966
+Wide Grip Pull-Up,Best3DeadliftKg,2967
+Wide Grip Pull-Up (Weighted),Best3DeadliftKg,2968
+Wide Grip Rear Pull-Up,Best3DeadliftKg,2970
+Wide Grip Tricep Push Down,Best3BenchKg,2972
+Wide MAG Pulldowns,Best3DeadliftKg,2973
+Wide Neutral Pulldown,Best3DeadliftKg,2974
+Wide Neutral Pullups,Best3DeadliftKg,2975
+Wide Overhand Pulldown,Best3DeadliftKg,2976
+Wide Row,Best3DeadliftKg,2977
+Wide Stance Rdl,Best3DeadliftKg,2979
+Wide Stance Sumo Squats,Best3SquatKg,2980
+Wide-Grip Pull-Up (Weighted),Best3DeadliftKg,2981
+Windshield Wipers,Cardio_Core,2984
+Wood Chop (High To Low),Best3DeadliftKg,2987
+Wrist Cable Supination,Best3DeadliftKg,2992
+Wrist Curl (Cable),Best3DeadliftKg,2993
+Wrist Curls (Cable),Best3DeadliftKg,2996
+Wrist Curls (Dumbbell),Best3DeadliftKg,2997
+Y Raise,Best3BenchKg,3008
+Y Raise (Dumbbell),Best3BenchKg,3009
+Yoke,Best3DeadliftKg,3016
+Yoke Carry,Best3SquatKg,3017
+Yoke Walk,Cardio_Core,3018
+Z Press,Best3BenchKg,3019
+Z Press (Barbell),Best3BenchKg,3020
+Z-Press (Dumbbell),Best3BenchKg,3022
+Z-Sit Shoulder Press,Best3BenchKg,3023
+Zercher Front-Foot Elevated Split Squat,Best3SquatKg,3025
+Zercher Good Morning,Best3DeadliftKg,3026
+Zercher Lunges,Best3SquatKg,3027
+Zercher RDL,Best3DeadliftKg,3029
+Zercher Reverse Lunge,Best3SquatKg,3030
+Zercher Walks,Cardio_Core,3032
+Zottman Curl,Best3DeadliftKg,3033
+Zottman Curls,Best3DeadliftKg,3035
+ab wheel weighted,Cardio_Core,3036
+abductor chair,Best3SquatKg,3037
+cable press around,Best3BenchKg,3040
+circus press,Best3BenchKg,3042
+dead hang time,Best3DeadliftKg,3044
+hip adduction (Cable),Best3SquatKg,3046
+kettlebell biceps,Best3DeadliftKg,3048
+machine preacher curl,Best3DeadliftKg,3049
+shrug,Best3DeadliftKg,3053
+standing overhead press,Best3BenchKg,3054
+zercher deadlift,Best3DeadliftKg,3057
