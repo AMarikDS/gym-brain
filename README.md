@@ -28,7 +28,7 @@ cd gym-brain
 
 2. Start the services using Docker Compose:
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 3. Access the web interface:
