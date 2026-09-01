@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gym-brain-backend"
+version = "0.1.0"
+description = "FastAPI backend for Gym Brain ML recommender system"
+authors = ["AMarikDS"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.111.0"
+uvicorn = "^0.30.0"
+pydantic = "^2.7.0"
+pandas = "^2.2.0"
+catboost = "^1.2.0"
+torch = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
