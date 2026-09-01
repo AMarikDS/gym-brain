@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir poetry reflex
 COPY pyproject.toml ./
 
 RUN poetry config virtualenvs.create false \
-    && poetry install --no-interaction --no-ansi
+    && poetry install --no-interaction --no-ansi --no-root
 
 COPY . .
 
