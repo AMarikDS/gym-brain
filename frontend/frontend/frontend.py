@@ -100,7 +100,7 @@ class State(rx.State):
         self.history_names = []
         await self.add_exercise(first_ex_id, first_ex_name, raw_eq)
 
-    def reset(self):
+    def reset_workout(self):
         self.history_ids = []
         self.history_names = []
         self.recommendations = []
@@ -213,7 +213,7 @@ def workout_builder():
                         )
                     )
                 ),
-                rx.button("Reset Workout", on_click=State.reset, color_scheme="red", mt="4")
+                rx.button("Reset Workout", on_click=State.reset_workout, color_scheme="red", mt="4")
             ),
             rx.box(
                 rx.text("Start your workout by choosing the first exercise. (Example IDs used for UI demo)"),
