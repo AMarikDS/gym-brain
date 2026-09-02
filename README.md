@@ -35,7 +35,7 @@ docker compose up --build
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 4. Access the API documentation:
-Open [http://localhost:8080/docs](http://localhost:8080/docs) in your browser.
+Open [http://localhost:8001/docs](http://localhost:8001/docs) in your browser.
 
 ## Project Structure 📁
 
