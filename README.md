@@ -1,8 +1,8 @@
-# Gym Brain AI 🏋️‍♂️🧠
+# Gym Brain AI
 
 A Two-Stage AI Recommender System (Transformer + CatBoost) for dynamic fitness workouts, providing personalized exercise sequencing and target weight predictions.
 
-## Architecture 🏛
+## Architecture
 
 This project follows a Microservices architecture using modern Python tooling:
 
@@ -12,13 +12,13 @@ This project follows a Microservices architecture using modern Python tooling:
 4. **Backend (FastAPI)**: Serves the Machine Learning models via a high-performance REST API.
 5. **Frontend (Reflex)**: A reactive and modern web application UI that communicates with the Backend.
 
-## Tech Stack ⚙️
+## Tech Stack
 - **Machine Learning**: PyTorch, CatBoost, Pandas
 - **Backend**: FastAPI, Uvicorn, Pydantic, Poetry
 - **Frontend**: Reflex
 - **Infrastructure**: Docker, Docker Compose
 
-## How to Run Locally 🐳
+## How to Run Locally
 
 1. Clone the repository:
 ```bash
@@ -37,8 +37,9 @@ Open [http://localhost:3001](http://localhost:3001) in your browser.
 4. Access the API documentation:
 Open [http://localhost:8001/docs](http://localhost:8001/docs) in your browser.
 
-## Project Structure 📁
+## Project Structure
 
-- `backend/` - FastAPI application, REST endpoints, ML service, and model assets (`vocab.json`, `*.cbm`, `*.pth`).
+- `models/` - Contains all machine learning weights and mappings (`vocab.json`, `*.cbm`, `*.pth`).
+- `backend/` - FastAPI application, REST endpoints, and ML inference service.
 - `frontend/` - Reflex UI application.
-- `notebooks/` - Original Jupyter notebooks used for training the models and exploring data.
+- `notebooks/` - Original Jupyter notebooks used for training the models and exploring data (Excluded from Git).

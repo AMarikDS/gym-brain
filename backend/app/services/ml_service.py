@@ -43,7 +43,7 @@ class MLService:
     """
     def __init__(self):
         self.device = torch.device("cpu")
-        self.assets_dir = os.path.join(os.path.dirname(__file__), "..", "model_assets")
+        self.assets_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "models"))
         
         # Load Vocab
         with open(os.path.join(self.assets_dir, 'vocab.json'), 'r') as f:
