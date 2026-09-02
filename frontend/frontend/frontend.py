@@ -15,6 +15,24 @@ class State(rx.State):
     squat: str = "0"
     bench: str = "0"
     deadlift: str = "0"
+
+    def set_level(self, val: str):
+        self.level = val
+
+    def set_goal(self, val: str):
+        self.goal = val
+
+    def set_equipment(self, val: str):
+        self.equipment = val
+
+    def set_squat(self, val: str):
+        self.squat = val
+
+    def set_bench(self, val: str):
+        self.bench = val
+
+    def set_deadlift(self, val: str):
+        self.deadlift = val
     
     # Workout State
     history_ids: List[int] = []
