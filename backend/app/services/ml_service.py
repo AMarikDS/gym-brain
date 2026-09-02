@@ -46,7 +46,7 @@ class MLService:
         self.assets_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "models"))
         
         # Load Vocab
-        with open(os.path.join(self.assets_dir, 'vocab.json'), 'r') as f:
+        with open(os.path.join(self.assets_dir, 'encoder', 'vocab.json'), 'r') as f:
             self.vocab = json.load(f)
         self.id2name = {int(v): k for k, v in self.vocab.items()}
         
@@ -58,14 +58,14 @@ class MLService:
             self.exercise_meta_dict = {}
 
         try:
-            df_equip = pd.read_csv(os.path.join(self.assets_dir, "id_to_equipment_mapping_FIXED.csv"))
+            df_equip = pd.read_csv(os.path.join(self.assets_dir, "metadata", "id_to_equipment_mapping_FIXED.csv"))
             self.id_to_eq_dict = df_equip.set_index('candidate_id')['equipment_golden'].to_dict()
         except Exception:
             self.id_to_eq_dict = {}
 
         # Load Transformer
         self.transformer = TransformerRec(vocab_size=len(self.vocab)).to(self.device)
-        bert_path = os.path.join(self.assets_dir, 'gym_bert_v2_ep27_hit0.3522.pth')
+        bert_path = os.path.join(self.assets_dir, 'encoder', 'gym_bert_v2_ep27_hit0.3522.pth')
         if os.path.exists(bert_path):
             self.transformer.load_state_dict(torch.load(bert_path, map_location=self.device))
             self.transformer.eval()
@@ -73,20 +73,20 @@ class MLService:
 
         # Load CatBoost Classifier
         self.cat_ranker = CatBoostClassifier()
-        cat_path = os.path.join(self.assets_dir, 'catboost_recommender_final.cbm')
+        cat_path = os.path.join(self.assets_dir, 'ranker', 'catboost_recommender_final.cbm')
         if os.path.exists(cat_path):
             self.cat_ranker.load_model(cat_path)
             print("Loaded CatBoost Ranker")
 
         # Load CatBoost Regressors
         self.regressor_light = CatBoostRegressor()
-        light_path = os.path.join(self.assets_dir, 'weight_predictor_light.cbm')
+        light_path = os.path.join(self.assets_dir, 'regressor', 'weight_predictor_light.cbm')
         if os.path.exists(light_path):
             self.regressor_light.load_model(light_path)
             print("Loaded Regressor LIGHT")
 
         self.regressor_pro = CatBoostRegressor()
-        pro_path = os.path.join(self.assets_dir, 'weight_predictor_pro.cbm')
+        pro_path = os.path.join(self.assets_dir, 'regressor', 'weight_predictor_pro.cbm')
         if os.path.exists(pro_path):
             self.regressor_pro.load_model(pro_path)
             print("Loaded Regressor PRO")
