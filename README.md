@@ -32,7 +32,7 @@ docker compose up --build
 ```
 
 3. Access the web interface:
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3001](http://localhost:3001) in your browser.
 
 4. Access the API documentation:
 Open [http://localhost:8001/docs](http://localhost:8001/docs) in your browser.
