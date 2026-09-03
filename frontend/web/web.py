@@ -37,6 +37,8 @@ class State(rx.State):
     def set_squat(self, val: str): self.squat = val
     def set_bench(self, val: str): self.bench = val
     def set_deadlift(self, val: str): self.deadlift = val
+    def set_age(self, val: str): self.age = val
+    def set_bw(self, val: str): self.bw = val
     
     def next_step(self):
         if self.current_step < 4:
