@@ -378,7 +378,7 @@ def step_4_workspace():
                     size="3",
                     width="100%"
                 ),
-                width=["100%", "100%", "35%"],
+                width="35%",
                 p="4",
             ),
             
@@ -398,11 +398,11 @@ def step_4_workspace():
                         pr="2"
                     )
                 ),
-                width=["100%", "100%", "65%"],
+                width="65%",
                 p="4",
-                border_left=["none", "none", "1px solid rgba(255,255,255,0.1)"]
+                border_left="1px solid rgba(255,255,255,0.1)"
             ),
-            direction=["column", "column", "row"],
+            direction="row",
             spacing="6",
             align_items="flex-start"
         ),
