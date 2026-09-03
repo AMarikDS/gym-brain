@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y curl unzip gcc python3-dev && \
     apt-get install -y nodejs && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir poetry reflex
+RUN pip install --no-cache-dir poetry
 
 COPY pyproject.toml ./
 
