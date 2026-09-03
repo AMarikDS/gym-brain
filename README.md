@@ -2,20 +2,29 @@
 
 A Two-Stage AI Recommender System (Transformer + CatBoost) for dynamic fitness workouts, providing personalized exercise sequencing and target weight predictions.
 
-## Architecture
+## 🧠 AI Pipeline & Data Flow
 
-This project follows a Microservices architecture using modern Python tooling:
+This project follows a Microservices architecture powered by a 3-stage Machine Learning pipeline:
 
-1. **Candidate Generation (TransformerRec / BERT)**: Encodes the user's workout history and generates candidate exercises.
-2. **Reranking (CatBoost Classifier)**: Takes the top candidates and reranks them based on user context (Level, Goal, Equipment) and muscle group continuity.
-3. **Target Regression (CatBoost Regressor - Pro/Light)**: Predicts the optimal working weight and reps for the next chosen exercise. The "Pro" version leverages known 1RM stats (Squat, Bench, Deadlift) for extreme accuracy, while the "Light" version solves the cold-start problem using standard demographics.
-4. **Backend (FastAPI)**: Serves the Machine Learning models via a high-performance REST API.
-5. **Frontend (Reflex)**: A reactive and modern web application UI that communicates with the Backend.
+### 1. Candidate Generation (TransformerRec / BERT)
+- **What it does:** Acts as the brain for sequencing, understanding the context of your workout.
+- **Input:** A sequence of past exercise IDs (your current workout history).
+- **Output:** A list of Top-N potential next exercises, scored by their contextual relevance (`bert_score`).
 
-## Tech Stack
+### 2. Reranking (CatBoost Ranker)
+- **What it does:** Filters and personalizes the raw AI suggestions.
+- **Input:** User profile (Sex, Age, Bodyweight, Goal, Level, Equipment constraints) + Candidate exercises from the Transformer.
+- **Output:** A re-ranked list of exercises sorted by a personalized relevance score (`final_score`).
+
+### 3. Target Regression (CatBoost Regressor Pro / Light)
+- **What it does:** Accurately predicts the optimal working weight and reps for your next exercise.
+- **Input:** The selected exercise + User profile (+ SBD 1RM stats for the Pro model).
+- **Output:** Predicted optimal weight (kg) and target repetitions.
+
+## 🛠 Tech Stack
 - **Machine Learning**: PyTorch, CatBoost, Pandas
 - **Backend**: FastAPI, Uvicorn, Pydantic, Poetry
-- **Frontend**: Reflex
+- **Frontend**: Reflex (Reactive Python UI framework)
 - **Infrastructure**: Docker, Docker Compose
 
 ## How to Run Locally
