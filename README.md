@@ -1,8 +1,22 @@
-# Gym Brain AI
+<div align="center">
+  <h1>Gym Brain AI</h1>
+  <p><b>Hyper-Personalized Fitness Intelligence</b></p>
 
-A Two-Stage AI Recommender System (Transformer + CatBoost) for dynamic fitness workouts, providing personalized exercise sequencing and target weight predictions.
+  <p>
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
+    <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+    <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+  </p>
 
-## 🧠 AI Pipeline & Data Flow
+  <p>
+    <i>A Two-Stage AI Recommender System (Transformer + CatBoost) for dynamic fitness workouts, providing personalized exercise sequencing and target weight predictions.</i>
+  </p>
+</div>
+
+<hr/>
+
+## AI Pipeline & Data Flow
 
 This project follows a Microservices architecture powered by a 3-stage Machine Learning pipeline:
 
@@ -21,7 +35,7 @@ This project follows a Microservices architecture powered by a 3-stage Machine L
 - **Input:** The selected exercise + User profile (+ SBD 1RM stats for the Pro model).
 - **Output:** Predicted optimal weight (kg) and target repetitions.
 
-## 🛠 Tech Stack
+## Tech Stack
 - **Machine Learning**: PyTorch, CatBoost, Pandas
 - **Backend**: FastAPI, Uvicorn, Pydantic, Poetry
 - **Frontend**: Reflex (Reactive Python UI framework)

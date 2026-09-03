@@ -118,7 +118,7 @@ class State(rx.State):
                     data = resp.json()
                     weight = data.get("weight", 0)
                     reps = data.get("reps", 0)
-                    self.current_prediction = f"🎯 Optimal Target: {weight} kg x {reps} reps"
+                    self.current_prediction = f"Optimal Target: {weight} kg x {reps} reps"
         except Exception as e:
             print(e)
             
