@@ -180,7 +180,7 @@ def step_1_bio():
                 rx.select(
                     ["Novice", "Beginner", "Intermediate", "Advanced"], 
                     value=State.level, on_change=State.set_level,
-                    variant="soft", color_scheme="gray", size="3"
+                    variant="surface", color_scheme="cyan", size="3", style={"color": "white"}
                 ),
             ),
             rx.box(
@@ -188,7 +188,7 @@ def step_1_bio():
                 rx.select(
                     ['Powerbuilding', 'Bodybuilding', 'Athletics', 'Powerlifting', 'Muscle & Sculpting', 'Bodyweight Fitness', 'Fitness'], 
                     value=State.goal, on_change=State.set_goal,
-                    variant="soft", color_scheme="gray", size="3"
+                    variant="surface", color_scheme="cyan", size="3", style={"color": "white"}
                 ),
             ),
             rx.box(
@@ -196,16 +196,16 @@ def step_1_bio():
                 rx.select(
                     ['Male', 'Female'], 
                     value=State.sex, on_change=State.set_sex,
-                    variant="soft", color_scheme="gray", size="3"
+                    variant="surface", color_scheme="cyan", size="3", style={"color": "white"}
                 ),
             ),
             rx.box(
                 rx.text("Age", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.age, on_change=State.set_age, type="number", variant="soft", color_scheme="gray", size="3"),
+                rx.input(value=State.age, on_change=State.set_age, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
             ),
             rx.box(
                 rx.text("Bodyweight (kg)", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.bw, on_change=State.set_bw, type="number", variant="soft", color_scheme="gray", size="3"),
+                rx.input(value=State.bw, on_change=State.set_bw, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
             ),
             columns="2",
             spacing="6",
@@ -228,20 +228,20 @@ def step_2_stats():
                 rx.select(
                     ['Machine', 'Dumbbell', 'Barbell', 'Bodyweight', 'All (Gym Mixed)'], 
                     value=State.equipment, on_change=State.set_equipment,
-                    variant="soft", color_scheme="gray", size="3"
+                    variant="surface", color_scheme="cyan", size="3", style={"color": "white"}
                 ),
             ),
             rx.box(
                 rx.text("Squat 1RM (kg)", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.squat, on_change=State.set_squat, type="number", variant="soft", color_scheme="gray", size="3"),
+                rx.input(value=State.squat, on_change=State.set_squat, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
             ),
             rx.box(
                 rx.text("Bench 1RM (kg)", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.bench, on_change=State.set_bench, type="number", variant="soft", color_scheme="gray", size="3"),
+                rx.input(value=State.bench, on_change=State.set_bench, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
             ),
             rx.box(
                 rx.text("Deadlift 1RM (kg)", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.deadlift, on_change=State.set_deadlift, type="number", variant="soft", color_scheme="gray", size="3"),
+                rx.input(value=State.deadlift, on_change=State.set_deadlift, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
             ),
             columns="2",
             spacing="6",
@@ -422,8 +422,7 @@ def index():
                 (4, step_4_workspace()),
                 step_1_bio()
             ),
-            # Increase max width depending on the step
-            max_width=rx.cond(State.current_step == 4, "1200px", "800px"),
+            max_width="1200px",
             margin_x="auto",
             padding_y="10",
             transition="max-width 0.4s ease-in-out"
