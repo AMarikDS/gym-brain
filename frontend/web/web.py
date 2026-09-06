@@ -180,7 +180,7 @@ def step_1_bio():
                 rx.select(
                     ["Novice", "Beginner", "Intermediate", "Advanced"], 
                     value=State.level, on_change=State.set_level,
-                    variant="soft", color_scheme="gray", color="white", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}
+                    variant="soft", color_scheme="cyan", size="3", style={"background_color": "rgba(0,0,0,0.5)", "border": "1px solid rgba(255,255,255,0.2)"}
                 ),
             ),
             rx.box(
@@ -188,7 +188,7 @@ def step_1_bio():
                 rx.select(
                     ['Powerbuilding', 'Bodybuilding', 'Athletics', 'Powerlifting', 'Muscle & Sculpting', 'Bodyweight Fitness', 'Fitness'], 
                     value=State.goal, on_change=State.set_goal,
-                    variant="soft", color_scheme="gray", color="white", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}
+                    variant="soft", color_scheme="cyan", size="3", style={"background_color": "rgba(0,0,0,0.5)", "border": "1px solid rgba(255,255,255,0.2)"}
                 ),
             ),
             rx.box(
@@ -196,7 +196,7 @@ def step_1_bio():
                 rx.select(
                     ['Male', 'Female'], 
                     value=State.sex, on_change=State.set_sex,
-                    variant="soft", color_scheme="gray", color="white", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}
+                    variant="soft", color_scheme="cyan", size="3", style={"background_color": "rgba(0,0,0,0.5)", "border": "1px solid rgba(255,255,255,0.2)"}
                 ),
             ),
             rx.box(
@@ -228,7 +228,7 @@ def step_2_stats():
                 rx.select(
                     ['Machine', 'Dumbbell', 'Barbell', 'Bodyweight', 'All (Gym Mixed)'], 
                     value=State.equipment, on_change=State.set_equipment,
-                    variant="soft", color_scheme="gray", color="white", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}
+                    variant="soft", color_scheme="cyan", size="3", style={"background_color": "rgba(0,0,0,0.5)", "border": "1px solid rgba(255,255,255,0.2)"}
                 ),
             ),
             rx.box(
