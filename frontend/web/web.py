@@ -176,36 +176,36 @@ def step_1_bio():
         rx.heading("Step 1: Biological Profile", size="6", color="white", mb="6"),
         rx.grid(
             rx.box(
-                rx.text("Level", size="3", color="gray.200", mb="2", weight="medium"),
+                rx.text("Level", size="3", color="#cbd5e1", mb="2", weight="medium"),
                 rx.select(
                     ["Novice", "Beginner", "Intermediate", "Advanced"], 
                     value=State.level, on_change=State.set_level,
-                    variant="surface", color_scheme="cyan", size="3", style={"color": "white"}
+                    variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}
                 ),
             ),
             rx.box(
-                rx.text("Goal", size="3", color="gray.200", mb="2", weight="medium"),
+                rx.text("Goal", size="3", color="#cbd5e1", mb="2", weight="medium"),
                 rx.select(
                     ['Powerbuilding', 'Bodybuilding', 'Athletics', 'Powerlifting', 'Muscle & Sculpting', 'Bodyweight Fitness', 'Fitness'], 
                     value=State.goal, on_change=State.set_goal,
-                    variant="surface", color_scheme="cyan", size="3", style={"color": "white"}
+                    variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}
                 ),
             ),
             rx.box(
-                rx.text("Sex", size="3", color="gray.200", mb="2", weight="medium"),
+                rx.text("Sex", size="3", color="#cbd5e1", mb="2", weight="medium"),
                 rx.select(
                     ['Male', 'Female'], 
                     value=State.sex, on_change=State.set_sex,
-                    variant="surface", color_scheme="cyan", size="3", style={"color": "white"}
+                    variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}
                 ),
             ),
             rx.box(
-                rx.text("Age", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.age, on_change=State.set_age, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
+                rx.text("Age", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.input(value=State.age, on_change=State.set_age, type="number", variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}),
             ),
             rx.box(
-                rx.text("Bodyweight (kg)", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.bw, on_change=State.set_bw, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
+                rx.text("Bodyweight (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.input(value=State.bw, on_change=State.set_bw, type="number", variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}),
             ),
             columns="2",
             spacing="6",
@@ -224,24 +224,24 @@ def step_2_stats():
         rx.heading("Step 2: Equipment & Base Strength", size="6", color="white", mb="6"),
         rx.grid(
             rx.box(
-                rx.text("Available Equipment", size="3", color="gray.200", mb="2", weight="medium"),
+                rx.text("Available Equipment", size="3", color="#cbd5e1", mb="2", weight="medium"),
                 rx.select(
                     ['Machine', 'Dumbbell', 'Barbell', 'Bodyweight', 'All (Gym Mixed)'], 
                     value=State.equipment, on_change=State.set_equipment,
-                    variant="surface", color_scheme="cyan", size="3", style={"color": "white"}
+                    variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}
                 ),
             ),
             rx.box(
-                rx.text("Squat 1RM (kg)", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.squat, on_change=State.set_squat, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
+                rx.text("Squat 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.input(value=State.squat, on_change=State.set_squat, type="number", variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}),
             ),
             rx.box(
-                rx.text("Bench 1RM (kg)", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.bench, on_change=State.set_bench, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
+                rx.text("Bench 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.input(value=State.bench, on_change=State.set_bench, type="number", variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}),
             ),
             rx.box(
-                rx.text("Deadlift 1RM (kg)", size="3", color="gray.200", mb="2", weight="medium"),
-                rx.input(value=State.deadlift, on_change=State.set_deadlift, type="number", variant="surface", color_scheme="cyan", size="3", style={"color": "white"}),
+                rx.text("Deadlift 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.input(value=State.deadlift, on_change=State.set_deadlift, type="number", variant="soft", color_scheme="gray", size="3", style={"background_color": "rgba(0,0,0,0.5)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)"}),
             ),
             columns="2",
             spacing="6",
