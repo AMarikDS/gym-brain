@@ -186,7 +186,7 @@ class MLService:
                 {
                     "exercise_name": row["name"],
                     "exercise_id": int(row["candidate_id"]),
-                    "final_score": float(row["final_score"]),
+                    "final_score": round(float(row["final_score"]), 2),
                     "bert_score": float(row["bert_score"]),
                     "equipment": row["raw_equipment"],
                 }
@@ -242,7 +242,7 @@ class MLService:
         input_df = pd.DataFrame([input_data])[cols]
         pred = model.predict(Pool(input_df, cat_features=cat_features))[0]
 
-        weight, reps = float(pred[0]), int(pred[1])
+        weight, reps = round(float(pred[0]), 1), int(pred[1])
         eq_clean_val = INVENTORY_MAP.get(raw_eq, "Machine").lower()
 
         if "dumbbell" in eq_clean_val:

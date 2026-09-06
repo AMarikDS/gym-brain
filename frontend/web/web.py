@@ -20,12 +20,6 @@ GLASS_STYLE = {
     "padding": "2rem",
 }
 
-INPUT_STYLE = {
-    "background_color": "#1e293b",
-    "color": "#f8fafc",
-    "border": "1px solid #334155",
-}
-
 class State(rx.State):
     """
     Класс, описывающий глобальное состояние приложения (Wizard-формы и логику ML).
@@ -193,7 +187,7 @@ def hero_section() -> rx.Component:
             rx.text(
                 "Hyper-Personalized Fitness Intelligence",
                 size="4",
-                color="gray.300",
+                color="white",
                 weight="medium",
                 letter_spacing="0.05em",
             ),
@@ -223,7 +217,7 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             rx.box(
@@ -235,7 +229,7 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             rx.box(
@@ -247,7 +241,7 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             rx.box(
@@ -259,7 +253,7 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             rx.box(
@@ -271,16 +265,18 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             columns="2",
             spacing="6",
         ),
         rx.flex(
-            rx.spacer(),
-            rx.button("Next Step", on_click=State.next_step, size="4", color_scheme="cyan", mt="8"),
+            rx.button("Next Step", on_click=State.next_step, size="4", color_scheme="cyan"),
             width="100%",
+            justify="end",
+            align="center",
+            mt="9"
         ),
         style=GLASS_STYLE,
         mb="8",
@@ -301,7 +297,7 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             rx.box(
@@ -313,7 +309,7 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             rx.box(
@@ -325,7 +321,7 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             rx.box(
@@ -337,17 +333,19 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    style=INPUT_STYLE,
+                    
                 ),
             ),
             columns="2",
             spacing="6",
         ),
         rx.flex(
-            rx.button("Back", on_click=State.prev_step, size="4", variant="soft", color_scheme="gray", mt="8"),
-            rx.spacer(),
-            rx.button("Review Profile", on_click=State.next_step, size="4", color_scheme="cyan", mt="8"),
+            rx.button("Back", on_click=State.prev_step, size="4", style={"background_color": "rgba(255,255,255,0.1)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)", "cursor": "pointer"}),
+            rx.button("Review Profile", on_click=State.next_step, size="4", color_scheme="cyan"),
             width="100%",
+            justify="between",
+            align="center",
+            mt="9"
         ),
         style=GLASS_STYLE,
         mb="8",
@@ -360,19 +358,19 @@ def step_3_summary() -> rx.Component:
         rx.heading("Step 3: Neural Initialization", size="6", color="white", mb="6"),
         rx.text(
             "Please confirm your parameters before the AI generates your dynamic workout trajectory.",
-            color="gray.300",
+            color="white",
             mb="6",
             size="3",
         ),
         rx.box(
             rx.grid(
-                rx.text("Profile:", weight="bold", color="cyan.200"),
+                rx.text("Profile:", weight="bold", color="#4facfe"),
                 rx.text(f"{State.sex}, {State.age} yrs, {State.bw} kg", color="white"),
-                rx.text("Goal / Level:", weight="bold", color="cyan.200"),
+                rx.text("Goal / Level:", weight="bold", color="#4facfe"),
                 rx.text(f"{State.goal} ({State.level})", color="white"),
-                rx.text("Equipment:", weight="bold", color="cyan.200"),
+                rx.text("Equipment:", weight="bold", color="#4facfe"),
                 rx.text(State.equipment, color="white"),
-                rx.text("Strength (S/B/D):", weight="bold", color="cyan.200"),
+                rx.text("Strength (S/B/D):", weight="bold", color="#4facfe"),
                 rx.text(f"{State.squat} / {State.bench} / {State.deadlift} kg", color="white"),
                 columns="2",
                 spacing="4",
@@ -405,7 +403,11 @@ def step_3_summary() -> rx.Component:
             spacing="4",
         ),
         rx.flex(
-            rx.button("Edit Settings", on_click=State.prev_step, size="3", variant="soft", color_scheme="gray", mt="8"),
+            rx.button("Edit Settings", on_click=State.prev_step, size="3", style={"background_color": "rgba(255,255,255,0.1)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)", "cursor": "pointer"}),
+            width="100%",
+            justify="start",
+            align="center",
+            mt="9"
         ),
         style=GLASS_STYLE,
         mb="8",
@@ -472,7 +474,7 @@ def step_4_workspace() -> rx.Component:
                 rx.cond(
                     State.current_prediction != "",
                     rx.box(
-                        rx.text("AI Target Prediction", size="2", color="cyan.200", mb="1"),
+                        rx.text("AI Target Prediction", size="2", color="#4facfe", mb="1"),
                         rx.text(State.current_prediction, weight="bold", size="5", color="white"),
                         p="5",
                         mt="6",
@@ -487,7 +489,7 @@ def step_4_workspace() -> rx.Component:
                     on_click=State.reset_workout,
                     color_scheme="red",
                     variant="soft",
-                    mt="8",
+                    mt="9",
                     size="3",
                     width="100%",
                 ),
@@ -523,6 +525,8 @@ def index() -> rx.Component:
     """Главная страница приложения."""
     return rx.box(
         rx.container(
+            rx.script("document.documentElement.classList.add('dark'); document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark');"),
+            
             hero_section(),
             rx.match(
                 State.current_step,
@@ -544,13 +548,5 @@ def index() -> rx.Component:
     )
 
 
-app = rx.App(
-    theme=rx.theme(
-        appearance="dark",
-        has_background=False,
-        radius="large",
-        accent_color="cyan",
-        gray_color="slate",
-    )
-)
+app = rx.App()
 app.add_page(index, title="Gym Brain AI")
