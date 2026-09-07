@@ -25,7 +25,7 @@ jobs:
           
       - name: Backend - Install dependencies
         working-directory: ./backend
-        run: poetry install --no-interaction --no-ansi
+        run: poetry install --no-interaction --no-ansi --no-root
           
       - name: Check code formatting (Black)
         run: |
