@@ -20,6 +20,7 @@ GLASS_STYLE = {
     "padding": "2rem",
 }
 
+
 class State(rx.State):
     """
     Класс, описывающий глобальное состояние приложения (Wizard-формы и логику ML).
@@ -102,13 +103,21 @@ class State(rx.State):
                 "level": self.level,
                 "goal": self.goal,
                 "equipment": self.equipment,
-                "sbd": [float(self.squat or 0.0), float(self.bench or 0.0), float(self.deadlift or 0.0)],
+                "sbd": [
+                    float(self.squat or 0.0),
+                    float(self.bench or 0.0),
+                    float(self.deadlift or 0.0),
+                ],
             }
 
             async with httpx.AsyncClient() as client:
                 resp = await client.post(
                     "http://backend:8080/api/v1/recommend",
-                    json={"history_ids": self.history_ids, "profile": profile, "top_k": 10},
+                    json={
+                        "history_ids": self.history_ids,
+                        "profile": profile,
+                        "top_k": 10,
+                    },
                     timeout=10.0,
                 )
                 if resp.status_code == 200:
@@ -136,26 +145,38 @@ class State(rx.State):
                 "level": self.level,
                 "goal": self.goal,
                 "equipment": self.equipment,
-                "sbd": [float(self.squat or 0.0), float(self.bench or 0.0), float(self.deadlift or 0.0)],
+                "sbd": [
+                    float(self.squat or 0.0),
+                    float(self.bench or 0.0),
+                    float(self.deadlift or 0.0),
+                ],
             }
 
             async with httpx.AsyncClient() as client:
                 resp = await client.post(
                     "http://backend:8080/api/v1/predict_weight",
-                    json={"profile": profile, "exercise_name": ex_name, "raw_equipment": raw_eq},
+                    json={
+                        "profile": profile,
+                        "exercise_name": ex_name,
+                        "raw_equipment": raw_eq,
+                    },
                     timeout=10.0,
                 )
                 if resp.status_code == 200:
                     data = resp.json()
                     weight = data.get("weight", 0)
                     reps = data.get("reps", 0)
-                    self.current_prediction = f"Optimal Target: {weight} kg x {reps} reps"
+                    self.current_prediction = (
+                        f"Optimal Target: {weight} kg x {reps} reps"
+                    )
         except (httpx.RequestError, ValueError) as e:
             print(f"Error predicting weight: {e}")
 
         await self.get_recommendations()
 
-    async def start_workout(self, first_ex_id: int, first_ex_name: str, raw_eq: str) -> None:
+    async def start_workout(
+        self, first_ex_id: int, first_ex_name: str, raw_eq: str
+    ) -> None:
         """Инициализирует сессию первым базовым упражнением."""
         self.history_ids = []
         self.history_names = []
@@ -217,19 +238,23 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             rx.box(
                 rx.text("Goal", size="3", color="#cbd5e1", mb="2", weight="medium"),
                 rx.select(
-                    ["Powerbuilding", "Bodybuilding", "Athletics", "Powerlifting", "Fitness"],
+                    [
+                        "Powerbuilding",
+                        "Bodybuilding",
+                        "Athletics",
+                        "Powerlifting",
+                        "Fitness",
+                    ],
                     value=State.goal,
                     on_change=State.set_goal,
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             rx.box(
@@ -241,7 +266,6 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             rx.box(
@@ -253,11 +277,16 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             rx.box(
-                rx.text("Bodyweight (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Bodyweight (kg)",
+                    size="3",
+                    color="#cbd5e1",
+                    mb="2",
+                    weight="medium",
+                ),
                 rx.input(
                     value=State.bw,
                     on_change=State.set_bw,
@@ -265,18 +294,19 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             columns="2",
             spacing="6",
         ),
         rx.flex(
-            rx.button("Next Step", on_click=State.next_step, size="4", color_scheme="cyan"),
+            rx.button(
+                "Next Step", on_click=State.next_step, size="4", color_scheme="cyan"
+            ),
             width="100%",
             justify="end",
             align="center",
-            mt="9"
+            mt="9",
         ),
         style=GLASS_STYLE,
         mb="8",
@@ -286,10 +316,18 @@ def step_1_bio() -> rx.Component:
 def step_2_stats() -> rx.Component:
     """Генерирует второй шаг Wizard-а (Инвентарь и силовые показатели)."""
     return rx.box(
-        rx.heading("Step 2: Equipment & Base Strength", size="6", color="white", mb="6"),
+        rx.heading(
+            "Step 2: Equipment & Base Strength", size="6", color="white", mb="6"
+        ),
         rx.grid(
             rx.box(
-                rx.text("Available Equipment", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Available Equipment",
+                    size="3",
+                    color="#cbd5e1",
+                    mb="2",
+                    weight="medium",
+                ),
                 rx.select(
                     ["Machine", "Dumbbell", "Barbell", "Bodyweight", "All (Gym Mixed)"],
                     value=State.equipment,
@@ -297,11 +335,12 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             rx.box(
-                rx.text("Squat 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Squat 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"
+                ),
                 rx.input(
                     value=State.squat,
                     on_change=State.set_squat,
@@ -309,11 +348,12 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             rx.box(
-                rx.text("Bench 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Bench 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"
+                ),
                 rx.input(
                     value=State.bench,
                     on_change=State.set_bench,
@@ -321,11 +361,16 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             rx.box(
-                rx.text("Deadlift 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Deadlift 1RM (kg)",
+                    size="3",
+                    color="#cbd5e1",
+                    mb="2",
+                    weight="medium",
+                ),
                 rx.input(
                     value=State.deadlift,
                     on_change=State.set_deadlift,
@@ -333,19 +378,33 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
-                    
                 ),
             ),
             columns="2",
             spacing="6",
         ),
         rx.flex(
-            rx.button("Back", on_click=State.prev_step, size="4", style={"background_color": "rgba(255,255,255,0.1)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)", "cursor": "pointer"}),
-            rx.button("Review Profile", on_click=State.next_step, size="4", color_scheme="cyan"),
+            rx.button(
+                "Back",
+                on_click=State.prev_step,
+                size="4",
+                style={
+                    "background_color": "rgba(255,255,255,0.1)",
+                    "color": "white",
+                    "border": "1px solid rgba(255,255,255,0.2)",
+                    "cursor": "pointer",
+                },
+            ),
+            rx.button(
+                "Review Profile",
+                on_click=State.next_step,
+                size="4",
+                color_scheme="cyan",
+            ),
             width="100%",
             justify="between",
             align="center",
-            mt="9"
+            mt="9",
         ),
         style=GLASS_STYLE,
         mb="8",
@@ -371,7 +430,10 @@ def step_3_summary() -> rx.Component:
                 rx.text("Equipment:", weight="bold", color="#4facfe"),
                 rx.text(State.equipment, color="white"),
                 rx.text("Strength (S/B/D):", weight="bold", color="#4facfe"),
-                rx.text(f"{State.squat} / {State.bench} / {State.deadlift} kg", color="white"),
+                rx.text(
+                    f"{State.squat} / {State.bench} / {State.deadlift} kg",
+                    color="white",
+                ),
                 columns="2",
                 spacing="4",
                 p="6",
@@ -403,11 +465,21 @@ def step_3_summary() -> rx.Component:
             spacing="4",
         ),
         rx.flex(
-            rx.button("Edit Settings", on_click=State.prev_step, size="3", style={"background_color": "rgba(255,255,255,0.1)", "color": "white", "border": "1px solid rgba(255,255,255,0.2)", "cursor": "pointer"}),
+            rx.button(
+                "Edit Settings",
+                on_click=State.prev_step,
+                size="3",
+                style={
+                    "background_color": "rgba(255,255,255,0.1)",
+                    "color": "white",
+                    "border": "1px solid rgba(255,255,255,0.2)",
+                    "cursor": "pointer",
+                },
+            ),
             width="100%",
             justify="start",
             align="center",
-            mt="9"
+            mt="9",
         ),
         style=GLASS_STYLE,
         mb="8",
@@ -421,8 +493,19 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
             rx.box(
                 rx.text(rec["exercise_name"], weight="bold", size="4", color="white"),
                 rx.flex(
-                    rx.badge(rec["equipment"], color_scheme="indigo", variant="soft", size="2", mr="2"),
-                    rx.badge(f"Match Score: {rec['final_score']}", color_scheme="cyan", variant="surface", size="2"),
+                    rx.badge(
+                        rec["equipment"],
+                        color_scheme="indigo",
+                        variant="soft",
+                        size="2",
+                        mr="2",
+                    ),
+                    rx.badge(
+                        f"Match Score: {rec['final_score']}",
+                        color_scheme="cyan",
+                        variant="surface",
+                        size="2",
+                    ),
                     mt="3",
                 ),
             ),
@@ -430,12 +513,17 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
             rx.button(
                 rx.icon(tag="plus", size=20),
                 "Add to Routine",
-                on_click=lambda: State.add_exercise(rec["exercise_id"], rec["exercise_name"], rec["equipment"]),
+                on_click=lambda: State.add_exercise(
+                    rec["exercise_id"], rec["exercise_name"], rec["equipment"]
+                ),
                 size="3",
                 color_scheme="cyan",
                 variant="solid",
                 box_shadow="0 0 15px -3px rgba(6, 182, 212, 0.4)",
-                _hover={"transform": "scale(1.05)", "box_shadow": "0 0 20px 0px rgba(6, 182, 212, 0.6)"},
+                _hover={
+                    "transform": "scale(1.05)",
+                    "box_shadow": "0 0 20px 0px rgba(6, 182, 212, 0.6)",
+                },
             ),
             align_items="center",
         ),
@@ -444,7 +532,10 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
         border_radius="lg",
         bg="rgba(255, 255, 255, 0.05)",
         border="1px solid rgba(255, 255, 255, 0.1)",
-        _hover={"bg": "rgba(255, 255, 255, 0.08)", "border": "1px solid rgba(6, 182, 212, 0.5)"},
+        _hover={
+            "bg": "rgba(255, 255, 255, 0.08)",
+            "border": "1px solid rgba(6, 182, 212, 0.5)",
+        },
         transition="all 0.2s ease",
     )
 
@@ -474,8 +565,15 @@ def step_4_workspace() -> rx.Component:
                 rx.cond(
                     State.current_prediction != "",
                     rx.box(
-                        rx.text("AI Target Prediction", size="2", color="#4facfe", mb="1"),
-                        rx.text(State.current_prediction, weight="bold", size="5", color="white"),
+                        rx.text(
+                            "AI Target Prediction", size="2", color="#4facfe", mb="1"
+                        ),
+                        rx.text(
+                            State.current_prediction,
+                            weight="bold",
+                            size="5",
+                            color="white",
+                        ),
                         p="5",
                         mt="6",
                         border_radius="md",
@@ -500,7 +598,9 @@ def step_4_workspace() -> rx.Component:
                 rx.heading("AI Next Step Generation", size="5", color="white", mb="4"),
                 rx.cond(
                     State.is_loading,
-                    rx.flex(rx.spinner(color="cyan", size="3"), justify="center", p="10"),
+                    rx.flex(
+                        rx.spinner(color="cyan", size="3"), justify="center", p="10"
+                    ),
                     rx.box(
                         rx.foreach(State.recommendations, recommendation_card),
                         max_height="600px",
@@ -525,8 +625,13 @@ def index() -> rx.Component:
     """Главная страница приложения."""
     return rx.box(
         rx.container(
-            rx.script("document.documentElement.classList.add('dark'); document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark');"),
-            
+            rx.script(
+                (
+                    "document.documentElement.classList.add('dark'); "
+                    "document.documentElement.setAttribute('data-theme', 'dark'); "
+                    "localStorage.setItem('theme', 'dark');"
+                )
+            ),
             hero_section(),
             rx.match(
                 State.current_step,

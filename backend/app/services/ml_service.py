@@ -12,10 +12,9 @@ from typing import Any
 
 import pandas as pd
 import torch
+from app.schemas.requests import UserProfile
 from catboost import CatBoostClassifier, CatBoostRegressor, Pool
 from torch import nn
-
-from app.schemas.requests import UserProfile
 
 LEVEL_MAP = {"Novice": 0, "Beginner": 1, "Intermediate": 2, "Advanced": 3, "Elite": 4}
 
@@ -79,7 +78,11 @@ class MLService:
             os.path.join(os.path.dirname(__file__), "..", "..", "..", "models")
         )
 
-        with open(os.path.join(self.assets_dir, "encoder", "vocab.json"), "r", encoding="utf-8") as f:
+        with open(
+            os.path.join(self.assets_dir, "encoder", "vocab.json"),
+            "r",
+            encoding="utf-8",
+        ) as f:
             self.vocab = json.load(f)
         self.id2name = {int(v): k for k, v in self.vocab.items()}
 
@@ -87,33 +90,47 @@ class MLService:
 
         try:
             df_equip = pd.read_csv(
-                os.path.join(self.assets_dir, "metadata", "id_to_equipment_mapping_FIXED.csv")
+                os.path.join(
+                    self.assets_dir, "metadata", "id_to_equipment_mapping_FIXED.csv"
+                )
             )
-            self.id_to_eq_dict = df_equip.set_index("candidate_id")["equipment_golden"].to_dict()
+            self.id_to_eq_dict = df_equip.set_index("candidate_id")[
+                "equipment_golden"
+            ].to_dict()
         except FileNotFoundError:
             self.id_to_eq_dict = {}
 
         self.transformer = TransformerRec(vocab_size=len(self.vocab)).to(self.device)
-        bert_path = os.path.join(self.assets_dir, "encoder", "gym_bert_v2_ep27_hit0.3522.pth")
+        bert_path = os.path.join(
+            self.assets_dir, "encoder", "gym_bert_v2_ep27_hit0.3522.pth"
+        )
         if os.path.exists(bert_path):
-            self.transformer.load_state_dict(torch.load(bert_path, map_location=self.device))
+            self.transformer.load_state_dict(
+                torch.load(bert_path, map_location=self.device)
+            )
             self.transformer.eval()
             print("Loaded Transformer Model")
 
         self.cat_ranker = CatBoostClassifier()
-        cat_path = os.path.join(self.assets_dir, "ranker", "catboost_recommender_final.cbm")
+        cat_path = os.path.join(
+            self.assets_dir, "ranker", "catboost_recommender_final.cbm"
+        )
         if os.path.exists(cat_path):
             self.cat_ranker.load_model(cat_path)
             print("Loaded CatBoost Ranker")
 
         self.regressor_light = CatBoostRegressor()
-        light_path = os.path.join(self.assets_dir, "regressor", "weight_predictor_light.cbm")
+        light_path = os.path.join(
+            self.assets_dir, "regressor", "weight_predictor_light.cbm"
+        )
         if os.path.exists(light_path):
             self.regressor_light.load_model(light_path)
             print("Loaded Regressor LIGHT")
 
         self.regressor_pro = CatBoostRegressor()
-        pro_path = os.path.join(self.assets_dir, "regressor", "weight_predictor_pro.cbm")
+        pro_path = os.path.join(
+            self.assets_dir, "regressor", "weight_predictor_pro.cbm"
+        )
         if os.path.exists(pro_path):
             self.regressor_pro.load_model(pro_path)
             print("Loaded Regressor PRO")
@@ -143,7 +160,10 @@ class MLService:
             name = self.id2name.get(idx_val, "Unknown")
             current_meta = self.exercise_meta_dict.get(name, {})
             is_same = (
-                1 if current_meta.get("category") == last_meta.get("category") and last_meta else 0
+                1
+                if current_meta.get("category") == last_meta.get("category")
+                and last_meta
+                else 0
             )
 
             raw_eq = self.id_to_eq_dict.get(idx_val, "Unknown")
@@ -205,8 +225,17 @@ class MLService:
 
         if has_records:
             cols = [
-                "Sex", "Age", "BodyweightKg", "Best3SquatKg", "Best3BenchKg", "Best3DeadliftKg",
-                "goal_clean", "level_idx", "Base_Lift", "eq_clean", "exercise_id"
+                "Sex",
+                "Age",
+                "BodyweightKg",
+                "Best3SquatKg",
+                "Best3BenchKg",
+                "Best3DeadliftKg",
+                "goal_clean",
+                "level_idx",
+                "Base_Lift",
+                "eq_clean",
+                "exercise_id",
             ]
             input_data = {
                 "Sex": profile.sex,
@@ -225,7 +254,13 @@ class MLService:
             cat_features = ["Sex", "goal_clean", "Base_Lift", "eq_clean", "exercise_id"]
         else:
             cols = [
-                "Sex", "Age", "BodyweightKg", "goal_clean", "level_idx", "eq_clean", "exercise_id"
+                "Sex",
+                "Age",
+                "BodyweightKg",
+                "goal_clean",
+                "level_idx",
+                "eq_clean",
+                "exercise_id",
             ]
             input_data = {
                 "Sex": profile.sex,
