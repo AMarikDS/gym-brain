@@ -32,7 +32,7 @@ GLASS_STYLE = {
     "border": "1px solid rgba(255, 255, 255, 0.15)",
     "border_radius": "1.5rem",
     "box_shadow": "0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 1px rgba(255,255,255,0.1)",
-    "padding": "3rem",
+    "padding": "2rem",
 }
 
 
@@ -188,6 +188,9 @@ class State(rx.State):
             print(f"Error predicting weight: {e}")
 
         await self.get_recommendations()
+        return rx.call_script(
+            "setTimeout(() => { const el = document.getElementById('trajectory-end'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'end'}); }, 100);"
+        )
 
     async def start_workout(
         self, first_ex_id: int, first_ex_name: str, raw_eq: str
@@ -196,7 +199,7 @@ class State(rx.State):
         self.history_ids = []
         self.history_names = []
         self.next_step()
-        await self.add_exercise(first_ex_id, first_ex_name, raw_eq)
+        return await self.add_exercise(first_ex_id, first_ex_name, raw_eq)
 
     def reset_workout(self) -> None:
         """Сбрасывает текущую тренировочную сессию."""
@@ -346,7 +349,7 @@ def step_1_bio() -> rx.Component:
                 ),
             ),
             columns="2",
-            spacing="6",
+            spacing="4",
             style={"width": "100%"},
         ),
         rx.flex(
@@ -356,7 +359,7 @@ def step_1_bio() -> rx.Component:
             style={"width": "100%"},
             justify="end",
             align="center",
-            margin_top="2rem",
+            margin_top="1rem",
         ),
         style=GLASS_STYLE,
         margin_bottom="2rem",
@@ -446,7 +449,7 @@ def step_2_stats() -> rx.Component:
                 ),
             ),
             columns="2",
-            spacing="6",
+            spacing="4",
             style={"width": "100%"},
         ),
         rx.flex(
@@ -470,7 +473,7 @@ def step_2_stats() -> rx.Component:
             style={"width": "100%"},
             justify="between",
             align="center",
-            margin_top="2rem",
+            margin_top="1rem",
         ),
         style=GLASS_STYLE,
         margin_bottom="2rem",
@@ -582,7 +585,7 @@ def step_3_summary() -> rx.Component:
             style={"width": "100%"},
             justify="start",
             align="center",
-            margin_top="2rem",
+            margin_top="1rem",
         ),
         style=GLASS_STYLE,
         margin_bottom="2rem",
@@ -645,6 +648,7 @@ def step_4_workspace() -> rx.Component:
                             width="100%",
                         ),
                     ),
+                    rx.box(id="trajectory-end", height="1px"),
                     direction="column",
                     spacing="3",
                     bg="rgba(255, 255, 255, 0.02)",
@@ -687,7 +691,7 @@ def step_4_workspace() -> rx.Component:
                     on_click=State.reset_workout,
                     color_scheme="red",
                     variant="soft",
-                    margin_top="2rem",
+                    margin_top="1rem",
                     size="3",
                     style={"width": "100%"},
                 ),
@@ -721,7 +725,7 @@ def step_4_workspace() -> rx.Component:
                 border_left="1px solid rgba(255,255,255,0.1)",
             ),
             direction="row",
-            spacing="6",
+            spacing="4",
             align_items="flex-start",
             style={"width": "100%"},
         ),
