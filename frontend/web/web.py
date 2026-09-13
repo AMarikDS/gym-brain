@@ -498,25 +498,57 @@ def step_3_summary() -> rx.Component:
             margin_bottom="2rem",
         ),
         rx.heading(
-            "Initialize Seed Exercise", size="4", color="white", margin_bottom="1rem"
+            "Select Initial Muscle Group", size="4", color="white", margin_bottom="1rem"
         ),
         rx.grid(
             rx.button(
-                "Initialize with Bench Press",
+                "Chest (Bench Press)",
                 on_click=lambda: State.start_workout(324, "Bench Press", "Barbell"),
-                size="4",
+                size="3",
                 color_scheme="cyan",
-                box_shadow="0 0 20px -3px rgba(6, 182, 212, 0.5)",
-                _hover={"transform": "scale(1.02)"},
                 style={"width": "100%"},
             ),
             rx.button(
-                "Initialize with Squat",
+                "Legs (Squat)",
                 on_click=lambda: State.start_workout(340, "Barbell Squat", "Barbell"),
-                size="4",
+                size="3",
                 color_scheme="indigo",
-                box_shadow="0 0 20px -3px rgba(99, 102, 241, 0.5)",
-                _hover={"transform": "scale(1.02)"},
+                style={"width": "100%"},
+            ),
+            rx.button(
+                "Back (Deadlift)",
+                on_click=lambda: State.start_workout(
+                    720, "Deadlift (Barbell)", "Barbell"
+                ),
+                size="3",
+                color_scheme="blue",
+                style={"width": "100%"},
+            ),
+            rx.button(
+                "Shoulders (OHP)",
+                on_click=lambda: State.start_workout(
+                    1778, "Overhead Press (Barbell)", "Barbell"
+                ),
+                size="3",
+                color_scheme="tomato",
+                style={"width": "100%"},
+            ),
+            rx.button(
+                "Arms (Bicep Curl)",
+                on_click=lambda: State.start_workout(
+                    363, "Bicep Curl (Dumbbell)", "Dumbbell"
+                ),
+                size="3",
+                color_scheme="green",
+                style={"width": "100%"},
+            ),
+            rx.button(
+                "Core (Abs Crunch)",
+                on_click=lambda: State.start_workout(
+                    130, "Abs Crunch (Bodyweight)", "Bodyweight"
+                ),
+                size="3",
+                color_scheme="amber",
                 style={"width": "100%"},
             ),
             columns="2",
