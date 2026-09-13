@@ -148,7 +148,7 @@ class State(rx.State):
     async def add_exercise(self, ex_id: int, ex_name: str, raw_eq: str) -> None:
         """Добавляет упражнение в историю и предсказывает целевой рабочий вес."""
         self.history_ids.append(ex_id)
-        self.history_names.append(ex_name)
+        self.history_names.append(f"{len(self.history_names) + 1}. {ex_name}")
 
         self.is_loading = True
         try:
@@ -642,21 +642,22 @@ def step_4_workspace() -> rx.Component:
                 rx.heading(
                     "Current Trajectory", size="4", color="white", margin_bottom="1rem"
                 ),
-                rx.flex(
+                rx.box(
                     rx.foreach(
                         State.history_names,
-                        lambda name: rx.badge(
+                        lambda name: rx.text(
                             name,
-                            color_scheme="cyan",
-                            variant="outline",
-                            mr="2",
-                            margin_bottom="0.5rem",
-                            size="3",
-                            border_color="rgba(6, 182, 212, 0.6)",
                             color="cyan.100",
+                            size="3",
+                            margin_bottom="0.5rem",
+                            padding_bottom="0.5rem",
+                            border_bottom="1px solid rgba(6, 182, 212, 0.2)",
                         ),
                     ),
-                    wrap="wrap",
+                    bg="rgba(0, 0, 0, 0.2)",
+                    p="4",
+                    border_radius="md",
+                    border="1px solid rgba(255, 255, 255, 0.05)",
                 ),
                 rx.cond(
                     State.current_prediction != "",
