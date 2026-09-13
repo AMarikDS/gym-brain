@@ -209,6 +209,36 @@ class State(rx.State):
         self.current_prediction = ""
         self.current_step = 1
 
+    @rx.var
+    def trajectory_items(self) -> list[dict[str, str | bool]]:
+        items = []
+        for i, name in enumerate(self.history_names):
+            items.append(
+                {
+                    "name": name,
+                    "is_last": i == len(self.history_names) - 1,
+                }
+            )
+        return items
+
+    async def undo_last_exercise(self) -> None:
+        if not self.history_ids:
+            return
+
+        self.history_ids.pop()
+        self.history_names.pop()
+
+        if not self.history_ids:
+            self.reset_workout()
+            return
+
+        self.is_loading = True
+        try:
+            await self.get_recommendations()
+            self.current_prediction = "Target recalculated."
+        finally:
+            self.is_loading = False
+
 
 def hero_section() -> rx.Component:
     """Генерирует верхний промо-заголовок (Hero Section)."""
@@ -575,9 +605,9 @@ def step_3_summary() -> rx.Component:
         ),
         rx.flex(
             rx.button(
-                "Edit Settings",
+                "Back",
                 on_click=State.prev_step,
-                size="3",
+                size="4",
                 style={
                     "background_color": "rgba(255,255,255,0.1)",
                     "color": "white",
@@ -638,17 +668,33 @@ def step_4_workspace() -> rx.Component:
                 ),
                 rx.flex(
                     rx.foreach(
-                        State.history_names,
-                        lambda name: rx.text(
-                            name,
-                            color="white",
-                            size="4",
+                        State.trajectory_items,
+                        lambda item: rx.flex(
+                            rx.text(
+                                item["name"],
+                                color="white",
+                                size="4",
+                            ),
+                            rx.spacer(),
+                            rx.cond(
+                                item["is_last"],
+                                rx.icon_button(
+                                    rx.icon(tag="trash"),
+                                    on_click=State.undo_last_exercise,
+                                    color_scheme="red",
+                                    variant="ghost",
+                                    size="2",
+                                    cursor="pointer",
+                                    _hover={"background": "rgba(239, 68, 68, 0.2)"},
+                                ),
+                            ),
+                            align="center",
+                            width="100%",
                             bg="linear-gradient(90deg, rgba(6, 182, 212, 0.15), transparent)",
                             padding="0.75rem",
                             padding_left="1rem",
                             border_left="4px solid #06b6d4",
                             border_radius="0 0.75rem 0.75rem 0",
-                            width="100%",
                         ),
                     ),
                     rx.box(id="trajectory-end", height="1px"),
