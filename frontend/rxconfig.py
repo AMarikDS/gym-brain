@@ -11,6 +11,7 @@ config = rx.Config(
     default_color_mode="dark",
     backend_host="0.0.0.0",
     api_url="http://localhost:3001",
+    stylesheets=["/styles.css"],
     plugins=[
         RadixThemesPlugin(
             theme=rx.theme(

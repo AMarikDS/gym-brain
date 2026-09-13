@@ -695,9 +695,6 @@ def step_4_workspace() -> rx.Component:
 def index() -> rx.Component:
     """Главная страница приложения."""
     return rx.box(
-        rx.html(
-            "<style>.rt-TextFieldRoot, .rt-SelectTrigger { width: 100% !important; }</style>"
-        ),
         rx.container(
             rx.script(
                 (
