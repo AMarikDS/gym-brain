@@ -3,9 +3,6 @@
 Содержит описание интерфейса и состояний на базе Reflex.
 """
 
-# BSL License
-# Copyright (c) 2025 RTA Technologies
-
 import httpx
 import reflex as rx
 

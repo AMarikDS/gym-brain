@@ -3,9 +3,6 @@
 Содержит настройки сборки и адреса API.
 """
 
-# BSL License
-# Copyright (c) 2025 RTA Technologies
-
 import reflex as rx
 from reflex_components_radix.plugin import RadixThemesPlugin
 
@@ -21,8 +18,8 @@ config = rx.Config(
                 has_background=False,
                 radius="large",
                 accent_color="cyan",
-                gray_color="slate"
+                gray_color="slate",
             )
         )
-    ]
+    ],
 )

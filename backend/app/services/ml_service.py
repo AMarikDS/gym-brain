@@ -3,9 +3,6 @@
 Обертка над CatBoost и PyTorch Transformer.
 """
 
-# BSL License
-# Copyright (c) 2025 RTA Technologies
-
 import json
 import os
 from typing import Any
