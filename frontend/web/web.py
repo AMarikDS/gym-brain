@@ -7,6 +7,23 @@ import httpx
 import reflex as rx
 
 # Custom Glassmorphism Style
+
+SEED_BUTTON_STYLE = {
+    "background": "rgba(255, 255, 255, 0.03)",
+    "border": "1px solid rgba(6, 182, 212, 0.3)",
+    "box_shadow": "0 4px 15px -3px rgba(6, 182, 212, 0.15)",
+    "color": "#e2e8f0",
+    "width": "100%",
+    "transition": "all 0.3s ease",
+    "_hover": {
+        "background": "linear-gradient(90deg, rgba(6, 182, 212, 0.15), rgba(99, 102, 241, 0.15))",
+        "border": "1px solid rgba(6, 182, 212, 0.8)",
+        "box_shadow": "0 0 20px -3px rgba(6, 182, 212, 0.4)",
+        "transform": "translateY(-2px)",
+        "color": "white",
+    },
+}
+
 GLASS_STYLE = {
     "bg": "rgba(255, 255, 255, 0.05)",
     "backdrop_filter": "blur(16px)",
@@ -504,52 +521,46 @@ def step_3_summary() -> rx.Component:
             rx.button(
                 "Chest (Bench Press)",
                 on_click=lambda: State.start_workout(324, "Bench Press", "Barbell"),
-                size="3",
-                color_scheme="cyan",
-                style={"width": "100%"},
+                size="4",
+                style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Legs (Squat)",
                 on_click=lambda: State.start_workout(340, "Barbell Squat", "Barbell"),
-                size="3",
-                color_scheme="indigo",
-                style={"width": "100%"},
+                size="4",
+                style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Back (Deadlift)",
                 on_click=lambda: State.start_workout(
                     720, "Deadlift (Barbell)", "Barbell"
                 ),
-                size="3",
-                color_scheme="blue",
-                style={"width": "100%"},
+                size="4",
+                style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Shoulders (OHP)",
                 on_click=lambda: State.start_workout(
                     1778, "Overhead Press (Barbell)", "Barbell"
                 ),
-                size="3",
-                color_scheme="tomato",
-                style={"width": "100%"},
+                size="4",
+                style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Arms (Bicep Curl)",
                 on_click=lambda: State.start_workout(
                     363, "Bicep Curl (Dumbbell)", "Dumbbell"
                 ),
-                size="3",
-                color_scheme="green",
-                style={"width": "100%"},
+                size="4",
+                style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Core (Abs Crunch)",
                 on_click=lambda: State.start_workout(
                     130, "Abs Crunch (Bodyweight)", "Bodyweight"
                 ),
-                size="3",
-                color_scheme="amber",
-                style={"width": "100%"},
+                size="4",
+                style=SEED_BUTTON_STYLE,
             ),
             columns="2",
             spacing="4",
