@@ -642,21 +642,26 @@ def step_4_workspace() -> rx.Component:
                 rx.heading(
                     "Current Trajectory", size="4", color="white", margin_bottom="1rem"
                 ),
-                rx.box(
+                rx.flex(
                     rx.foreach(
                         State.history_names,
                         lambda name: rx.text(
                             name,
-                            color="cyan.100",
+                            color="white",
                             size="3",
-                            margin_bottom="0.5rem",
-                            padding_bottom="0.5rem",
-                            border_bottom="1px solid rgba(6, 182, 212, 0.2)",
+                            bg="linear-gradient(90deg, rgba(6, 182, 212, 0.15), transparent)",
+                            p="2",
+                            padding_left="0.75rem",
+                            border_left="2px solid #06b6d4",
+                            border_radius="0 4px 4px 0",
+                            width="100%",
                         ),
                     ),
-                    bg="rgba(0, 0, 0, 0.2)",
+                    direction="column",
+                    spacing="2",
+                    bg="rgba(255, 255, 255, 0.02)",
                     p="4",
-                    border_radius="md",
+                    border_radius="lg",
                     border="1px solid rgba(255, 255, 255, 0.05)",
                 ),
                 rx.cond(
@@ -665,8 +670,12 @@ def step_4_workspace() -> rx.Component:
                         rx.text(
                             "AI Target Prediction",
                             size="2",
-                            color="#4facfe",
-                            margin_bottom="0.25rem",
+                            weight="bold",
+                            letter_spacing="0.05em",
+                            background_image="linear-gradient(270deg, #00f2fe, #4facfe)",
+                            background_clip="text",
+                            color="transparent",
+                            margin_bottom="0.5rem",
                         ),
                         rx.text(
                             State.current_prediction,
@@ -674,11 +683,12 @@ def step_4_workspace() -> rx.Component:
                             size="4",
                             color="white",
                         ),
-                        p="4",
-                        margin_top="1.5rem",
-                        border_radius="md",
-                        bg="rgba(6, 182, 212, 0.15)",
-                        border_left="4px solid #06b6d4",
+                        p="5",
+                        margin_top="2rem",
+                        border_radius="xl",
+                        background="linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%)",
+                        border="1px solid rgba(6, 182, 212, 0.3)",
+                        box_shadow="0 0 20px -5px rgba(6, 182, 212, 0.2)",
                     ),
                 ),
                 rx.button(
