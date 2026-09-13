@@ -15,6 +15,7 @@ SEED_BUTTON_STYLE = {
     "color": "#e2e8f0",
     "width": "100%",
     "transition": "all 0.3s ease",
+    "border_radius": "0.75rem",
     "_hover": {
         "background": "linear-gradient(90deg, rgba(6, 182, 212, 0.15), rgba(99, 102, 241, 0.15))",
         "border": "1px solid rgba(6, 182, 212, 0.8)",
@@ -29,9 +30,9 @@ GLASS_STYLE = {
     "backdrop_filter": "blur(16px)",
     "-webkit-backdrop-filter": "blur(16px)",
     "border": "1px solid rgba(255, 255, 255, 0.15)",
-    "border_radius": "xl",
+    "border_radius": "1.5rem",
     "box_shadow": "0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 1px rgba(255,255,255,0.1)",
-    "padding": "2rem",
+    "padding": "3rem",
 }
 
 
@@ -180,13 +181,17 @@ class State(rx.State):
                     data = resp.json()
                     weight = data.get("weight", 0)
                     reps = data.get("reps", 0)
-                    self.current_prediction = f"Optimal Target: {weight} kg x {reps} reps"
+                    self.current_prediction = (
+                        f"Optimal Target: {weight} kg x {reps} reps"
+                    )
         except (httpx.RequestError, ValueError) as e:
             print(f"Error predicting weight: {e}")
 
         await self.get_recommendations()
 
-    async def start_workout(self, first_ex_id: int, first_ex_name: str, raw_eq: str) -> None:
+    async def start_workout(
+        self, first_ex_id: int, first_ex_name: str, raw_eq: str
+    ) -> None:
         """Инициализирует сессию первым базовым упражнением."""
         self.history_ids = []
         self.history_names = []
@@ -225,7 +230,7 @@ def hero_section() -> rx.Component:
             direction="column",
             align_items="center",
         ),
-        p="6",
+        padding="2.5rem",
         margin_bottom="2rem",
         border_radius="xl",
         text_align="center",
@@ -345,7 +350,9 @@ def step_1_bio() -> rx.Component:
             style={"width": "100%"},
         ),
         rx.flex(
-            rx.button("Next Step", on_click=State.next_step, size="4", color_scheme="cyan"),
+            rx.button(
+                "Next Step", on_click=State.next_step, size="4", color_scheme="cyan"
+            ),
             style={"width": "100%"},
             justify="end",
             align="center",
@@ -500,15 +507,17 @@ def step_3_summary() -> rx.Component:
                 ),
                 columns="2",
                 spacing="4",
-                p="6",
+                padding="2.5rem",
                 bg="rgba(0, 0, 0, 0.3)",
-                border_radius="md",
+                border_radius="1.5rem",
                 border="1px solid rgba(255,255,255,0.1)",
                 style={"width": "100%"},
             ),
             margin_bottom="2rem",
         ),
-        rx.heading("Select Initial Muscle Group", size="4", color="white", margin_bottom="1rem"),
+        rx.heading(
+            "Select Initial Muscle Group", size="4", color="white", margin_bottom="1rem"
+        ),
         rx.grid(
             rx.button(
                 "Chest (Bench Press)",
@@ -524,25 +533,33 @@ def step_3_summary() -> rx.Component:
             ),
             rx.button(
                 "Back (Deadlift)",
-                on_click=lambda: State.start_workout(720, "Deadlift (Barbell)", "Barbell"),
+                on_click=lambda: State.start_workout(
+                    720, "Deadlift (Barbell)", "Barbell"
+                ),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Shoulders (OHP)",
-                on_click=lambda: State.start_workout(1778, "Overhead Press (Barbell)", "Barbell"),
+                on_click=lambda: State.start_workout(
+                    1778, "Overhead Press (Barbell)", "Barbell"
+                ),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Arms (Bicep Curl)",
-                on_click=lambda: State.start_workout(363, "Bicep Curl (Dumbbell)", "Dumbbell"),
+                on_click=lambda: State.start_workout(
+                    363, "Bicep Curl (Dumbbell)", "Dumbbell"
+                ),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Core (Abs Crunch)",
-                on_click=lambda: State.start_workout(130, "Abs Crunch (Bodyweight)", "Bodyweight"),
+                on_click=lambda: State.start_workout(
+                    130, "Abs Crunch (Bodyweight)", "Bodyweight"
+                ),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
@@ -592,7 +609,9 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
         bg="rgba(255, 255, 255, 0.02)",
         border="1px solid rgba(255, 255, 255, 0.05)",
         cursor="pointer",
-        on_click=lambda: State.add_exercise(rec["exercise_id"], rec["exercise_name"], rec["equipment"]),
+        on_click=lambda: State.add_exercise(
+            rec["exercise_id"], rec["exercise_name"], rec["equipment"]
+        ),
         _hover={
             "background": "linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%)",
             "border": "1px solid rgba(6, 182, 212, 0.5)",
@@ -608,7 +627,9 @@ def step_4_workspace() -> rx.Component:
     return rx.box(
         rx.flex(
             rx.box(
-                rx.heading("Current Trajectory", size="4", color="white", margin_bottom="1rem"),
+                rx.heading(
+                    "Current Trajectory", size="4", color="white", margin_bottom="1rem"
+                ),
                 rx.flex(
                     rx.foreach(
                         State.history_names,
@@ -630,6 +651,8 @@ def step_4_workspace() -> rx.Component:
                     padding="1.5rem",
                     border_radius="1rem",
                     border="1px solid rgba(255, 255, 255, 0.05)",
+                    max_height="350px",
+                    overflow_y="auto",
                 ),
                 rx.cond(
                     State.current_prediction != "",
@@ -680,7 +703,9 @@ def step_4_workspace() -> rx.Component:
                 ),
                 rx.cond(
                     State.is_loading,
-                    rx.flex(rx.spinner(color="cyan", size="3"), justify="center", p="10"),
+                    rx.flex(
+                        rx.spinner(color="cyan", size="3"), justify="center", p="10"
+                    ),
                     rx.box(
                         rx.foreach(State.recommendations, recommendation_card),
                         max_height="600px",
