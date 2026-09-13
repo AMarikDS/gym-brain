@@ -348,18 +348,21 @@ def step_1_bio() -> rx.Component:
                     style={"width": "100%"},
                 ),
             ),
-            columns="2",
-            spacing="4",
-            style={"width": "100%"},
-        ),
-        rx.flex(
-            rx.button(
-                "Next Step", on_click=State.next_step, size="4", color_scheme="cyan"
+            rx.flex(
+                rx.button(
+                    "Next Step",
+                    on_click=State.next_step,
+                    size="4",
+                    color_scheme="cyan",
+                    style={"width": "100%"},
+                ),
+                justify="end",
+                align="end",
+                style={"width": "100%", "height": "100%"},
             ),
+            columns="2",
+            spacing="6",
             style={"width": "100%"},
-            justify="end",
-            align="center",
-            margin_top="1rem",
         ),
         style=GLASS_STYLE,
         margin_bottom="2rem",
