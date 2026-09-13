@@ -229,7 +229,11 @@ class State(rx.State):
         self.history_names.pop()
 
         if not self.history_ids:
-            self.reset_workout()
+            self.history_ids = []
+            self.history_names = []
+            self.recommendations = []
+            self.current_prediction = ""
+            self.current_step = 3
             return
 
         self.is_loading = True
@@ -690,11 +694,12 @@ def step_4_workspace() -> rx.Component:
                             ),
                             align="center",
                             width="100%",
-                            bg="linear-gradient(90deg, rgba(6, 182, 212, 0.15), transparent)",
+                            bg="rgba(255, 255, 255, 0.05)",
+                            border="1px solid rgba(255, 255, 255, 0.1)",
                             padding="0.75rem",
                             padding_left="1rem",
                             border_left="4px solid #06b6d4",
-                            border_radius="0 0.75rem 0.75rem 0",
+                            border_radius="0.75rem",
                         ),
                     ),
                     rx.box(id="trajectory-end", height="1px"),
@@ -722,8 +727,9 @@ def step_4_workspace() -> rx.Component:
                         rx.text(
                             State.current_prediction,
                             weight="bold",
-                            size="6",
+                            size="5",
                             color="white",
+                            white_space="nowrap",
                         ),
                         padding="1.5rem",
                         margin_top="1.5rem",
@@ -734,15 +740,28 @@ def step_4_workspace() -> rx.Component:
                         box_shadow="0 0 20px -5px rgba(6, 182, 212, 0.1)",
                     ),
                 ),
-                rx.button(
-                    rx.icon(tag="rotate-ccw", mr="2"),
-                    "End & Reset Workout",
-                    on_click=State.reset_workout,
-                    color_scheme="red",
-                    variant="soft",
+                rx.flex(
+                    rx.button(
+                        rx.icon(tag="arrow-left", mr="2"),
+                        "Back",
+                        on_click=State.undo_last_exercise,
+                        color_scheme="gray",
+                        variant="soft",
+                        size="3",
+                        style={"width": "100%"},
+                    ),
+                    rx.button(
+                        rx.icon(tag="rotate-ccw", mr="2"),
+                        "End & Reset",
+                        on_click=State.reset_workout,
+                        color_scheme="red",
+                        variant="soft",
+                        size="3",
+                        style={"width": "100%"},
+                    ),
+                    spacing="3",
                     margin_top="1rem",
-                    size="3",
-                    style={"width": "100%"},
+                    width="100%",
                 ),
                 width="40%",
                 p="4",
