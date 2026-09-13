@@ -238,6 +238,7 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             rx.box(
@@ -255,6 +256,7 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             rx.box(
@@ -266,6 +268,7 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             rx.box(
@@ -277,6 +280,7 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             rx.box(
@@ -294,10 +298,12 @@ def step_1_bio() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             columns="2",
             spacing="6",
+            width="100%",
         ),
         rx.flex(
             rx.button(
@@ -335,6 +341,7 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             rx.box(
@@ -348,6 +355,7 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             rx.box(
@@ -361,6 +369,7 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             rx.box(
@@ -378,10 +387,12 @@ def step_2_stats() -> rx.Component:
                     variant="surface",
                     color_scheme="gray",
                     size="3",
+                    width="100%",
                 ),
             ),
             columns="2",
             spacing="6",
+            width="100%",
         ),
         rx.flex(
             rx.button(
@@ -440,6 +451,7 @@ def step_3_summary() -> rx.Component:
                 bg="rgba(0, 0, 0, 0.3)",
                 border_radius="md",
                 border="1px solid rgba(255,255,255,0.1)",
+                width="100%",
             ),
             mb="8",
         ),
@@ -452,6 +464,7 @@ def step_3_summary() -> rx.Component:
                 color_scheme="cyan",
                 box_shadow="0 0 20px -3px rgba(6, 182, 212, 0.5)",
                 _hover={"transform": "scale(1.02)"},
+                width="100%",
             ),
             rx.button(
                 "Initialize with Squat",
@@ -460,9 +473,11 @@ def step_3_summary() -> rx.Component:
                 color_scheme="indigo",
                 box_shadow="0 0 20px -3px rgba(99, 102, 241, 0.5)",
                 _hover={"transform": "scale(1.02)"},
+                width="100%",
             ),
             columns="2",
             spacing="4",
+            width="100%",
         ),
         rx.flex(
             rx.button(
@@ -537,6 +552,7 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
             "border": "1px solid rgba(6, 182, 212, 0.5)",
         },
         transition="all 0.2s ease",
+        width="100%",
     )
 
 
@@ -615,6 +631,7 @@ def step_4_workspace() -> rx.Component:
             direction="row",
             spacing="6",
             align_items="flex-start",
+            width="100%",
         ),
         style=GLASS_STYLE,
         mb="8",
