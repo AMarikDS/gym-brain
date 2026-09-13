@@ -200,7 +200,7 @@ def hero_section() -> rx.Component:
                 background_image="linear-gradient(270deg, #00f2fe, #4facfe)",
                 background_clip="text",
                 color="transparent",
-                mb="2",
+                margin_bottom="0.5rem",
             ),
             rx.text(
                 "Hyper-Personalized Fitness Intelligence",
@@ -213,7 +213,7 @@ def hero_section() -> rx.Component:
             align_items="center",
         ),
         p="6",
-        mb="8",
+        margin_bottom="2rem",
         border_radius="xl",
         text_align="center",
         style=GLASS_STYLE,
@@ -224,10 +224,21 @@ def hero_section() -> rx.Component:
 def step_1_bio() -> rx.Component:
     """Генерирует первый шаг Wizard-а (Биометрический профиль)."""
     return rx.box(
-        rx.heading("Step 1: Biological Profile", size="6", color="white", mb="6"),
+        rx.heading(
+            "Step 1: Biological Profile",
+            size="6",
+            color="white",
+            margin_bottom="1.5rem",
+        ),
         rx.grid(
             rx.box(
-                rx.text("Level", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Level",
+                    size="3",
+                    color="#cbd5e1",
+                    margin_bottom="0.5rem",
+                    weight="medium",
+                ),
                 rx.select(
                     ["Novice", "Beginner", "Intermediate", "Advanced"],
                     value=State.level,
@@ -239,7 +250,13 @@ def step_1_bio() -> rx.Component:
                 ),
             ),
             rx.box(
-                rx.text("Goal", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Goal",
+                    size="3",
+                    color="#cbd5e1",
+                    margin_bottom="0.5rem",
+                    weight="medium",
+                ),
                 rx.select(
                     [
                         "Powerbuilding",
@@ -257,7 +274,13 @@ def step_1_bio() -> rx.Component:
                 ),
             ),
             rx.box(
-                rx.text("Sex", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Sex",
+                    size="3",
+                    color="#cbd5e1",
+                    margin_bottom="0.5rem",
+                    weight="medium",
+                ),
                 rx.select(
                     ["Male", "Female"],
                     value=State.sex,
@@ -269,7 +292,13 @@ def step_1_bio() -> rx.Component:
                 ),
             ),
             rx.box(
-                rx.text("Age", size="3", color="#cbd5e1", mb="2", weight="medium"),
+                rx.text(
+                    "Age",
+                    size="3",
+                    color="#cbd5e1",
+                    margin_bottom="0.5rem",
+                    weight="medium",
+                ),
                 rx.input(
                     value=State.age,
                     on_change=State.set_age,
@@ -285,7 +314,7 @@ def step_1_bio() -> rx.Component:
                     "Bodyweight (kg)",
                     size="3",
                     color="#cbd5e1",
-                    mb="2",
+                    margin_bottom="0.5rem",
                     weight="medium",
                 ),
                 rx.input(
@@ -309,10 +338,10 @@ def step_1_bio() -> rx.Component:
             style={"width": "100%"},
             justify="end",
             align="center",
-            mt="9",
+            margin_top="2rem",
         ),
         style=GLASS_STYLE,
-        mb="8",
+        margin_bottom="2rem",
     )
 
 
@@ -320,7 +349,10 @@ def step_2_stats() -> rx.Component:
     """Генерирует второй шаг Wizard-а (Инвентарь и силовые показатели)."""
     return rx.box(
         rx.heading(
-            "Step 2: Equipment & Base Strength", size="6", color="white", mb="6"
+            "Step 2: Equipment & Base Strength",
+            size="6",
+            color="white",
+            margin_bottom="1.5rem",
         ),
         rx.grid(
             rx.box(
@@ -328,7 +360,7 @@ def step_2_stats() -> rx.Component:
                     "Available Equipment",
                     size="3",
                     color="#cbd5e1",
-                    mb="2",
+                    margin_bottom="0.5rem",
                     weight="medium",
                 ),
                 rx.select(
@@ -343,7 +375,11 @@ def step_2_stats() -> rx.Component:
             ),
             rx.box(
                 rx.text(
-                    "Squat 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"
+                    "Squat 1RM (kg)",
+                    size="3",
+                    color="#cbd5e1",
+                    margin_bottom="0.5rem",
+                    weight="medium",
                 ),
                 rx.input(
                     value=State.squat,
@@ -357,7 +393,11 @@ def step_2_stats() -> rx.Component:
             ),
             rx.box(
                 rx.text(
-                    "Bench 1RM (kg)", size="3", color="#cbd5e1", mb="2", weight="medium"
+                    "Bench 1RM (kg)",
+                    size="3",
+                    color="#cbd5e1",
+                    margin_bottom="0.5rem",
+                    weight="medium",
                 ),
                 rx.input(
                     value=State.bench,
@@ -374,7 +414,7 @@ def step_2_stats() -> rx.Component:
                     "Deadlift 1RM (kg)",
                     size="3",
                     color="#cbd5e1",
-                    mb="2",
+                    margin_bottom="0.5rem",
                     weight="medium",
                 ),
                 rx.input(
@@ -412,21 +452,26 @@ def step_2_stats() -> rx.Component:
             style={"width": "100%"},
             justify="between",
             align="center",
-            mt="9",
+            margin_top="2rem",
         ),
         style=GLASS_STYLE,
-        mb="8",
+        margin_bottom="2rem",
     )
 
 
 def step_3_summary() -> rx.Component:
     """Генерирует третий шаг Wizard-а (Сводка и инициализация)."""
     return rx.box(
-        rx.heading("Step 3: Neural Initialization", size="6", color="white", mb="6"),
+        rx.heading(
+            "Step 3: Neural Initialization",
+            size="6",
+            color="white",
+            margin_bottom="1.5rem",
+        ),
         rx.text(
             "Please confirm your parameters before the AI generates your dynamic workout trajectory.",
             color="white",
-            mb="6",
+            margin_bottom="1.5rem",
             size="3",
         ),
         rx.box(
@@ -450,9 +495,11 @@ def step_3_summary() -> rx.Component:
                 border="1px solid rgba(255,255,255,0.1)",
                 style={"width": "100%"},
             ),
-            mb="8",
+            margin_bottom="2rem",
         ),
-        rx.heading("Initialize Seed Exercise", size="4", color="white", mb="4"),
+        rx.heading(
+            "Initialize Seed Exercise", size="4", color="white", margin_bottom="1rem"
+        ),
         rx.grid(
             rx.button(
                 "Initialize with Bench Press",
@@ -491,10 +538,10 @@ def step_3_summary() -> rx.Component:
             style={"width": "100%"},
             justify="start",
             align="center",
-            mt="9",
+            margin_top="2rem",
         ),
         style=GLASS_STYLE,
-        mb="8",
+        margin_bottom="2rem",
     )
 
 
@@ -518,7 +565,7 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
                         variant="surface",
                         size="2",
                     ),
-                    mt="3",
+                    margin_top="1rem",
                 ),
             ),
             rx.spacer(),
@@ -540,7 +587,7 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
             align_items="center",
         ),
         p="5",
-        mb="4",
+        margin_bottom="1rem",
         border_radius="lg",
         bg="rgba(255, 255, 255, 0.05)",
         border="1px solid rgba(255, 255, 255, 0.1)",
@@ -558,7 +605,9 @@ def step_4_workspace() -> rx.Component:
     return rx.box(
         rx.flex(
             rx.box(
-                rx.heading("Current Trajectory", size="5", color="white", mb="4"),
+                rx.heading(
+                    "Current Trajectory", size="5", color="white", margin_bottom="1rem"
+                ),
                 rx.flex(
                     rx.foreach(
                         State.history_names,
@@ -567,7 +616,7 @@ def step_4_workspace() -> rx.Component:
                             color_scheme="cyan",
                             variant="outline",
                             mr="2",
-                            mb="2",
+                            margin_bottom="0.5rem",
                             size="3",
                             border_color="rgba(6, 182, 212, 0.6)",
                             color="cyan.100",
@@ -579,7 +628,10 @@ def step_4_workspace() -> rx.Component:
                     State.current_prediction != "",
                     rx.box(
                         rx.text(
-                            "AI Target Prediction", size="2", color="#4facfe", mb="1"
+                            "AI Target Prediction",
+                            size="2",
+                            color="#4facfe",
+                            margin_bottom="0.25rem",
                         ),
                         rx.text(
                             State.current_prediction,
@@ -588,7 +640,7 @@ def step_4_workspace() -> rx.Component:
                             color="white",
                         ),
                         p="5",
-                        mt="6",
+                        margin_top="1.5rem",
                         border_radius="md",
                         bg="rgba(6, 182, 212, 0.15)",
                         border_left="4px solid #06b6d4",
@@ -600,7 +652,7 @@ def step_4_workspace() -> rx.Component:
                     on_click=State.reset_workout,
                     color_scheme="red",
                     variant="soft",
-                    mt="9",
+                    margin_top="2rem",
                     size="3",
                     style={"width": "100%"},
                 ),
@@ -608,7 +660,12 @@ def step_4_workspace() -> rx.Component:
                 p="4",
             ),
             rx.box(
-                rx.heading("AI Next Step Generation", size="5", color="white", mb="4"),
+                rx.heading(
+                    "AI Next Step Generation",
+                    size="5",
+                    color="white",
+                    margin_bottom="1rem",
+                ),
                 rx.cond(
                     State.is_loading,
                     rx.flex(
@@ -631,7 +688,7 @@ def step_4_workspace() -> rx.Component:
             style={"width": "100%"},
         ),
         style=GLASS_STYLE,
-        mb="8",
+        margin_bottom="2rem",
     )
 
 
