@@ -181,9 +181,7 @@ class State(rx.State):
                     data = resp.json()
                     weight = data.get("weight", 0)
                     reps = data.get("reps", 0)
-                    self.current_prediction = (
-                        f"Optimal Target: {weight} kg x {reps} reps"
-                    )
+                    self.current_prediction = f"{weight} kg x {reps} reps"
         except (httpx.RequestError, ValueError) as e:
             print(f"Error predicting weight: {e}")
 
@@ -239,7 +237,7 @@ class State(rx.State):
         self.is_loading = True
         try:
             await self.get_recommendations()
-            self.current_prediction = "Target recalculated."
+            self.current_prediction = "Recalculated"
         finally:
             self.is_loading = False
 
@@ -382,21 +380,21 @@ def step_1_bio() -> rx.Component:
                     style={"width": "100%"},
                 ),
             ),
-            rx.flex(
-                rx.button(
-                    "Next Step",
-                    on_click=State.next_step,
-                    size="4",
-                    color_scheme="cyan",
-                    style={"width": "100%"},
-                ),
-                justify="end",
-                align="end",
-                style={"width": "100%", "height": "100%"},
-            ),
             columns="2",
-            spacing="6",
+            spacing="4",
             style={"width": "100%"},
+        ),
+        rx.flex(
+            rx.button(
+                "Next Step",
+                on_click=State.next_step,
+                size="4",
+                color_scheme="cyan",
+            ),
+            style={"width": "100%"},
+            justify="end",
+            align="center",
+            margin_top="2rem",
         ),
         style=GLASS_STYLE,
         margin_bottom="2rem",
@@ -740,7 +738,7 @@ def step_4_workspace() -> rx.Component:
                         box_shadow="0 0 20px -5px rgba(6, 182, 212, 0.1)",
                     ),
                 ),
-                rx.flex(
+                rx.grid(
                     rx.button(
                         rx.icon(tag="arrow-left", mr="2"),
                         "Back",
@@ -759,6 +757,7 @@ def step_4_workspace() -> rx.Component:
                         size="3",
                         style={"width": "100%"},
                     ),
+                    columns="2",
                     spacing="3",
                     margin_top="1rem",
                     width="100%",
