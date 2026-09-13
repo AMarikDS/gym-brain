@@ -600,40 +600,36 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
                         color_scheme="indigo",
                         variant="soft",
                         size="2",
-                        mr="2",
                     ),
                     margin_top="0.5rem",
                 ),
             ),
             rx.spacer(),
             rx.button(
-                rx.icon(tag="plus", size=20),
-                "Add to Routine",
+                rx.icon(tag="plus", size=18),
+                "Add",
                 on_click=lambda: State.add_exercise(
                     rec["exercise_id"], rec["exercise_name"], rec["equipment"]
                 ),
                 size="3",
                 color_scheme="cyan",
-                variant="outline",
+                variant="surface",
                 _hover={
-                    "transform": "scale(1.02)",
-                    "box_shadow": "0 0 15px 0px rgba(6, 182, 212, 0.4)",
-                    "background": "rgba(6, 182, 212, 0.1)",
+                    "background": "rgba(6, 182, 212, 0.2)",
                 },
             ),
             align_items="center",
         ),
         p="4",
-        margin_bottom="1rem",
+        margin_bottom="0.75rem",
         border_radius="lg",
         bg="rgba(255, 255, 255, 0.03)",
-        border="1px solid rgba(255, 255, 255, 0.1)",
+        border="1px solid rgba(255, 255, 255, 0.05)",
         _hover={
-            "bg": "rgba(255, 255, 255, 0.05)",
+            "bg": "rgba(255, 255, 255, 0.06)",
             "border": "1px solid rgba(6, 182, 212, 0.5)",
-            "box_shadow": "0 0 20px -5px rgba(6, 182, 212, 0.3)",
         },
-        transition="all 0.3s ease",
+        transition="all 0.2s ease",
         style={"width": "100%"},
     )
 
@@ -644,7 +640,7 @@ def step_4_workspace() -> rx.Component:
         rx.flex(
             rx.box(
                 rx.heading(
-                    "Current Trajectory", size="5", color="white", margin_bottom="1rem"
+                    "Current Trajectory", size="4", color="white", margin_bottom="1rem"
                 ),
                 rx.flex(
                     rx.foreach(
@@ -674,10 +670,10 @@ def step_4_workspace() -> rx.Component:
                         rx.text(
                             State.current_prediction,
                             weight="bold",
-                            size="5",
+                            size="4",
                             color="white",
                         ),
-                        p="5",
+                        p="4",
                         margin_top="1.5rem",
                         border_radius="md",
                         bg="rgba(6, 182, 212, 0.15)",
@@ -694,13 +690,13 @@ def step_4_workspace() -> rx.Component:
                     size="3",
                     style={"width": "100%"},
                 ),
-                width="30%",
+                width="40%",
                 p="4",
             ),
             rx.box(
                 rx.heading(
                     "AI Next Step Generation",
-                    size="5",
+                    size="4",
                     color="white",
                     margin_bottom="1rem",
                 ),
@@ -719,7 +715,7 @@ def step_4_workspace() -> rx.Component:
                         padding_bottom="0.5rem",
                     ),
                 ),
-                width="70%",
+                width="60%",
                 p="4",
                 border_left="1px solid rgba(255,255,255,0.1)",
             ),
