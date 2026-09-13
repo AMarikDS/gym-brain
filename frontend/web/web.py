@@ -592,44 +592,31 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
     """Генерирует карточку отдельного рекомендованного упражнения."""
     return rx.box(
         rx.flex(
-            rx.box(
-                rx.text(rec["exercise_name"], weight="bold", size="4", color="white"),
-                rx.flex(
-                    rx.badge(
-                        rec["equipment"],
-                        color_scheme="indigo",
-                        variant="soft",
-                        size="2",
-                    ),
-                    margin_top="0.5rem",
-                ),
-            ),
+            rx.text(rec["exercise_name"], weight="bold", size="4", color="white"),
             rx.spacer(),
-            rx.button(
-                rx.icon(tag="plus", size=18),
-                "Add",
-                on_click=lambda: State.add_exercise(
-                    rec["exercise_id"], rec["exercise_name"], rec["equipment"]
-                ),
-                size="3",
-                color_scheme="cyan",
+            rx.badge(
+                rec["equipment"],
+                color_scheme="indigo",
                 variant="surface",
-                _hover={
-                    "background": "rgba(6, 182, 212, 0.2)",
-                },
+                size="2",
             ),
             align_items="center",
         ),
-        p="4",
+        p="5",
         margin_bottom="0.75rem",
-        border_radius="lg",
-        bg="rgba(255, 255, 255, 0.03)",
+        border_radius="xl",
+        bg="rgba(255, 255, 255, 0.02)",
         border="1px solid rgba(255, 255, 255, 0.05)",
+        cursor="pointer",
+        on_click=lambda: State.add_exercise(
+            rec["exercise_id"], rec["exercise_name"], rec["equipment"]
+        ),
         _hover={
-            "bg": "rgba(255, 255, 255, 0.06)",
+            "background": "linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%)",
             "border": "1px solid rgba(6, 182, 212, 0.5)",
+            "box_shadow": "0 0 20px -5px rgba(6, 182, 212, 0.3)",
         },
-        transition="all 0.2s ease",
+        transition="all 0.3s ease",
         style={"width": "100%"},
     )
 
@@ -672,23 +659,23 @@ def step_4_workspace() -> rx.Component:
                             size="2",
                             weight="bold",
                             letter_spacing="0.05em",
-                            background_image="linear-gradient(270deg, #00f2fe, #4facfe)",
-                            background_clip="text",
-                            color="transparent",
+                            color="#4facfe",
                             margin_bottom="0.5rem",
+                            text_transform="uppercase",
                         ),
                         rx.text(
                             State.current_prediction,
                             weight="bold",
-                            size="4",
+                            size="5",
                             color="white",
                         ),
                         p="5",
-                        margin_top="2rem",
+                        margin_top="1.5rem",
                         border_radius="xl",
-                        background="linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%)",
+                        bg="rgba(6, 182, 212, 0.05)",
                         border="1px solid rgba(6, 182, 212, 0.3)",
-                        box_shadow="0 0 20px -5px rgba(6, 182, 212, 0.2)",
+                        border_left="4px solid #06b6d4",
+                        box_shadow="0 0 20px -5px rgba(6, 182, 212, 0.1)",
                     ),
                 ),
                 rx.button(
