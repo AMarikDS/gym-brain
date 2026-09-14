@@ -1,1 +1,7 @@
 .rt-TextFieldRoot, .rt-SelectTrigger, .rt-SelectRoot { width: 100% !important; }
+
+/* Increase input/select size manually since Reflex caps size prop at 3 */
+.rt-TextFieldRoot, .rt-SelectTrigger {
+    min-height: 3rem !important;
+    font-size: 1.125rem !important;
+}
