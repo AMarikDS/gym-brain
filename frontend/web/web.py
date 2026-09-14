@@ -96,20 +96,22 @@ class State(rx.State):
             try:
                 age_val = float(self.age)
                 if age_val < 12 or age_val > 100:
-                    return rx.window_alert(
-                        "Invalid Age: Must be between 12 and 100 years."
-                    )
+                    self.error_msg = "Invalid Age: Must be between 12 and 100 years."
+                    return
             except ValueError:
-                return rx.window_alert("Invalid Age: Must be a number.")
+                self.error_msg = "Invalid Age: Must be a number."
+                return
 
             try:
                 bw_val = float(self.bw)
                 if bw_val < 30 or bw_val > 300:
-                    return rx.window_alert(
+                    self.error_msg = (
                         "Invalid Bodyweight: Must be between 30kg and 300kg."
                     )
+                    return
             except ValueError:
-                return rx.window_alert("Invalid Bodyweight: Must be a number.")
+                self.error_msg = "Invalid Bodyweight: Must be a number."
+                return
 
         elif self.current_step == 2:
             for lift_name, lift_val in [
@@ -120,14 +122,15 @@ class State(rx.State):
                 try:
                     val = float(lift_val)
                     if val < 0 or val > 500:
-                        return rx.window_alert(
+                        self.error_msg = (
                             f"Invalid {lift_name} 1RM: Must be between 0 and 500kg."
                         )
+                        return
                 except ValueError:
-                    return rx.window_alert(
-                        f"Invalid {lift_name} 1RM: Must be a number."
-                    )
+                    self.error_msg = f"Invalid {lift_name} 1RM: Must be a number."
+                    return
 
+        self.error_msg = ""
         if self.current_step < 4:
             self.current_step += 1
 
@@ -142,6 +145,7 @@ class State(rx.State):
 
     current_prediction: str = ""
     is_loading: bool = False
+    error_msg: str = ""
 
     async def get_recommendations(self) -> None:
         """Запрашивает список рекомендованных упражнений у ML-сервиса."""
@@ -428,6 +432,16 @@ def step_1_bio() -> rx.Component:
             spacing="4",
             style={"width": "100%"},
         ),
+        rx.cond(
+            State.error_msg != "",
+            rx.callout(
+                State.error_msg,
+                icon="triangle_alert",
+                color_scheme="red",
+                variant="surface",
+                margin_bottom="1rem",
+            ),
+        ),
         rx.flex(
             rx.button(
                 "Next Step",
@@ -530,6 +544,16 @@ def step_2_stats() -> rx.Component:
             columns="2",
             spacing="4",
             style={"width": "100%"},
+        ),
+        rx.cond(
+            State.error_msg != "",
+            rx.callout(
+                State.error_msg,
+                icon="triangle_alert",
+                color_scheme="red",
+                variant="surface",
+                margin_bottom="1rem",
+            ),
         ),
         rx.flex(
             rx.button(
