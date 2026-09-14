@@ -45,3 +45,4 @@ datasets/
 *.pth
 *.json
 *.csv
+TASKS.md
