@@ -90,8 +90,44 @@ class State(rx.State):
         """Устанавливает собственный вес."""
         self.bw = val
 
-    def next_step(self) -> None:
-        """Переключает форму на следующий шаг."""
+    def next_step(self):
+        """Переключает форму на следующий шаг с валидацией."""
+        if self.current_step == 1:
+            try:
+                age_val = float(self.age)
+                if age_val < 12 or age_val > 100:
+                    return rx.window_alert(
+                        "Invalid Age: Must be between 12 and 100 years."
+                    )
+            except ValueError:
+                return rx.window_alert("Invalid Age: Must be a number.")
+
+            try:
+                bw_val = float(self.bw)
+                if bw_val < 30 or bw_val > 300:
+                    return rx.window_alert(
+                        "Invalid Bodyweight: Must be between 30kg and 300kg."
+                    )
+            except ValueError:
+                return rx.window_alert("Invalid Bodyweight: Must be a number.")
+
+        elif self.current_step == 2:
+            for lift_name, lift_val in [
+                ("Squat", self.squat),
+                ("Bench", self.bench),
+                ("Deadlift", self.deadlift),
+            ]:
+                try:
+                    val = float(lift_val)
+                    if val < 0 or val > 500:
+                        return rx.window_alert(
+                            f"Invalid {lift_name} 1RM: Must be between 0 and 500kg."
+                        )
+                except ValueError:
+                    return rx.window_alert(
+                        f"Invalid {lift_name} 1RM: Must be a number."
+                    )
+
         if self.current_step < 4:
             self.current_step += 1
 
