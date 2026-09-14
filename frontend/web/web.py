@@ -136,6 +136,7 @@ class State(rx.State):
 
     def prev_step(self) -> None:
         """Возвращает форму на предыдущий шаг."""
+        self.error_msg = ""
         if self.current_step > 1:
             self.current_step -= 1
 
