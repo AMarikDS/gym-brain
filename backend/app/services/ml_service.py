@@ -50,7 +50,9 @@ class TransformerRec(nn.Module):
         self.token_emb = nn.Embedding(vocab_size, hidden)
         self.pos_emb = nn.Embedding(max_len, hidden)
         self.dropout = nn.Dropout(dropout)
-        encoder_layer = nn.TransformerEncoderLayer(d_model=hidden, nhead=heads, dropout=dropout, batch_first=True)
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=hidden, nhead=heads, dropout=dropout, batch_first=True
+        )
         self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=layers)
         self.fc = nn.Linear(hidden, vocab_size)
 
@@ -69,7 +71,9 @@ class MLService:
 
     def __init__(self) -> None:
         self.device = torch.device("cpu")
-        self.assets_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "models"))
+        self.assets_dir = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..", "..", "..", "models")
+        )
 
         with open(
             os.path.join(self.assets_dir, "encoder", "vocab.json"),
@@ -82,37 +86,55 @@ class MLService:
         self.exercise_meta_dict: dict[str, dict[str, Any]] = {}
 
         try:
-            df_equip = pd.read_csv(os.path.join(self.assets_dir, "metadata", "id_to_equipment_mapping_FIXED.csv"))
-            self.id_to_eq_dict = df_equip.set_index("candidate_id")["equipment_golden"].to_dict()
+            df_equip = pd.read_csv(
+                os.path.join(
+                    self.assets_dir, "metadata", "id_to_equipment_mapping_FIXED.csv"
+                )
+            )
+            self.id_to_eq_dict = df_equip.set_index("candidate_id")[
+                "equipment_golden"
+            ].to_dict()
         except FileNotFoundError:
             self.id_to_eq_dict = {}
 
         self.transformer = TransformerRec(vocab_size=len(self.vocab)).to(self.device)
-        bert_path = os.path.join(self.assets_dir, "encoder", "gym_bert_v2_ep27_hit0.3522.pth")
+        bert_path = os.path.join(
+            self.assets_dir, "encoder", "gym_bert_v2_ep27_hit0.3522.pth"
+        )
         if os.path.exists(bert_path):
-            self.transformer.load_state_dict(torch.load(bert_path, map_location=self.device))
+            self.transformer.load_state_dict(
+                torch.load(bert_path, map_location=self.device)
+            )
             self.transformer.eval()
             print("Loaded Transformer Model")
 
         self.cat_ranker = CatBoostClassifier()
-        cat_path = os.path.join(self.assets_dir, "ranker", "catboost_recommender_final.cbm")
+        cat_path = os.path.join(
+            self.assets_dir, "ranker", "catboost_recommender_final.cbm"
+        )
         if os.path.exists(cat_path):
             self.cat_ranker.load_model(cat_path)
             print("Loaded CatBoost Ranker")
 
         self.regressor_light = CatBoostRegressor()
-        light_path = os.path.join(self.assets_dir, "regressor", "weight_predictor_light.cbm")
+        light_path = os.path.join(
+            self.assets_dir, "regressor", "weight_predictor_light.cbm"
+        )
         if os.path.exists(light_path):
             self.regressor_light.load_model(light_path)
             print("Loaded Regressor LIGHT")
 
         self.regressor_pro = CatBoostRegressor()
-        pro_path = os.path.join(self.assets_dir, "regressor", "weight_predictor_pro.cbm")
+        pro_path = os.path.join(
+            self.assets_dir, "regressor", "weight_predictor_pro.cbm"
+        )
         if os.path.exists(pro_path):
             self.regressor_pro.load_model(pro_path)
             print("Loaded Regressor PRO")
 
-    def recommend(self, history_ids: list[int], profile: UserProfile, top_k: int = 10) -> list[dict[str, Any]]:
+    def recommend(
+        self, history_ids: list[int], profile: UserProfile, top_k: int = 10
+    ) -> list[dict[str, Any]]:
         """
         Двухэтапный конвейер рекомендаций (Трансформер + CatBoost).
         """
@@ -134,7 +156,12 @@ class MLService:
             idx_val = int(idx)
             name = self.id2name.get(idx_val, "Unknown")
             current_meta = self.exercise_meta_dict.get(name, {})
-            is_same = 1 if current_meta.get("category") == last_meta.get("category") and last_meta else 0
+            is_same = (
+                1
+                if current_meta.get("category") == last_meta.get("category")
+                and last_meta
+                else 0
+            )
 
             raw_eq = self.id_to_eq_dict.get(idx_val, "Unknown")
             mapped_eq = INVENTORY_MAP.get(raw_eq, raw_eq)

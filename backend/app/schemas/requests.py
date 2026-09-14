@@ -1,12 +1,12 @@
 from typing import List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class UserProfile(BaseModel):
     sex: str
-    age: float
-    bw: float
+    age: float = Field(..., ge=10, le=120)
+    bw: float = Field(..., ge=20, le=300)
     level: str  # Novice, Beginner, Intermediate, Advanced
     goal: str  # Powerbuilding, Bodybuilding, Athletics, Powerlifting, etc.
     equipment: str  # Machine, Dumbbell, Barbell, Bodyweight, All (Gym Mixed)

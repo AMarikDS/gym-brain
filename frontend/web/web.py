@@ -113,8 +113,8 @@ class State(rx.State):
         try:
             profile = {
                 "sex": self.sex,
-                "age": float(self.age) if self.age else 25.0,
-                "bw": float(self.bw) if self.bw else 80.0,
+                "age": max(10.0, min(120.0, float(self.age))) if self.age else 25.0,
+                "bw": max(20.0, min(300.0, float(self.bw))) if self.bw else 80.0,
                 "level": self.level,
                 "goal": self.goal,
                 "equipment": self.equipment,
@@ -155,8 +155,8 @@ class State(rx.State):
         try:
             profile = {
                 "sex": self.sex,
-                "age": float(self.age) if self.age else 25.0,
-                "bw": float(self.bw) if self.bw else 80.0,
+                "age": max(10.0, min(120.0, float(self.age))) if self.age else 25.0,
+                "bw": max(20.0, min(300.0, float(self.bw))) if self.bw else 80.0,
                 "level": self.level,
                 "goal": self.goal,
                 "equipment": self.equipment,
@@ -179,9 +179,7 @@ class State(rx.State):
                 )
                 if resp.status_code == 200:
                     data = resp.json()
-                    weight = data.get("weight", 0)
-                    reps = data.get("reps", 0)
-                    self.current_prediction = f"{weight} kg x {reps} reps"
+                    self.current_prediction = data.get("target_text", "")
         except (httpx.RequestError, ValueError) as e:
             print(f"Error predicting weight: {e}")
 
@@ -193,7 +191,9 @@ class State(rx.State):
             "}, 100);"
         )
 
-    async def start_workout(self, first_ex_id: int, first_ex_name: str, raw_eq: str) -> None:
+    async def start_workout(
+        self, first_ex_id: int, first_ex_name: str, raw_eq: str
+    ) -> None:
         """Инициализирует сессию первым базовым упражнением."""
         self.history_ids = []
         self.history_names = []
@@ -359,6 +359,8 @@ def step_1_bio() -> rx.Component:
                     value=State.age,
                     on_change=State.set_age,
                     type="number",
+                    min="10",
+                    max="120",
                     variant="surface",
                     color_scheme="gray",
                     size="3",
@@ -377,6 +379,8 @@ def step_1_bio() -> rx.Component:
                     value=State.bw,
                     on_change=State.set_bw,
                     type="number",
+                    min="20",
+                    max="300",
                     variant="surface",
                     color_scheme="gray",
                     size="3",
@@ -557,7 +561,9 @@ def step_3_summary() -> rx.Component:
             ),
             margin_bottom="2rem",
         ),
-        rx.heading("Select Initial Muscle Group", size="4", color="white", margin_bottom="1rem"),
+        rx.heading(
+            "Select Initial Muscle Group", size="4", color="white", margin_bottom="1rem"
+        ),
         rx.grid(
             rx.button(
                 "Chest (Bench Press)",
@@ -573,25 +579,33 @@ def step_3_summary() -> rx.Component:
             ),
             rx.button(
                 "Back (Deadlift)",
-                on_click=lambda: State.start_workout(720, "Deadlift (Barbell)", "Barbell"),
+                on_click=lambda: State.start_workout(
+                    720, "Deadlift (Barbell)", "Barbell"
+                ),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Shoulders (OHP)",
-                on_click=lambda: State.start_workout(1778, "Overhead Press (Barbell)", "Barbell"),
+                on_click=lambda: State.start_workout(
+                    1778, "Overhead Press (Barbell)", "Barbell"
+                ),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Arms (Bicep Curl)",
-                on_click=lambda: State.start_workout(363, "Bicep Curl (Dumbbell)", "Dumbbell"),
+                on_click=lambda: State.start_workout(
+                    363, "Bicep Curl (Dumbbell)", "Dumbbell"
+                ),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Core (Abs Crunch)",
-                on_click=lambda: State.start_workout(130, "Abs Crunch (Bodyweight)", "Bodyweight"),
+                on_click=lambda: State.start_workout(
+                    130, "Abs Crunch (Bodyweight)", "Bodyweight"
+                ),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
@@ -641,7 +655,9 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
         bg="rgba(255, 255, 255, 0.02)",
         border="1px solid rgba(255, 255, 255, 0.05)",
         cursor="pointer",
-        on_click=lambda: State.add_exercise(rec["exercise_id"], rec["exercise_name"], rec["equipment"]),
+        on_click=lambda: State.add_exercise(
+            rec["exercise_id"], rec["exercise_name"], rec["equipment"]
+        ),
         _hover={
             "background": "linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%)",
             "border": "1px solid rgba(6, 182, 212, 0.5)",
@@ -657,7 +673,9 @@ def step_4_workspace() -> rx.Component:
     return rx.box(
         rx.flex(
             rx.box(
-                rx.heading("Current Trajectory", size="4", color="white", margin_bottom="1rem"),
+                rx.heading(
+                    "Current Trajectory", size="4", color="white", margin_bottom="1rem"
+                ),
                 rx.flex(
                     rx.foreach(
                         State.trajectory_items,
@@ -764,7 +782,9 @@ def step_4_workspace() -> rx.Component:
                 ),
                 rx.cond(
                     State.is_loading,
-                    rx.flex(rx.spinner(color="cyan", size="3"), justify="center", p="10"),
+                    rx.flex(
+                        rx.spinner(color="cyan", size="3"), justify="center", p="10"
+                    ),
                     rx.box(
                         rx.foreach(State.recommendations, recommendation_card),
                         max_height="600px",
