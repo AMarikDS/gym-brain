@@ -187,12 +187,13 @@ class State(rx.State):
 
         await self.get_recommendations()
         return rx.call_script(
-            "setTimeout(() => { const el = document.getElementById('trajectory-end'); if (el) el.scrollIntoView({behavior: 'smooth', block: 'end'}); }, 100);"
+            "setTimeout(() => { "
+            "const el = document.getElementById('trajectory-end'); "
+            "if (el) el.scrollIntoView({behavior: 'smooth', block: 'end'}); "
+            "}, 100);"
         )
 
-    async def start_workout(
-        self, first_ex_id: int, first_ex_name: str, raw_eq: str
-    ) -> None:
+    async def start_workout(self, first_ex_id: int, first_ex_name: str, raw_eq: str) -> None:
         """Инициализирует сессию первым базовым упражнением."""
         self.history_ids = []
         self.history_names = []
@@ -209,6 +210,7 @@ class State(rx.State):
 
     @rx.var
     def trajectory_items(self) -> list[dict[str, str | bool]]:
+        """Возвращает список элементов текущей траектории с флагом последнего элемента."""
         items = []
         for i, name in enumerate(self.history_names):
             items.append(
@@ -220,6 +222,7 @@ class State(rx.State):
         return items
 
     async def undo_last_exercise(self) -> None:
+        """Удаляет последнее добавленное упражнение из истории и пересчитывает рекомендации."""
         if not self.history_ids:
             return
 
@@ -554,9 +557,7 @@ def step_3_summary() -> rx.Component:
             ),
             margin_bottom="2rem",
         ),
-        rx.heading(
-            "Select Initial Muscle Group", size="4", color="white", margin_bottom="1rem"
-        ),
+        rx.heading("Select Initial Muscle Group", size="4", color="white", margin_bottom="1rem"),
         rx.grid(
             rx.button(
                 "Chest (Bench Press)",
@@ -572,33 +573,25 @@ def step_3_summary() -> rx.Component:
             ),
             rx.button(
                 "Back (Deadlift)",
-                on_click=lambda: State.start_workout(
-                    720, "Deadlift (Barbell)", "Barbell"
-                ),
+                on_click=lambda: State.start_workout(720, "Deadlift (Barbell)", "Barbell"),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Shoulders (OHP)",
-                on_click=lambda: State.start_workout(
-                    1778, "Overhead Press (Barbell)", "Barbell"
-                ),
+                on_click=lambda: State.start_workout(1778, "Overhead Press (Barbell)", "Barbell"),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Arms (Bicep Curl)",
-                on_click=lambda: State.start_workout(
-                    363, "Bicep Curl (Dumbbell)", "Dumbbell"
-                ),
+                on_click=lambda: State.start_workout(363, "Bicep Curl (Dumbbell)", "Dumbbell"),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
             rx.button(
                 "Core (Abs Crunch)",
-                on_click=lambda: State.start_workout(
-                    130, "Abs Crunch (Bodyweight)", "Bodyweight"
-                ),
+                on_click=lambda: State.start_workout(130, "Abs Crunch (Bodyweight)", "Bodyweight"),
                 size="4",
                 style=SEED_BUTTON_STYLE,
             ),
@@ -648,9 +641,7 @@ def recommendation_card(rec: dict[str, str | float | int]) -> rx.Component:
         bg="rgba(255, 255, 255, 0.02)",
         border="1px solid rgba(255, 255, 255, 0.05)",
         cursor="pointer",
-        on_click=lambda: State.add_exercise(
-            rec["exercise_id"], rec["exercise_name"], rec["equipment"]
-        ),
+        on_click=lambda: State.add_exercise(rec["exercise_id"], rec["exercise_name"], rec["equipment"]),
         _hover={
             "background": "linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%)",
             "border": "1px solid rgba(6, 182, 212, 0.5)",
@@ -666,9 +657,7 @@ def step_4_workspace() -> rx.Component:
     return rx.box(
         rx.flex(
             rx.box(
-                rx.heading(
-                    "Current Trajectory", size="4", color="white", margin_bottom="1rem"
-                ),
+                rx.heading("Current Trajectory", size="4", color="white", margin_bottom="1rem"),
                 rx.flex(
                     rx.foreach(
                         State.trajectory_items,
@@ -775,9 +764,7 @@ def step_4_workspace() -> rx.Component:
                 ),
                 rx.cond(
                     State.is_loading,
-                    rx.flex(
-                        rx.spinner(color="cyan", size="3"), justify="center", p="10"
-                    ),
+                    rx.flex(rx.spinner(color="cyan", size="3"), justify="center", p="10"),
                     rx.box(
                         rx.foreach(State.recommendations, recommendation_card),
                         max_height="600px",
