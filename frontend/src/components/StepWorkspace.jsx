@@ -15,7 +15,10 @@ const StepWorkspace = ({ state, resetWorkout, undoLastExercise, addExercise }) =
                 const isLast = index === state.history_names.length - 1;
                 return (
                   <div key={index} className="trajectory-item">
-                    <span style={{ fontWeight: 500 }}>{name}</span>
+                    <span style={{ fontWeight: 500 }}>
+                      <span style={{ color: '#64748b', marginRight: '0.5rem' }}>{index + 1}.</span>
+                      {name}
+                    </span>
                     {isLast && (
                       <button 
                         className="btn btn-ghost-danger" 
