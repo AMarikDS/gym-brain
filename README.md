@@ -58,7 +58,7 @@ This project follows a microservices architecture powered by a 3-stage Machine L
 - **Machine Learning**: PyTorch, CatBoost, Scikit-learn, Pandas, NumPy
 - **Backend**: FastAPI, Uvicorn, Pydantic, Poetry
 - **Frontend**: React, Vite, Vanilla CSS
-- **Infrastructure**: Docker, Docker Compose, Nginx
+- **Infrastructure**: Docker, Nginx
 
 <br />
 
