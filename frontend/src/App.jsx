@@ -110,9 +110,28 @@ function App() {
       ...prev,
       history_ids: newHistoryIds,
       history_names: newHistoryNames,
-      current_prediction: "",
+      current_prediction: "Calculating...",
       current_step: 4
     }));
+
+    try {
+      const response = await fetch('/api/v1/predict_weight', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          profile: buildProfile(),
+          exercise_name: first_ex_name,
+          raw_equipment: raw_eq
+        })
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setState(prev => ({ ...prev, current_prediction: data.target_text || "" }));
+      }
+    } catch (e) {
+      console.error("Error predicting weight:", e);
+      setState(prev => ({ ...prev, current_prediction: "" }));
+    }
     
     await getRecommendations(newHistoryIds);
   };
