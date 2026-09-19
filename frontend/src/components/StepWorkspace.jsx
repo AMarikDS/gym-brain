@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Trash2, RotateCcw, Undo2, Loader2 } from 'lucide-react';
 
 const StepWorkspace = ({ state, resetWorkout, undoLastExercise, addExercise }) => {
+  const listEndRef = useRef(null);
+
+  useEffect(() => {
+    listEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [state.history_names]);
+
   return (
     <div className="glass-card" style={{ marginBottom: '2rem' }}>
       <div className="workspace-grid">
@@ -32,6 +38,7 @@ const StepWorkspace = ({ state, resetWorkout, undoLastExercise, addExercise }) =
                   </div>
                 );
               })}
+              <div ref={listEndRef} />
             </div>
           </div>
 
