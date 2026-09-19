@@ -4,6 +4,9 @@ services:
   backend:
     build: 
       context: ./backend
+      args:
+        HTTP_PROXY: ${HTTP_PROXY:-}
+        HTTPS_PROXY: ${HTTPS_PROXY:-}
     ports:
       - "8001:8080"
     command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
@@ -14,6 +17,9 @@ services:
   frontend:
     build:
       context: ./frontend
+      args:
+        HTTP_PROXY: ${HTTP_PROXY:-}
+        HTTPS_PROXY: ${HTTPS_PROXY:-}
     ports:
       - "3001:3000"
     depends_on:
