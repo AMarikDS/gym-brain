@@ -1,32 +1,39 @@
 <div align="center">
   <h1>Gym Brain AI</h1>
   <p><b>Hyper-Personalized Fitness Intelligence</b></p>
+  
+  <br />
 
   <p>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite"/>
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
     <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
-    <img src="https://img.shields.io/badge/Reflex-0F172A?style=for-the-badge&logoColor=white" alt="Reflex"/>
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
     <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
   </p>
 
-  <p>
-    <i>A Two-Stage AI Recommender System (Transformer + CatBoost) for dynamic fitness workouts, providing personalized exercise sequencing and target predictions through a Cyberpunk Glassmorphism UI.</i>
-  </p>
+  <br />
+  
+  <blockquote>
+    <p><i>A Two-Stage AI Recommender System (Transformer + CatBoost) for dynamic fitness workouts, providing personalized exercise sequencing and target predictions through a premium Light Glassmorphism UI.</i></p>
+  </blockquote>
 </div>
 
 <hr/>
 
-## 🌟 Key Features
+## Key Features
 
 - **Interactive Wizard UI**: Step-by-step workout initialization gathering biological stats, available equipment, and 1RM maxes.
 - **Dynamic Contextual Predictions**: Generates target metrics automatically formatting them based on exercise type (e.g. `+10 kg x 10 reps` for Bodyweight vs `15 mins` for Cardio).
 - **Strict Data Validation**: Real-time client-side and backend validation to prevent dirty inputs and absurd predictions.
 - **Workout Trajectory Engine**: Auto-scrollable session workspace with Undo/Restart features for continuous planning.
 
-## 🧠 AI Pipeline & Data Flow
+<br />
 
-This project follows a Microservices architecture powered by a 3-stage Machine Learning pipeline:
+## AI Pipeline & Data Flow
+
+This project follows a Microservices architecture powered by a 3-stage Machine Learning pipeline.
 
 ### 1. Candidate Generation (TransformerRec / BERT)
 - **What it does:** Acts as the brain for sequencing, understanding the context of your workout.
@@ -43,13 +50,18 @@ This project follows a Microservices architecture powered by a 3-stage Machine L
 - **Input:** The selected exercise + User profile (+ SBD 1RM stats for the Pro model).
 - **Output:** Predicted optimal dynamic target (kg/reps/mins).
 
-## 🛠 Tech Stack
+<br />
+
+## Tech Stack
+
 - **Machine Learning**: PyTorch, CatBoost, Pandas
 - **Backend**: FastAPI, Uvicorn, Pydantic, Poetry
-- **Frontend**: Reflex (Reactive Python UI framework)
-- **Infrastructure**: Docker, Docker Compose
+- **Frontend**: React, Vite, Vanilla CSS (Light Glassmorphism Design System)
+- **Infrastructure**: Docker, Docker Compose, Nginx
 
-## 🚀 How to Run Locally
+<br />
+
+## How to Run Locally
 
 1. Clone the repository:
 ```bash
@@ -68,9 +80,11 @@ Open [http://localhost:3001](http://localhost:3001) in your browser.
 4. Access the API documentation:
 Open [http://localhost:8001/docs](http://localhost:8001/docs) in your browser.
 
-## 📂 Project Structure
+<br />
+
+## Project Structure
 
 - `models/` - Contains all machine learning weights and mappings (`vocab.json`, `*.cbm`, `*.pth`).
 - `backend/` - FastAPI application, REST endpoints, and ML inference service.
-- `frontend/` - Reflex UI application with full Glassmorphism styling.
+- `frontend/` - React/Vite Single Page Application with Nginx reverse proxy.
 - `notebooks/` - Original Jupyter notebooks used for training the models and exploring data.
