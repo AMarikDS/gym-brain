@@ -23,11 +23,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '20.x'
-        cache: 'npm'
-        cache-dependency-path: './frontend/package-lock.json'
 
     - name: Install dependencies
-      run: npm ci
+      run: npm install
 
     - name: Lint (if eslint is present)
       run: npm run lint --if-present

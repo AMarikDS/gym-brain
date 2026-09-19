@@ -17,7 +17,6 @@
 
   <!-- PLACEHOLDER FOR VIDEO: Once you record a video, we will replace this image with:
   <video src="docs/demo.mp4" autoplay loop muted width="800" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"></video> -->
-  <img src="docs/hero.png" alt="Gym Brain Interface" width="800" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);" />
   
 </div>
 
