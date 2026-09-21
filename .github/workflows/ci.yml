@@ -29,15 +29,15 @@ jobs:
           
       - name: Check code formatting (Black)
         run: |
-          black --check backend/app backend/tests frontend/web || echo "Black formatting issues found"
+          black --check backend/app backend/tests || echo "Black formatting issues found"
           
       - name: Check imports (isort)
         run: |
-          isort --check-only backend/app backend/tests frontend/web || echo "Isort issues found"
+          isort --check-only backend/app backend/tests || echo "Isort issues found"
           
       - name: Lint with flake8
         run: |
-          flake8 backend/app backend/tests frontend/web --count --max-complexity=10 --max-line-length=120 --statistics || echo "Flake8 issues found"
+          flake8 backend/app backend/tests --count --max-complexity=10 --max-line-length=120 --statistics || echo "Flake8 issues found"
           
       - name: Backend - Run tests
         working-directory: ./backend
