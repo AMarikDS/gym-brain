@@ -22,25 +22,25 @@
 
 <hr/>
 
-## BigTech & Highload Инференс (Triton, TensorRT, JIT)
+## BigTech & Highload Inference (Triton, TensorRT, JIT)
 
-В проекте реализован **C++ TorchScript (JIT)** движок для инференса Трансформера, симулирующий стандарты BigTech (Triton Inference Server). 
+The project implements a **C++ TorchScript (JIT)** inference engine for the Transformer, simulating BigTech standards (e.g., Triton Inference Server).
 
-### Почему не чистый PyTorch?
-Обычный PyTorch имеет большой overhead из-за GIL (Global Interpreter Lock) и динамического графа вычислений (Python overhead). Для production-ready 1000+ RPS это неприемлемо. Мы скомпилировали модель в **TorchScript (JIT)** — это позволяет запускать её полностью в среде C++ (LibTorch) без участия Python.
+### Why not pure PyTorch?
+Standard PyTorch carries significant overhead due to the Python GIL (Global Interpreter Lock) and dynamic computation graphs. This is unacceptable for production-ready 1000+ RPS architectures. We compiled the PyTorch model into **TorchScript (JIT)**, allowing it to run entirely in a C++ environment (LibTorch) without Python overhead.
 
-### Сравнение технологий (Production Stack)
-1. **TorchScript JIT (Реализовано):** Компилирует модель в статичный граф, который можно использовать в C++ или Rust. Ускоряет инференс на CPU и GPU, используется как нативный бэкенд в **NVIDIA Triton Inference Server**.
-2. **ONNX Runtime:** Универсальный C++ движок от Microsoft, который часто дает максимальную производительность на CPU за счет агрессивного слияния слоев (graph optimization).
-3. **TensorRT:** Проприетарный движок от NVIDIA. Оптимизирует веса конкретно под архитектуру вашего чипа (например, T4, A100), квантизует в FP16/INT8. Дает максимальный FPS на GPU.
-4. **Triton Inference Server & Kubernetes:** В BigTech сами модели оборачивают не в FastAPI, а в Triton, который через gRPC принимает батчи запросов от пользователей (Dynamic Batching) и загружает GPU на 100%. Затем всё это скейлится в K8s.
+### Inference Technologies (Production Stack)
+1. **TorchScript JIT (Implemented):** Compiles the model into a static graph for C++ or Rust execution. Speeds up inference on CPU/GPU and serves as a native backend for **NVIDIA Triton Inference Server**.
+2. **ONNX Runtime:** Microsoft's universal C++ engine, often providing maximum CPU performance via aggressive graph optimization.
+3. **TensorRT:** NVIDIA's proprietary engine. Optimizes weights for specific chip architectures (e.g., T4, A100) and quantizes to FP16/INT8 for maximum GPU FPS.
+4. **Triton Inference Server & Kubernetes:** In BigTech, models aren't wrapped directly in FastAPI. Instead, they are deployed to Triton, which handles gRPC requests, dynamic batching, and 100% GPU utilization, orchestrated by K8s.
 
-### Benchmark (1000 запросов)
-Проведенный нагрузочный тест показал значительный **Бизнес-эффект** от компиляции модели:
+### Benchmark (1000 requests)
+Our load testing demonstrated significant **Business Impact** from model compilation:
 * **PyTorch (Python):** p99 Latency = `4.023 ms` | Mean = `2.556 ms`
 * **C++ JIT (LibTorch):** p99 Latency = `2.546 ms` | Mean = `2.183 ms`
 
-**Бизнес-эффект:** C++ движок оказался в **1.6 раз быстрее** на 99-м перцентиле (p99). Это радикально снижает потребление ресурсов железа и гарантирует стабильное время ответа при спайках нагрузки (highload).
+**Business Impact:** The C++ engine proved to be **1.6x faster** at the 99th percentile (p99). This radically reduces hardware resource consumption and guarantees stable response times during traffic spikes (highload).
 
 <br />
 
@@ -55,20 +55,23 @@
 
 ## Pipeline Architecture
 
-This project follows a microservices architecture powered by a 3-stage Machine Learning pipeline.
+This project follows a microservices architecture powered by a 3-stage Machine Learning pipeline optimized for low-latency inference.
 
 ### 1. Candidate Generation
 - **Model**: TransformerRec (BERT architecture).
+- **Format**: C++ TorchScript JIT (`.pt`).
 - **Input**: Sequence of past exercise IDs.
 - **Output**: Top-N potential next exercises scored by contextual relevance.
 
 ### 2. Reranking
 - **Model**: CatBoost Ranker.
+- **Format**: Native C++ CatBoost Binary (`.cbm`).
 - **Input**: User profile and candidate exercises.
 - **Output**: Re-ranked list of exercises sorted by personalized relevance score.
 
 ### 3. Target Regression
 - **Model**: CatBoost Regressor.
+- **Format**: Native C++ CatBoost Binary (`.cbm`).
 - **Input**: Selected exercise and user profile.
 - **Output**: Predicted optimal dynamic target (weight, reps, or time).
 
