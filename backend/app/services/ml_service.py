@@ -97,16 +97,24 @@ class MLService:
         except FileNotFoundError:
             self.id_to_eq_dict = {}
 
-        self.transformer = TransformerRec(vocab_size=len(self.vocab)).to(self.device)
-        bert_path = os.path.join(
-            self.assets_dir, "encoder", "gym_bert_v2_ep27_hit0.3522.pth"
+        jit_path = os.path.join(
+            self.assets_dir, "encoder", "transformer_jit.pt"
         )
-        if os.path.exists(bert_path):
-            self.transformer.load_state_dict(
-                torch.load(bert_path, map_location=self.device)
-            )
+        if os.path.exists(jit_path):
+            self.transformer = torch.jit.load(jit_path, map_location=self.device)
             self.transformer.eval()
-            print("Loaded Transformer Model")
+            print("Loaded C++ TorchScript (JIT) Transformer Model for Highload")
+        else:
+            self.transformer = TransformerRec(vocab_size=len(self.vocab)).to(self.device)
+            bert_path = os.path.join(
+                self.assets_dir, "encoder", "gym_bert_v2_ep27_hit0.3522.pth"
+            )
+            if os.path.exists(bert_path):
+                self.transformer.load_state_dict(
+                    torch.load(bert_path, map_location=self.device)
+                )
+                self.transformer.eval()
+                print("Loaded Python PyTorch Transformer Model")
 
         self.cat_ranker = CatBoostClassifier()
         cat_path = os.path.join(
