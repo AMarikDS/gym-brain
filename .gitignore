@@ -41,8 +41,8 @@ notebooks/
 # Data and Models
 models/
 datasets/
+datasets/*.json
+datasets/*.csv
 *.cbm
 *.pth
-*.json
-*.csv
 TASKS.md
