@@ -22,7 +22,7 @@
 
 <hr/>
 
-## 🚀 BigTech & Highload Инференс (Triton, TensorRT, JIT)
+## BigTech & Highload Инференс (Triton, TensorRT, JIT)
 
 В проекте реализован **C++ TorchScript (JIT)** движок для инференса Трансформера, симулирующий стандарты BigTech (Triton Inference Server). 
 
@@ -35,12 +35,12 @@
 3. **TensorRT:** Проприетарный движок от NVIDIA. Оптимизирует веса конкретно под архитектуру вашего чипа (например, T4, A100), квантизует в FP16/INT8. Дает максимальный FPS на GPU.
 4. **Triton Inference Server & Kubernetes:** В BigTech сами модели оборачивают не в FastAPI, а в Triton, который через gRPC принимает батчи запросов от пользователей (Dynamic Batching) и загружает GPU на 100%. Затем всё это скейлится в K8s.
 
-### 📊 Benchmark (1000 запросов)
+### Benchmark (1000 запросов)
 Проведенный нагрузочный тест показал значительный **Бизнес-эффект** от компиляции модели:
 * **PyTorch (Python):** p99 Latency = `4.023 ms` | Mean = `2.556 ms`
 * **C++ JIT (LibTorch):** p99 Latency = `2.546 ms` | Mean = `2.183 ms`
 
-✅ **Бизнес-эффект:** C++ движок оказался в **1.6 раз быстрее** на 99-м перцентиле (p99). Это радикально снижает потребление ресурсов железа и гарантирует стабильное время ответа при спайках нагрузки (highload).
+**Бизнес-эффект:** C++ движок оказался в **1.6 раз быстрее** на 99-м перцентиле (p99). Это радикально снижает потребление ресурсов железа и гарантирует стабильное время ответа при спайках нагрузки (highload).
 
 <br />
 
@@ -85,25 +85,30 @@ This project follows a microservices architecture powered by a 3-stage Machine L
 
 ## How to Run Locally
 
-1. Clone the repository:
+<p>
+  <img src="https://img.shields.io/badge/Clone-Repository-3776AB?style=for-the-badge&logo=github&logoColor=white" alt="Clone"/>
+</p>
+
 ```bash
 git clone https://github.com/AMarikDS/gym-brain.git
 cd gym-brain
 ```
 
-2. Start the services using Docker Compose:
+<p>
+  <img src="https://img.shields.io/badge/Docker-Compose_Up-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+</p>
+
 ```bash
-# Optional: If you are behind a corporate proxy, you must pass it to the build process:
-# docker compose build --build-arg HTTP_PROXY=$HTTP_PROXY --build-arg HTTPS_PROXY=$HTTPS_PROXY backend
+# Optional: If you are behind a corporate proxy, you must export it first:
+# export HTTP_PROXY=... HTTPS_PROXY=...
 
 docker compose up --build -d
 ```
 
-3. Access the web interface:
-Open [http://localhost:3001](http://localhost:3001) in your browser.
-
-4. Access the API documentation:
-Open [http://localhost:8001/docs](http://localhost:8001/docs) in your browser.
+<p>
+  <a href="http://localhost:3001" target="_blank"><img src="https://img.shields.io/badge/Frontend-Web_Interface-B73BFE?style=for-the-badge&logo=react&logoColor=white" alt="Web Interface"/></a>
+  <a href="http://localhost:8001/docs" target="_blank"><img src="https://img.shields.io/badge/Backend-API_Docs-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="API Docs"/></a>
+</p>
 
 <br />
 
