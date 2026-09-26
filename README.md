@@ -37,19 +37,13 @@
 
 ## How to Run Locally
 
-<p>
-  <img src="https://img.shields.io/badge/Clone-Repository-3776AB?style=for-the-badge&logo=github&logoColor=white" alt="Clone"/>
-</p>
-
+1. **Clone the Repository**
 ```bash
 git clone https://github.com/AMarikDS/gym-brain.git
 cd gym-brain
 ```
 
-<p>
-  <img src="https://img.shields.io/badge/Docker-Compose_Up-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-</p>
-
+2. **Start Services (Docker Compose)**
 ```bash
 # Optional: If you are behind a corporate proxy, you must export it first:
 # export HTTP_PROXY=... HTTPS_PROXY=...
@@ -57,10 +51,9 @@ cd gym-brain
 docker compose up --build -d
 ```
 
-<p>
-  <a href="http://localhost:3001" target="_blank"><img src="https://img.shields.io/badge/Frontend-Web_Interface-B73BFE?style=for-the-badge&logo=react&logoColor=white" alt="Web Interface"/></a>
-  <a href="http://localhost:8001/docs" target="_blank"><img src="https://img.shields.io/badge/Backend-API_Docs-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="API Docs"/></a>
-</p>
+3. **Access the App**
+- **Web Interface:** [http://localhost:3001](http://localhost:3001)
+- **API Documentation:** [http://localhost:8001/docs](http://localhost:8001/docs)
 
 <br />
 
