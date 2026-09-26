@@ -35,6 +35,14 @@
 
 <br />
 
+## Prerequisites
+
+To run this project, you must have the following installed on your machine:
+- [Docker Engine](https://docs.docker.com/engine/install/)
+- [Docker Compose (v2)](https://docs.docker.com/compose/install/) (Ensure you use `docker compose` with a space, not the deprecated `docker-compose` with a hyphen).
+
+<br />
+
 ## How to Run Locally
 
 1. **Clone the Repository**
