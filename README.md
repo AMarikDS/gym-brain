@@ -81,27 +81,7 @@ This project follows a microservices architecture powered by a 3-stage Machine L
 
 <br />
 
-## BigTech & Highload Inference (Triton, TensorRT, JIT)
 
-The project implements a **C++ TorchScript (JIT)** inference engine for the Transformer, simulating BigTech standards (e.g., Triton Inference Server).
-
-### Why not pure PyTorch?
-Standard PyTorch carries significant overhead due to the Python GIL (Global Interpreter Lock) and dynamic computation graphs. This is unacceptable for production-ready 1000+ RPS architectures. We compiled the PyTorch model into **TorchScript (JIT)**, allowing it to run entirely in a C++ environment (LibTorch) without Python overhead.
-
-### Inference Technologies (Production Stack)
-1. **TorchScript JIT (Implemented):** Compiles the model into a static graph for C++ or Rust execution. Speeds up inference on CPU/GPU and serves as a native backend for **NVIDIA Triton Inference Server**.
-2. **ONNX Runtime:** Microsoft's universal C++ engine, often providing maximum CPU performance via aggressive graph optimization.
-3. **TensorRT:** NVIDIA's proprietary engine. Optimizes weights for specific chip architectures (e.g., T4, A100) and quantizes to FP16/INT8 for maximum GPU FPS.
-4. **Triton Inference Server & Kubernetes:** In BigTech, models aren't wrapped directly in FastAPI. Instead, they are deployed to Triton, which handles gRPC requests, dynamic batching, and 100% GPU utilization, orchestrated by K8s.
-
-### Benchmark (1000 requests)
-Our load testing demonstrated significant **Business Impact** from model compilation:
-* **PyTorch (Python):** p99 Latency = `4.023 ms` | Mean = `2.556 ms`
-* **C++ JIT (LibTorch):** p99 Latency = `2.546 ms` | Mean = `2.183 ms`
-
-**Business Impact:** The C++ engine proved to be **1.6x faster** at the 99th percentile (p99). This radically reduces hardware resource consumption and guarantees stable response times during traffic spikes (highload).
-
-<br />
 
 ## Project Structure
 
