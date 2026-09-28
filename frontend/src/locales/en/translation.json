@@ -1,0 +1,80 @@
+{
+  "app": {
+    "title": "Gym Brain AI",
+    "subtitle": "Hyper-Personalized Fitness Intelligence"
+  },
+  "stepBio": {
+    "title": "Step 1: Biological Profile",
+    "level": "Level",
+    "goal": "Goal",
+    "sex": "Sex",
+    "age": "Age",
+    "bodyweight": "Bodyweight (kg)",
+    "nextStep": "Next Step"
+  },
+  "stepStats": {
+    "title": "Step 2: Equipment & Base Strength",
+    "equipment": "Available Equipment",
+    "squat1RM": "Squat 1RM (kg)",
+    "bench1RM": "Bench 1RM (kg)",
+    "deadlift1RM": "Deadlift 1RM (kg)",
+    "back": "Back",
+    "reviewProfile": "Review Profile"
+  },
+  "stepMuscle": {
+    "successTitle": "Profile configured successfully!",
+    "successSubtitle": "ML pipeline is ready. Choose your first exercise.",
+    "selectInitial": "Select Initial Muscle Group",
+    "chest": "Chest (Bench Press)",
+    "legs": "Legs (Squat)",
+    "back": "Back (Deadlift)",
+    "shoulders": "Shoulders (OHP)",
+    "arms": "Arms (Bicep Curl)",
+    "core": "Core (Abs Crunch)",
+    "backToStats": "Back to Stats"
+  },
+  "stepWorkspace": {
+    "currentTrajectory": "Current Trajectory",
+    "aiTargetPrediction": "AI Target Prediction",
+    "calculating": "Calculating...",
+    "recalculating": "Recalculating...",
+    "undoLastAction": "Undo Last Action",
+    "restartSession": "Restart Session",
+    "aiNextStepGeneration": "AI Next Step Generation",
+    "undoExercise": "Undo this exercise"
+  },
+  "errors": {
+    "invalidAge": "Invalid Age: Must be between 12 and 100 years.",
+    "invalidBodyweight": "Invalid Bodyweight: Must be between 30kg and 300kg.",
+    "invalid1RM": "Invalid {{lift}} 1RM: Must be between 0 and 500kg."
+  },
+  "options": {
+    "levels": {
+      "Novice": "Novice",
+      "Beginner": "Beginner",
+      "Intermediate": "Intermediate",
+      "Advanced": "Advanced"
+    },
+    "goals": {
+      "Bodybuilding": "Bodybuilding",
+      "Powerlifting": "Powerlifting",
+      "Powerbuilding": "Powerbuilding",
+      "Athletics": "Athletics",
+      "Fitness": "Fitness",
+      "Weight Loss": "Weight Loss"
+    },
+    "sexes": {
+      "Male": "Male",
+      "Female": "Female"
+    },
+    "equipments": {
+      "All (Gym Mixed)": "All (Gym Mixed)",
+      "Barbell": "Barbell",
+      "Dumbbell": "Dumbbell",
+      "Machine": "Machine",
+      "Cable": "Cable",
+      "Bodyweight": "Bodyweight",
+      "Cardio": "Cardio"
+    }
+  }
+}

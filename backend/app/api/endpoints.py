@@ -2,6 +2,7 @@ from typing import Any, Dict
 
 from app.schemas.requests import PredictWeightRequest, RecommendRequest
 from app.services.ml_service import ml_service
+from app.services.translation_service import translation_service
 from fastapi import APIRouter
 
 router = APIRouter()
@@ -15,6 +16,11 @@ def recommend_exercises(request: RecommendRequest) -> Dict[str, Any]:
     recommendations = ml_service.recommend(
         history_ids=request.history_ids, profile=request.profile, top_k=request.top_k
     )
+
+    if request.language == "ru":
+        for rec in recommendations:
+            rec["exercise_name"] = translation_service.translate_en_to_ru(rec["exercise_name"])
+
     return {"recommendations": recommendations}
 
 
@@ -33,19 +39,32 @@ def predict_weight(request: PredictWeightRequest) -> Dict[str, Any]:
     eq = request.raw_equipment.lower()
 
     if "cardio" in eq or "fitness" in eq or "run" in eq or "bike" in eq:
-        # Cardio exercises typically use time instead of weight
-        # We can use the predicted "reps" as minutes, or just a placeholder
-        target_text = f"{max(5, reps * 2)} mins"
+        if request.language == "ru":
+            target_text = f"{max(5, reps * 2)} мин"
+        else:
+            target_text = f"{max(5, reps * 2)} mins"
     elif "bodyweight" in eq:
         if weight <= 0:
-            target_text = f"Bodyweight x {reps} reps"
+            if request.language == "ru":
+                target_text = f"Свой вес x {reps} повт"
+            else:
+                target_text = f"Bodyweight x {reps} reps"
         else:
-            target_text = f"+{weight} kg x {reps} reps"
+            if request.language == "ru":
+                target_text = f"+{weight} кг x {reps} повт"
+            else:
+                target_text = f"+{weight} kg x {reps} reps"
     else:
         # Standard weights (Machine, Barbell, Dumbbell, Cable)
         if weight <= 0:
-            target_text = f"Light Weight x {reps} reps"
+            if request.language == "ru":
+                target_text = f"Легкий вес x {reps} повт"
+            else:
+                target_text = f"Light Weight x {reps} reps"
         else:
-            target_text = f"{weight} kg x {reps} reps"
+            if request.language == "ru":
+                target_text = f"{weight} кг x {reps} повт"
+            else:
+                target_text = f"{weight} kg x {reps} reps"
 
     return {"weight": weight, "reps": reps, "target_text": target_text}

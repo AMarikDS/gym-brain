@@ -1,10 +1,14 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import StepBio from './components/StepBio'
 import StepStats from './components/StepStats'
 import StepMuscle from './components/StepMuscle'
 import StepWorkspace from './components/StepWorkspace'
+import LanguageSwitcher from './components/LanguageSwitcher'
 
 function App() {
+  const { t, i18n } = useTranslation();
+
   const [state, setState] = useState({
     current_step: 1,
     level: "Intermediate",
@@ -30,12 +34,12 @@ function App() {
     if (state.current_step === 1) {
       const ageVal = parseFloat(state.age);
       if (isNaN(ageVal) || ageVal < 12 || ageVal > 100) {
-        setError("Invalid Age: Must be between 12 and 100 years.");
+        setError(t('errors.invalidAge'));
         return;
       }
       const bwVal = parseFloat(state.bw);
       if (isNaN(bwVal) || bwVal < 30 || bwVal > 300) {
-        setError("Invalid Bodyweight: Must be between 30kg and 300kg.");
+        setError(t('errors.invalidBodyweight'));
         return;
       }
     } else if (state.current_step === 2) {
@@ -47,7 +51,7 @@ function App() {
       for (let lift of lifts) {
         const val = parseFloat(lift.val);
         if (isNaN(val) || val < 0 || val > 500) {
-          setError(`Invalid ${lift.name} 1RM: Must be between 0 and 500kg.`);
+          setError(t('errors.invalid1RM', { lift: lift.name }));
           return;
         }
       }
@@ -88,7 +92,8 @@ function App() {
         body: JSON.stringify({
           history_ids: currentHistory,
           profile: buildProfile(),
-          top_k: 10
+          top_k: 10,
+          language: i18n.language
         })
       });
       if (response.ok) {
@@ -105,12 +110,12 @@ function App() {
   const startWorkout = async (first_ex_id, first_ex_name, raw_eq) => {
     const newHistoryIds = [first_ex_id];
     const newHistoryNames = [first_ex_name];
-    
+
     setState(prev => ({
       ...prev,
       history_ids: newHistoryIds,
       history_names: newHistoryNames,
-      current_prediction: "Calculating...",
+      current_prediction: t('stepWorkspace.calculating'),
       current_step: 4
     }));
 
@@ -121,7 +126,8 @@ function App() {
         body: JSON.stringify({
           profile: buildProfile(),
           exercise_name: first_ex_name,
-          raw_equipment: raw_eq
+          raw_equipment: raw_eq,
+          language: i18n.language
         })
       });
       if (response.ok) {
@@ -132,14 +138,14 @@ function App() {
       console.error("Error predicting weight:", e);
       setState(prev => ({ ...prev, current_prediction: "" }));
     }
-    
+
     await getRecommendations(newHistoryIds);
   };
 
   const addExercise = async (ex_id, ex_name, raw_eq) => {
     const newHistoryIds = [...state.history_ids, ex_id];
     const newHistoryNames = [...state.history_names, ex_name];
-    
+
     setState(prev => ({
       ...prev,
       history_ids: newHistoryIds,
@@ -153,7 +159,8 @@ function App() {
         body: JSON.stringify({
           profile: buildProfile(),
           exercise_name: ex_name,
-          raw_equipment: raw_eq
+          raw_equipment: raw_eq,
+          language: i18n.language
         })
       });
       if (response.ok) {
@@ -169,7 +176,7 @@ function App() {
 
   const undoLastExercise = async () => {
     if (state.history_ids.length === 0) return;
-    
+
     if (state.history_ids.length === 1) {
       resetWorkout();
       return;
@@ -177,14 +184,14 @@ function App() {
 
     const newHistoryIds = state.history_ids.slice(0, -1);
     const newHistoryNames = state.history_names.slice(0, -1);
-    
+
     setState(prev => ({
       ...prev,
       history_ids: newHistoryIds,
       history_names: newHistoryNames,
-      current_prediction: "Recalculating..."
+      current_prediction: t('stepWorkspace.recalculating')
     }));
-    
+
     await getRecommendations(newHistoryIds);
   };
 
@@ -201,9 +208,10 @@ function App() {
 
   return (
     <div className="container">
+      <LanguageSwitcher />
       <div className="hero-title">
-        <h1>Gym Brain AI</h1>
-        <p>Hyper-Personalized Fitness Intelligence</p>
+        <h1>{t('app.title')}</h1>
+        <p>{t('app.subtitle')}</p>
       </div>
 
       {state.current_step === 1 && (
@@ -216,13 +224,24 @@ function App() {
         <StepMuscle prevStep={prevStep} startWorkout={startWorkout} />
       )}
       {state.current_step === 4 && (
-        <StepWorkspace 
-          state={state} 
-          resetWorkout={resetWorkout} 
-          undoLastExercise={undoLastExercise} 
-          addExercise={addExercise} 
+        <StepWorkspace
+          state={state}
+          resetWorkout={resetWorkout}
+          undoLastExercise={undoLastExercise}
+          addExercise={addExercise}
         />
       )}
+
+      <footer style={{
+        marginTop: 'auto',
+        padding: '2rem 1rem',
+        textAlign: 'center',
+        fontSize: '0.8rem',
+        color: '#64748b',
+        opacity: 0.7
+      }}>
+        Gym Brain AI v1.0.0 • © 2026 Artem Markov
+      </footer>
     </div>
   )
 }

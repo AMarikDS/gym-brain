@@ -29,7 +29,9 @@
 ## Key Features
 
 - **Interactive Wizard UI**: Step-by-step workout initialization gathering biological stats, available equipment, and 1RM metrics.
+- **Full UI Localization**: Seamless 0ms language switching (English/Russian) via `react-i18next`.
 - **Dynamic Contextual Predictions**: Generates target metrics formatted based on exercise type (e.g., rep ranges for hypertrophy vs strength).
+- **Zero-Delay ML Translation**: Automatically translates dynamically generated AI predictions using an open-source NLP model (`Helsinki-NLP` via HuggingFace) with LRU caching for 0ms repeated inference.
 - **Data Validation**: Real-time client-side and backend validation to prevent dirty or illogical inputs.
 - **Workout Trajectory Engine**: Auto-scrollable session workspace with Undo and Restart features for seamless in-gym usage.
 
@@ -86,6 +88,11 @@ This project follows a microservices architecture powered by a 3-stage Machine L
 - **Format**: Native C++ CatBoost Binary (`.cbm`).
 - **Input**: Selected exercise and user profile.
 - **Output**: Predicted optimal dynamic target (weight, reps, or time).
+
+### 4. Dynamic Translation (i18n)
+- **Model**: MarianMT (`Helsinki-NLP/opus-mt-en-ru`).
+- **Input**: Generated English ML predictions.
+- **Output**: Localized strings (Russian). Caches results in memory for zero-delay repeated inference.
 
 <br />
 

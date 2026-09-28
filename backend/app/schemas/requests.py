@@ -21,6 +21,7 @@ class RecommendRequest(BaseModel):
     history_ids: List[int]
     profile: UserProfile
     top_k: int = 10
+    language: str = "en"
 
 
 class PredictWeightRequest(BaseModel):
@@ -28,3 +29,4 @@ class PredictWeightRequest(BaseModel):
     exercise_name: str
     base_lift: Optional[str] = None
     raw_equipment: str = "Machine"
+    language: str = "en"

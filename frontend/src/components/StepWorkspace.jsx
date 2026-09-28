@@ -1,8 +1,10 @@
 import React, { useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Trash2, RotateCcw, Undo2, Loader2 } from 'lucide-react';
 
 const StepWorkspace = ({ state, resetWorkout, undoLastExercise, addExercise }) => {
   const listEndRef = useRef(null);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     listEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -13,7 +15,7 @@ const StepWorkspace = ({ state, resetWorkout, undoLastExercise, addExercise }) =
       <div className="workspace-grid">
         {/* Left Column: Trajectory */}
         <div>
-          <h2 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>Current Trajectory</h2>
+          <h2 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>{t('stepWorkspace.currentTrajectory')}</h2>
           
           <div className="glass-card-sm">
             <div className="trajectory-list">
@@ -30,7 +32,7 @@ const StepWorkspace = ({ state, resetWorkout, undoLastExercise, addExercise }) =
                         className="btn btn-ghost-danger" 
                         style={{ padding: '0.25rem' }}
                         onClick={undoLastExercise}
-                        title="Undo this exercise"
+                        title={t('stepWorkspace.undoExercise')}
                       >
                         <Trash2 size={18} />
                       </button>
@@ -44,24 +46,24 @@ const StepWorkspace = ({ state, resetWorkout, undoLastExercise, addExercise }) =
 
           {state.current_prediction && (
             <div className="ai-prediction">
-              <div className="ai-prediction-label">AI Target Prediction</div>
+              <div className="ai-prediction-label">{t('stepWorkspace.aiTargetPrediction')}</div>
               <div className="ai-prediction-value">{state.current_prediction}</div>
             </div>
           )}
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1.5rem' }}>
             <button className="btn btn-outline" onClick={undoLastExercise} style={{ width: '100%' }}>
-              <Undo2 size={18} /> Undo Last Action
+              <Undo2 size={18} /> {t('stepWorkspace.undoLastAction')}
             </button>
             <button className="btn btn-danger" onClick={resetWorkout} style={{ width: '100%' }}>
-              <RotateCcw size={18} /> Restart Session
+              <RotateCcw size={18} /> {t('stepWorkspace.restartSession')}
             </button>
           </div>
         </div>
 
         {/* Right Column: Recommendations */}
         <div style={{ paddingLeft: '2rem', borderLeft: '1px solid #e2e8f0' }}>
-          <h2 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>AI Next Step Generation</h2>
+          <h2 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>{t('stepWorkspace.aiNextStepGeneration')}</h2>
           
           {state.is_loading ? (
             <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}>
@@ -76,7 +78,7 @@ const StepWorkspace = ({ state, resetWorkout, undoLastExercise, addExercise }) =
                   onClick={() => addExercise(rec.exercise_id, rec.exercise_name, rec.equipment)}
                 >
                   <span style={{ fontSize: '1.125rem', fontWeight: 600 }}>{rec.exercise_name}</span>
-                  <span className="badge">{rec.equipment}</span>
+                  <span className="badge">{t(`options.equipments.${rec.equipment}`, rec.equipment)}</span>
                 </div>
               ))}
             </div>

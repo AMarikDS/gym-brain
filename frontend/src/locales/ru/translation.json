@@ -1,0 +1,80 @@
+{
+  "app": {
+    "title": "Gym Brain AI",
+    "subtitle": "Сверхумный фитнес-интеллект"
+  },
+  "stepBio": {
+    "title": "Шаг 1: Биологический профиль",
+    "level": "Уровень",
+    "goal": "Цель",
+    "sex": "Пол",
+    "age": "Возраст",
+    "bodyweight": "Вес тела (кг)",
+    "nextStep": "Далее"
+  },
+  "stepStats": {
+    "title": "Шаг 2: Экипировка и базовая сила",
+    "equipment": "Доступная экипировка",
+    "squat1RM": "Присед 1RM (кг)",
+    "bench1RM": "Жим лежа 1RM (кг)",
+    "deadlift1RM": "Становая тяга 1RM (кг)",
+    "back": "Назад",
+    "reviewProfile": "Проверить профиль"
+  },
+  "stepMuscle": {
+    "successTitle": "Профиль успешно настроен!",
+    "successSubtitle": "ML-пайплайн готов. Выберите первое упражнение.",
+    "selectInitial": "Выберите начальную группу мышц",
+    "chest": "Грудь (Жим лежа)",
+    "legs": "Ноги (Присед)",
+    "back": "Спина (Становая)",
+    "shoulders": "Плечи (Жим стоя)",
+    "arms": "Руки (Бицепс)",
+    "core": "Пресс (Скручивания)",
+    "backToStats": "Назад к статистике"
+  },
+  "stepWorkspace": {
+    "currentTrajectory": "Текущая тренировка",
+    "aiTargetPrediction": "AI Предсказание цели",
+    "calculating": "Вычисляю...",
+    "recalculating": "Пересчитываю...",
+    "undoLastAction": "Отменить последнее действие",
+    "restartSession": "Сбросить сессию",
+    "aiNextStepGeneration": "AI Генерация следующего шага",
+    "undoExercise": "Отменить это упражнение"
+  },
+  "errors": {
+    "invalidAge": "Неверный возраст: от 12 до 100 лет.",
+    "invalidBodyweight": "Неверный вес: от 30кг до 300кг.",
+    "invalid1RM": "Неверный {{lift}} 1RM: от 0 до 500кг."
+  },
+  "options": {
+    "levels": {
+      "Novice": "Новичок",
+      "Beginner": "Начинающий",
+      "Intermediate": "Средний",
+      "Advanced": "Продвинутый"
+    },
+    "goals": {
+      "Bodybuilding": "Бодибилдинг",
+      "Powerlifting": "Пауэрлифтинг",
+      "Powerbuilding": "Пауэрбилдинг",
+      "Athletics": "Атлетика",
+      "Fitness": "Фитнес",
+      "Weight Loss": "Похудение"
+    },
+    "sexes": {
+      "Male": "Мужской",
+      "Female": "Женский"
+    },
+    "equipments": {
+      "All (Gym Mixed)": "Все (Тренажерный зал)",
+      "Barbell": "Штанга",
+      "Dumbbell": "Гантели",
+      "Machine": "Тренажеры",
+      "Cable": "Блоки",
+      "Bodyweight": "Свой вес",
+      "Cardio": "Кардио"
+    }
+  }
+}
