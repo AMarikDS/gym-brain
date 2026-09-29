@@ -6,13 +6,14 @@ const StepBio = ({ state, setState, nextStep, error }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="glass-card">
-      <h2 style={{ marginBottom: '1.5rem' }}>{t('stepBio.title')}</h2>
+    <div className="card">
+      <h2 className="text-2xl font-bold text-slate-800 mb-6">{t('stepBio.title')}</h2>
       
-      <div className="form-grid">
-        <div className="form-group">
-          <label>{t('stepBio.level')}</label>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div className="flex flex-col gap-1.5">
+          <label className="text-sm font-semibold text-slate-700">{t('stepBio.level')}</label>
           <select 
+            className="input-field"
             value={state.level} 
             onChange={(e) => setState({ ...state, level: e.target.value })}
           >
@@ -23,9 +24,10 @@ const StepBio = ({ state, setState, nextStep, error }) => {
           </select>
         </div>
 
-        <div className="form-group">
-          <label>{t('stepBio.goal')}</label>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-sm font-semibold text-slate-700">{t('stepBio.goal')}</label>
           <select 
+            className="input-field"
             value={state.goal} 
             onChange={(e) => setState({ ...state, goal: e.target.value })}
           >
@@ -37,9 +39,10 @@ const StepBio = ({ state, setState, nextStep, error }) => {
           </select>
         </div>
 
-        <div className="form-group">
-          <label>{t('stepBio.sex')}</label>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-sm font-semibold text-slate-700">{t('stepBio.sex')}</label>
           <select 
+            className="input-field"
             value={state.sex} 
             onChange={(e) => setState({ ...state, sex: e.target.value })}
           >
@@ -48,9 +51,10 @@ const StepBio = ({ state, setState, nextStep, error }) => {
           </select>
         </div>
 
-        <div className="form-group">
-          <label>{t('stepBio.age')}</label>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-sm font-semibold text-slate-700">{t('stepBio.age')}</label>
           <input 
+            className="input-field"
             type="number" 
             min="10" 
             max="120"
@@ -59,9 +63,10 @@ const StepBio = ({ state, setState, nextStep, error }) => {
           />
         </div>
 
-        <div className="form-group full-width">
-          <label>{t('stepBio.bodyweight')}</label>
+        <div className="flex flex-col gap-1.5 md:col-span-2">
+          <label className="text-sm font-semibold text-slate-700">{t('stepBio.bodyweight')}</label>
           <input 
+            className="input-field"
             type="number" 
             min="20" 
             max="300"
@@ -73,8 +78,8 @@ const StepBio = ({ state, setState, nextStep, error }) => {
 
       <Alert message={error} />
 
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <button className="btn btn-primary" onClick={nextStep}>
+      <div className="flex justify-end mt-4">
+        <button className="btn-primary" onClick={nextStep}>
           {t('stepBio.nextStep')}
         </button>
       </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import StepBio from './components/StepBio'
 import StepStats from './components/StepStats'
@@ -9,23 +9,37 @@ import LanguageSwitcher from './components/LanguageSwitcher'
 function App() {
   const { t, i18n } = useTranslation();
 
-  const [state, setState] = useState({
-    current_step: 1,
-    level: "Intermediate",
-    goal: "Bodybuilding",
-    sex: "Male",
-    age: "25",
-    bw: "80",
-    equipment: "All (Gym Mixed)",
-    squat: "0",
-    bench: "0",
-    deadlift: "0",
-    history_ids: [],
-    history_names: [],
-    recommendations: [],
-    current_prediction: "",
-    is_loading: false
+  const [state, setState] = useState(() => {
+    const savedState = localStorage.getItem('gymBrainState');
+    if (savedState) {
+      try {
+        return JSON.parse(savedState);
+      } catch (e) {
+        console.error("Failed to parse saved state", e);
+      }
+    }
+    return {
+      current_step: 1,
+      level: "Intermediate",
+      goal: "Bodybuilding",
+      sex: "Male",
+      age: "25",
+      bw: "80",
+      equipment: "All (Gym Mixed)",
+      squat: "0",
+      bench: "0",
+      deadlift: "0",
+      history_ids: [],
+      history_names: [], // stores display names (localized)
+      recommendations: [],
+      current_prediction: "",
+      is_loading: false
+    };
   });
+
+  useEffect(() => {
+    localStorage.setItem('gymBrainState', JSON.stringify(state));
+  }, [state]);
 
   const [error, setError] = useState("");
 
@@ -107,9 +121,9 @@ function App() {
     }
   };
 
-  const startWorkout = async (first_ex_id, first_ex_name, raw_eq) => {
+  const startWorkout = async (first_ex_id, first_ex_name_en, first_ex_name_local, raw_eq) => {
     const newHistoryIds = [first_ex_id];
-    const newHistoryNames = [first_ex_name];
+    const newHistoryNames = [first_ex_name_local || first_ex_name_en];
 
     setState(prev => ({
       ...prev,
@@ -125,7 +139,7 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           profile: buildProfile(),
-          exercise_name: first_ex_name,
+          exercise_name: first_ex_name_en,
           raw_equipment: raw_eq,
           language: i18n.language
         })
@@ -142,9 +156,9 @@ function App() {
     await getRecommendations(newHistoryIds);
   };
 
-  const addExercise = async (ex_id, ex_name, raw_eq) => {
+  const addExercise = async (ex_id, ex_name_en, ex_name_local, raw_eq) => {
     const newHistoryIds = [...state.history_ids, ex_id];
-    const newHistoryNames = [...state.history_names, ex_name];
+    const newHistoryNames = [...state.history_names, ex_name_local || ex_name_en];
 
     setState(prev => ({
       ...prev,
@@ -158,7 +172,7 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           profile: buildProfile(),
-          exercise_name: ex_name,
+          exercise_name: ex_name_en,
           raw_equipment: raw_eq,
           language: i18n.language
         })
@@ -207,13 +221,19 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="min-h-screen flex flex-col items-center py-12 px-4 relative">
       <LanguageSwitcher />
-      <div className="hero-title">
-        <h1>{t('app.title')}</h1>
-        <p>{t('app.subtitle')}</p>
+      
+      <div className="text-center mb-10 max-w-2xl">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-primary-600 mb-4 animate-fade-in">
+          {t('app.title')}
+        </h1>
+        <p className="text-lg text-slate-500 font-medium">
+          {t('app.subtitle')}
+        </p>
       </div>
 
+      <div className={`w-full transition-all duration-500 ease-in-out ${state.current_step === 4 ? 'max-w-5xl' : 'max-w-xl'} animate-fade-in`}>
       {state.current_step === 1 && (
         <StepBio state={state} setState={setState} nextStep={nextStep} error={error} />
       )}
@@ -231,15 +251,9 @@ function App() {
           addExercise={addExercise}
         />
       )}
-
-      <footer style={{
-        marginTop: 'auto',
-        padding: '2rem 1rem',
-        textAlign: 'center',
-        fontSize: '0.8rem',
-        color: '#64748b',
-        opacity: 0.7
-      }}>
+      </div>
+      
+      <footer className="mt-auto pt-16 pb-4 text-center text-sm text-slate-400 font-medium">
         Gym Brain AI v1.0.0 • © 2026 Artem Markov
       </footer>
     </div>

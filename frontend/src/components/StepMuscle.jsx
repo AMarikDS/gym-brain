@@ -5,61 +5,62 @@ const StepMuscle = ({ prevStep, startWorkout }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="glass-card">
-      <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#0f172a' }}>
+
+    <div className="card text-center">
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-slate-800 mb-2">
           {t('stepMuscle.successTitle')}
         </h2>
-        <p style={{ color: '#64748b', marginTop: '0.5rem' }}>
+        <p className="text-slate-500 font-medium">
           {t('stepMuscle.successSubtitle')}
         </p>
       </div>
 
-      <h3 style={{ fontSize: '1.125rem', marginBottom: '1rem', color: '#0f172a' }}>
+      <h3 className="text-lg font-semibold text-slate-700 mb-4 text-left">
         {t('stepMuscle.selectInitial')}
       </h3>
       
-      <div className="step-buttons">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         <button 
-          className="btn muscle-btn"
-          onClick={() => startWorkout(15, "Bench Press (Barbell)", "Barbell")}
+          className="btn-secondary py-4 hover:border-primary-500 hover:text-primary-600"
+          onClick={() => startWorkout(15, "Bench Press (Barbell)", t('stepMuscle.chest'), "Barbell")}
         >
           {t('stepMuscle.chest')}
         </button>
         <button 
-          className="btn muscle-btn"
-          onClick={() => startWorkout(5, "Squat (Barbell)", "Barbell")}
+          className="btn-secondary py-4 hover:border-primary-500 hover:text-primary-600"
+          onClick={() => startWorkout(5, "Squat (Barbell)", t('stepMuscle.legs'), "Barbell")}
         >
           {t('stepMuscle.legs')}
         </button>
         <button 
-          className="btn muscle-btn"
-          onClick={() => startWorkout(720, "Deadlift (Barbell)", "Barbell")}
+          className="btn-secondary py-4 hover:border-primary-500 hover:text-primary-600"
+          onClick={() => startWorkout(720, "Deadlift (Barbell)", t('stepMuscle.back'), "Barbell")}
         >
           {t('stepMuscle.back')}
         </button>
         <button 
-          className="btn muscle-btn"
-          onClick={() => startWorkout(1778, "Overhead Press (Barbell)", "Barbell")}
+          className="btn-secondary py-4 hover:border-primary-500 hover:text-primary-600"
+          onClick={() => startWorkout(1778, "Overhead Press (Barbell)", t('stepMuscle.shoulders'), "Barbell")}
         >
           {t('stepMuscle.shoulders')}
         </button>
         <button 
-          className="btn muscle-btn"
-          onClick={() => startWorkout(363, "Bicep Curl (Dumbbell)", "Dumbbell")}
+          className="btn-secondary py-4 hover:border-primary-500 hover:text-primary-600"
+          onClick={() => startWorkout(363, "Bicep Curl (Dumbbell)", t('stepMuscle.arms'), "Dumbbell")}
         >
           {t('stepMuscle.arms')}
         </button>
         <button 
-          className="btn muscle-btn"
-          onClick={() => startWorkout(130, "Abs Crunch (Bodyweight)", "Bodyweight")}
+          className="btn-secondary py-4 hover:border-primary-500 hover:text-primary-600"
+          onClick={() => startWorkout(130, "Abs Crunch (Bodyweight)", t('stepMuscle.core'), "Bodyweight")}
         >
           {t('stepMuscle.core')}
         </button>
       </div>
 
-      <div style={{ marginTop: '2rem', display: 'flex' }}>
-        <button className="btn btn-outline" onClick={prevStep}>
+      <div className="mt-8 flex justify-start">
+        <button className="btn-secondary max-w-[200px]" onClick={prevStep}>
           {t('stepMuscle.backToStats')}
         </button>
       </div>

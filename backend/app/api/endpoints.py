@@ -19,7 +19,10 @@ def recommend_exercises(request: RecommendRequest) -> Dict[str, Any]:
 
     if request.language == "ru":
         for rec in recommendations:
-            rec["exercise_name"] = translation_service.translate_en_to_ru(rec["exercise_name"])
+            rec["translated_name"] = translation_service.translate_en_to_ru(rec["exercise_name"])
+    else:
+        for rec in recommendations:
+            rec["translated_name"] = rec["exercise_name"]
 
     return {"recommendations": recommendations}
 

@@ -6,13 +6,14 @@ const StepStats = ({ state, setState, nextStep, prevStep, error }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="glass-card">
-      <h2 style={{ marginBottom: '1.5rem' }}>{t('stepStats.title')}</h2>
+    <div className="card">
+      <h2 className="text-2xl font-bold text-slate-800 mb-6">{t('stepStats.title')}</h2>
       
-      <div className="form-grid">
-        <div className="form-group">
-          <label>{t('stepStats.equipment')}</label>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div className="flex flex-col gap-1.5 md:col-span-2">
+          <label className="text-sm font-semibold text-slate-700">{t('stepStats.equipment')}</label>
           <select 
+            className="input-field"
             value={state.equipment} 
             onChange={(e) => setState({ ...state, equipment: e.target.value })}
           >
@@ -26,9 +27,10 @@ const StepStats = ({ state, setState, nextStep, prevStep, error }) => {
           </select>
         </div>
 
-        <div className="form-group">
-          <label>{t('stepStats.squat1RM')}</label>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-sm font-semibold text-slate-700">{t('stepStats.squat1RM')}</label>
           <input 
+            className="input-field"
             type="number" 
             min="0"
             value={state.squat} 
@@ -36,9 +38,10 @@ const StepStats = ({ state, setState, nextStep, prevStep, error }) => {
           />
         </div>
 
-        <div className="form-group">
-          <label>{t('stepStats.bench1RM')}</label>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-sm font-semibold text-slate-700">{t('stepStats.bench1RM')}</label>
           <input 
+            className="input-field"
             type="number" 
             min="0"
             value={state.bench} 
@@ -46,9 +49,10 @@ const StepStats = ({ state, setState, nextStep, prevStep, error }) => {
           />
         </div>
 
-        <div className="form-group">
-          <label>{t('stepStats.deadlift1RM')}</label>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-sm font-semibold text-slate-700">{t('stepStats.deadlift1RM')}</label>
           <input 
+            className="input-field"
             type="number" 
             min="0"
             value={state.deadlift} 
@@ -59,11 +63,12 @@ const StepStats = ({ state, setState, nextStep, prevStep, error }) => {
 
       <Alert message={error} />
 
-      <div className="flex-between">
-        <button className="btn btn-outline" onClick={prevStep}>
+
+      <div className="flex justify-between items-center gap-4 mt-6">
+        <button className="btn-secondary" onClick={prevStep}>
           {t('stepStats.back')}
         </button>
-        <button className="btn btn-primary" onClick={nextStep}>
+        <button className="btn-primary" onClick={nextStep}>
           {t('stepStats.reviewProfile')}
         </button>
       </div>
