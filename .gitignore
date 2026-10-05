@@ -27,7 +27,10 @@ env/
 .env
 
 # Jupyter Notebooks
-notebooks/
+notebooks/*
+!notebooks/*/
+notebooks/*/*
+!notebooks/*/*train*.ipynb
 .ipynb_checkpoints/
 
 # IDEs
@@ -39,10 +42,8 @@ notebooks/
 .DS_Store
 
 # Data and Models
-models/
+models/translation/
 datasets/
 datasets/*.json
 datasets/*.csv
-*.cbm
-*.pth
 TASKS.md

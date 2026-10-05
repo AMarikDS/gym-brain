@@ -8,7 +8,7 @@ ENV HTTPS_PROXY=$HTTPS_PROXY
 
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm install
+RUN unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy && npm install
 
 COPY . .
 RUN npm run build

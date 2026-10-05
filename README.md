@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Gym Brain</h1>
-  <p><b>Two-Stage Recommender System for Fitness Workouts</b></p>
+  <p><b>Three-Stage Machine Learning Pipeline for Fitness Workouts</b></p>
   
   <br />
 
@@ -15,8 +15,7 @@
 
   <br />
 
-  <!-- PLACEHOLDER FOR VIDEO: Once you record a video, we will replace this image with:
-  <video src="docs/demo.mp4" autoplay loop muted width="800" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"></video> -->
+  <video src="docs/demo.mp4" autoplay loop muted playsinline width="800" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"></video>
   
 </div>
 
@@ -40,6 +39,7 @@
 ## Prerequisites
 
 To run this project, you must have the following installed on your machine:
+- [Git LFS](https://git-lfs.com/) (Required to download the Machine Learning models)
 - [Docker Engine](https://docs.docker.com/engine/install/)
 - [Docker Compose (v2)](https://docs.docker.com/compose/install/) (Ensure you use `docker compose` with a space, not the deprecated `docker-compose` with a hyphen).
 
@@ -47,8 +47,9 @@ To run this project, you must have the following installed on your machine:
 
 ## How to Run Locally
 
-1. **Clone the Repository**
+1. **Install Git LFS & Clone the Repository**
 ```bash
+git lfs install
 git clone https://github.com/AMarikDS/gym-brain.git
 cd gym-brain
 ```

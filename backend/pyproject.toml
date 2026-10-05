@@ -4,6 +4,10 @@ package-mode = false
 version = "0.1.0"
 description = "FastAPI backend for Gym Brain ML recommender system"
 authors = ["AMarikDS"]
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -12,7 +16,7 @@ uvicorn = "^0.30.0"
 pydantic = "^2.7.0"
 pandas = "^2.2.0"
 catboost = "^1.2.0"
-torch = "^2.0.0"
+torch = {version = "^2.0.0", source = "pytorch"}
 httpx = "^0.27.0"
 pytest = "^8.0.0"
 transformers = "^5.17.0"

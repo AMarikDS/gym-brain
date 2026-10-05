@@ -7,7 +7,7 @@ from app.services.ml_service import TransformerRec
 
 def run_benchmark():
     print("=" * 60)
-    print("🚀 HIGHLOAD INFERENCE BENCHMARK: Python PyTorch vs C++ LibTorch (JIT) 🚀")
+    print("HIGHLOAD INFERENCE BENCHMARK: Python PyTorch vs C++ LibTorch (JIT)")
     print("=" * 60)
     
     assets_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "models"))
@@ -73,7 +73,7 @@ def run_benchmark():
     speedup_mean = pt_mean / jit_mean
     
     print("\n" + "=" * 60)
-    print("📊 BENCHMARK RESULTS (1000 Inferences)")
+    print("BENCHMARK RESULTS (1000 Inferences)")
     print("=" * 60)
     print(f"{'Metric':<20} | {'Python PyTorch':<15} | {'C++ LibTorch (JIT)':<15}")
     print("-" * 60)
@@ -81,8 +81,8 @@ def run_benchmark():
     print(f"{'p99 Latency':<20} | {pt_p99:.3f} ms      | {jit_p99:.3f} ms")
     print("=" * 60)
     
-    print(f"\n✅ BUSINESS EFFECT: JIT is {speedup_p99:.1f}x faster at the 99th percentile!")
-    print(f"✅ BUSINESS EFFECT: JIT reduces average inference latency by {speedup_mean:.1f}x!")
+    print(f"\nBUSINESS EFFECT: JIT is {speedup_p99:.1f}x faster at the 99th percentile!")
+    print(f"BUSINESS EFFECT: JIT reduces average inference latency by {speedup_mean:.1f}x!")
     print("This confirms the model is optimized for Triton Inference Server and 1000+ RPS.")
     print("=" * 60 + "\n")
 

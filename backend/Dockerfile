@@ -6,16 +6,23 @@ ENV HTTP_PROXY=$HTTP_PROXY
 ENV HTTPS_PROXY=$HTTPS_PROXY
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y gcc python3-dev && rm -rf /var/lib/apt/lists/*
+RUN if [ -n "$HTTP_PROXY" ]; then \
+      export HTTP_PROXY=$(echo $HTTP_PROXY | sed -e 's/127.0.0.1/host.docker.internal/g' -e 's/localhost/host.docker.internal/g'); \
+    fi; \
+    if [ -n "$HTTPS_PROXY" ]; then \
+      export HTTPS_PROXY=$(echo $HTTPS_PROXY | sed -e 's/127.0.0.1/host.docker.internal/g' -e 's/localhost/host.docker.internal/g'); \
+    fi
 
 ENV POETRY_HTTP_TIMEOUT=1200 \
     PIP_DEFAULT_TIMEOUT=1200
 
-RUN pip install --no-cache-dir poetry
+RUN unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy && pip install --no-cache-dir poetry
 
 COPY pyproject.toml poetry.lock* ./
 
-RUN poetry config virtualenvs.create false \
+RUN unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy && poetry config virtualenvs.create false \
+    && rm -f poetry.lock \
+    && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu \
     && poetry install --no-interaction --no-ansi --no-root
 
 COPY ./app ./app

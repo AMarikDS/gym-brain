@@ -43,31 +43,31 @@ def predict_weight(request: PredictWeightRequest) -> Dict[str, Any]:
 
     if "cardio" in eq or "fitness" in eq or "run" in eq or "bike" in eq:
         if request.language == "ru":
-            target_text = f"{max(5, reps * 2)} мин"
+            target_text = f"{max(5, reps * 2)} минут"
         else:
-            target_text = f"{max(5, reps * 2)} mins"
+            target_text = f"{max(5, reps * 2)} minutes"
     elif "bodyweight" in eq:
         if weight <= 0:
             if request.language == "ru":
-                target_text = f"Свой вес x {reps} повт"
+                target_text = f"Свой вес x {reps} повторений"
             else:
-                target_text = f"Bodyweight x {reps} reps"
+                target_text = f"Bodyweight x {reps} repetitions"
         else:
             if request.language == "ru":
-                target_text = f"+{weight} кг x {reps} повт"
+                target_text = f"+{weight} килограмм x {reps} повторений"
             else:
-                target_text = f"+{weight} kg x {reps} reps"
+                target_text = f"+{weight} kilograms x {reps} repetitions"
     else:
         # Standard weights (Machine, Barbell, Dumbbell, Cable)
         if weight <= 0:
             if request.language == "ru":
-                target_text = f"Легкий вес x {reps} повт"
+                target_text = f"Легкий вес x {reps} повторений"
             else:
-                target_text = f"Light Weight x {reps} reps"
+                target_text = f"Light Weight x {reps} repetitions"
         else:
             if request.language == "ru":
-                target_text = f"{weight} кг x {reps} повт"
+                target_text = f"{weight} килограмм x {reps} повторений"
             else:
-                target_text = f"{weight} kg x {reps} reps"
+                target_text = f"{weight} kilograms x {reps} repetitions"
 
     return {"weight": weight, "reps": reps, "target_text": target_text}
