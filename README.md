@@ -15,7 +15,7 @@
 
   <br />
 
-  <video src="docs/demo.mp4" autoplay loop muted playsinline width="800" style="border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"></video>
+  https://github.com/AMarikDS/gym-brain/raw/main/docs/demo.mp4
   
 </div>
 
