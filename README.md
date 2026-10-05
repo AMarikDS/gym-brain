@@ -73,7 +73,7 @@ docker compose up --build -d
 This project follows a microservices architecture powered by a 3-stage Machine Learning pipeline optimized for low-latency inference.
 
 ### 1. Candidate Generation
-- **Model**: TransformerRec (BERT architecture).
+- **Model**: TransformerRec (Custom Transformer Encoder architecture).
 - **Format**: C++ TorchScript JIT (`.pt`).
 - **Input**: Sequence of past exercise IDs.
 - **Output**: Top-N potential next exercises scored by contextual relevance.
