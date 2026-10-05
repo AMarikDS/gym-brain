@@ -15,7 +15,7 @@
 
   <br />
 
-  https://github.com/AMarikDS/gym-brain/raw/main/docs/demo.mp4
+  <video src="https://github.com/AMarikDS/gym-brain/raw/main/docs/demo.mp4" controls="controls" muted="muted" width="800"></video>
   
 </div>
 
